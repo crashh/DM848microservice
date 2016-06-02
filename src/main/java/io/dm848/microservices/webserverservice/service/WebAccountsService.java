@@ -1,4 +1,4 @@
-package io.dm848.microservices.services.web;
+package io.dm848.microservices.webserverservice.service;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 
 import io.dm848.microservices.exceptions.AccountNotFoundException;
+import io.dm848.microservices.webserverservice.dto.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
@@ -47,7 +48,6 @@ public class WebAccountsService {
 	}
 
 	public Account findByNumber(String accountNumber) {
-
 		logger.info("findByNumber() invoked: for " + accountNumber);
 		return restTemplate.getForObject(serviceUrl + "/accounts/{number}",
 				Account.class, accountNumber);

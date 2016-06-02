@@ -1,4 +1,4 @@
-package io.dm848.microservices.accounts;
+package io.dm848.microservices.accountsservice.accounts;
 
 import java.util.List;
 
@@ -10,19 +10,19 @@ import org.springframework.data.repository.Repository;
  */
 public interface AccountRepository extends Repository<Account, Long> {
 	/**
-	 * Find an account with the specified account number.
+	 * Find an controller with the specified controller number.
 	 *
 	 * @param accountNumber
-	 * @return The account if found, null otherwise.
+	 * @return The controller if found, null otherwise.
 	 */
 	public Account findByNumber(String accountNumber);
 
 	/**
-	 * Find accounts whose owner name contains the specified string
+	 * Find account whose owner name contains the specified string
 	 * 
 	 * @param partialName
 	 *            Any alphabetic string.
-	 * @return The list of matching accounts - always non-null, but may be
+	 * @return The list of matching accountsservice - always non-null, but may be
 	 *         empty.
 	 */
 	public List<Account> findByOwnerContainingIgnoreCase(String partialName);

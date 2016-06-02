@@ -1,4 +1,4 @@
-package io.dm848.microservices.accounts;
+package io.dm848.microservices.accountsservice.accounts;
 
 import java.util.List;
 import java.util.logging.Logger;

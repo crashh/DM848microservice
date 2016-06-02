@@ -1,8 +1,11 @@
-package io.dm848.microservices.services.web;
+package io.dm848.microservices.webserverservice.controller;
 
 import java.util.List;
 import java.util.logging.Logger;
 
+import io.dm848.microservices.webserverservice.SearchCriteria;
+import io.dm848.microservices.webserverservice.dto.Account;
+import io.dm848.microservices.webserverservice.service.WebAccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,17 +56,17 @@ public class WebAccountsController {
 		return "account";
 	}
 
-	@RequestMapping("/accounts/owner/{text}")
-	public String ownerSearch(Model model, @PathVariable("text") String name) {
-		logger.info("web-service byOwner() invoked: " + name);
+    @RequestMapping("/accounts/owner/{text}")
+    public String ownerSearch(Model model, @PathVariable("text") String name) {
+        logger.info("web-service byOwner() invoked: " + name);
 
-		List<Account> accounts = accountsService.byOwnerContains(name);
-		logger.info("web-service byOwner() found: " + accounts);
-		model.addAttribute("search", name);
-		if (accounts != null)
-			model.addAttribute("accounts", accounts);
-		return "accounts";
-	}
+        List<Account> accounts = accountsService.byOwnerContains(name);
+        logger.info("web-service byOwner() found: " + accounts);
+        model.addAttribute("search", name);
+        if (accounts != null)
+            model.addAttribute("accounts", accounts);
+        return "accounts";
+    }
 
 	@RequestMapping(value = "/accounts/search", method = RequestMethod.GET)
 	public String searchForm(Model model) {

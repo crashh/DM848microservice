@@ -1,5 +1,8 @@
-package io.dm848.microservices.services.web;
+package io.dm848.microservices.webserverservice;
 
+import io.dm848.microservices.webserverservice.controller.HomeController;
+import io.dm848.microservices.webserverservice.controller.WebAccountsController;
+import io.dm848.microservices.webserverservice.service.WebAccountsService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -16,7 +19,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class WebServer {
 
 	/**
-	 * URL uses the logical name of account-service - upper or lower case,
+	 * URL uses the logical name of controller-service - upper or lower case,
 	 * doesn't matter.
 	 */
 	public static final String ACCOUNTS_SERVICE_URL = "http://ACCOUNTS-SERVICE";

@@ -1,4 +1,4 @@
-package io.dm848.microservices.services.web;
+package io.dm848.microservices.webserverservice.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

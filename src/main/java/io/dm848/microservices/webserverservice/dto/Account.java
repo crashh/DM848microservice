@@ -1,8 +1,9 @@
-package io.dm848.microservices.services.web;
+package io.dm848.microservices.webserverservice.dto;
 
 import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
+import io.dm848.microservices.webserverservice.service.WebAccountsService;
 
 /**
  * Account DTO - used to interact with the {@link WebAccountsService}.
@@ -24,16 +25,6 @@ public class Account {
 
 	public long getId() {
 		return id;
-	}
-
-	/**
-	 * Set JPA id - for testing and JPA only. Not intended for normal use.
-	 * 
-	 * @param id
-	 *            The new id.
-	 */
-	protected void setId(long id) {
-		this.id = id;
 	}
 
 	public String getNumber() {

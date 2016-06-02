@@ -1,8 +1,8 @@
-package io.dm848.microservices.services;
+package io.dm848.microservices;
 
-import io.dm848.microservices.services.accounts.AccountsServer;
-import io.dm848.microservices.services.registration.RegistrationServer;
-import io.dm848.microservices.services.web.WebServer;
+import io.dm848.microservices.accountsservice.AccountsServer;
+import io.dm848.microservices.registrationservice.RegistrationServer;
+import io.dm848.microservices.webserverservice.WebServer;
 
 /**
  * Only purpose of this file is to allow the services to be started from
@@ -34,9 +34,9 @@ public class Main {
 		}
 
 
-		if (serverName.equals("registration") || serverName.equals("reg")) {
+		if (serverName.equals("registrationservice") || serverName.equals("reg")) {
 			RegistrationServer.main(args);
-		} else if (serverName.equals("accounts") || serverName.equals("acc")) {
+		} else if (serverName.equals("accountsservice") || serverName.equals("acc")) {
 			AccountsServer.main(args);
 		} else if (serverName.equals("webserver") || serverName.equals("web")) {
 			WebServer.main(args);
@@ -48,6 +48,6 @@ public class Main {
 
 	private static void usage() {
 		System.out.println("Usage: java -jar ... -name <server-name> -port [server-port]");
-		System.out.println("       where server-name is 'reg', 'registration', " + "'accounts' or 'webserver' and server-port > 1024");
+		System.out.println("       where server-name is 'reg', 'registrationservice', " + "'accountsservice' or 'webserver' and server-port > 1024");
 	}
 }

@@ -1,4 +1,4 @@
-package io.dm848.microservices.accounts;
+package io.dm848.microservices.accountsservice.accounts;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Persistent account entity with JPA markup. Accounts are stored in an H2
+ * Persistent controller entity with JPA markup. Accounts are stored in an H2
  * relational database.
  */
 @Entity

@@ -1,4 +1,4 @@
-package io.dm848.microservices.services.web;
+package io.dm848.microservices.webserverservice;
 
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
@@ -47,13 +47,13 @@ public class SearchCriteria {
 
 			if (StringUtils.hasText(searchText)) {
 				errors.rejectValue("searchText", "nonEmpty",
-						"Cannot specify account number and search text");
+						"Cannot specify controller number and search text");
 			}
 		} else if (StringUtils.hasText(searchText)) {
 			; // Nothing to do
 		} else {
 			errors.rejectValue("accountNumber", "nonEmpty",
-					"Must specify either an account number or search text");
+					"Must specify either an controller number or search text");
 
 		}
 
@@ -62,7 +62,6 @@ public class SearchCriteria {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return (StringUtils.hasText(accountNumber) ? "number: " + accountNumber
 				: "")
 				+ (StringUtils.hasText(searchText) ? " text: " + searchText

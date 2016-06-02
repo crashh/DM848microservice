@@ -14,7 +14,7 @@
 
 	<properties>
 		<!-- Stand-alone RESTFul application for testing only -->
-		<start-class>io.dm848.microservices.services.Main</start-class>
+		<start-class>io.dm848.microservices.Main</start-class>
 	</properties>
 
 	<dependencies>
@@ -66,7 +66,7 @@
 		</dependency>
 
 		<dependency>
-			<!-- Eureka service registration -->
+			<!-- Eureka service registrationservice -->
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>

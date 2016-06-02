@@ -1,4 +1,4 @@
-package io.dm848.microservices.accounts;
+package io.dm848.microservices.accountsservice.accounts;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import io.dm848.microservices.services.accounts.AccountsServer;
+import io.dm848.microservices.accountsservice.AccountsServer;
 
 /**
  * Imitates the {@link AccountsServer}, but without using any of the discovery
@@ -21,8 +21,8 @@ import io.dm848.microservices.services.accounts.AccountsServer;
 @Import(AccountsConfiguration.class)
 class AccountsMain {
 	public static void main(String[] args) {
-		// Tell server to look for accounts-server.properties or
-		// accounts-server.yml
+		// Tell server to look for accountsservice-server.properties or
+		// accountsservice-server.yml
 		System.setProperty("spring.config.name", "accounts-server");
 		SpringApplication.run(AccountsMain.class, args);
 	}

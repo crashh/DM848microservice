@@ -1,4 +1,4 @@
-package io.dm848.microservices.services.accounts;
+package io.dm848.microservices.accountsservice;
 
 import java.util.logging.Logger;
 
@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Import;
 
-import io.dm848.microservices.accounts.AccountRepository;
-import io.dm848.microservices.accounts.AccountsConfiguration;
+import io.dm848.microservices.accountsservice.accounts.AccountRepository;
+import io.dm848.microservices.accountsservice.accounts.AccountsConfiguration;
 
 /**
  * Run as a micro-service, registering with the Discovery Server (Eureka).

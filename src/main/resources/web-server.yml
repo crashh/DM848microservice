@@ -14,7 +14,7 @@ error:
   path=/error
 
 # Discovery Server Access
-#  1. Define URL of registration server (defaultZone)
+#  1. Define URL of registrationservice server (defaultZone)
 #  2. Reduce lease-renewal time so processes register more quickly
 eureka:
   instance:
