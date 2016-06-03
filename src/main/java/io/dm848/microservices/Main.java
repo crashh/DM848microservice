@@ -34,9 +34,9 @@ public class Main {
 		}
 
 
-		if (serverName.equals("registrationservice") || serverName.equals("reg")) {
+		if (serverName.equals("registration") || serverName.equals("reg")) {
 			RegistrationServer.main(args);
-		} else if (serverName.equals("accountsservice") || serverName.equals("acc")) {
+		} else if (serverName.equals("account") || serverName.equals("acc")) {
 			AccountsServer.main(args);
 		} else if (serverName.equals("webserver") || serverName.equals("web")) {
 			WebServer.main(args);
@@ -48,6 +48,6 @@ public class Main {
 
 	private static void usage() {
 		System.out.println("Usage: java -jar ... -name <server-name> -port [server-port]");
-		System.out.println("       where server-name is 'reg', 'registrationservice', " + "'accountsservice' or 'webserver' and server-port > 1024");
+		System.out.println("       where server-name is 'reg', 'registration', " + "'account' or 'webserver' and server-port > 1024");
 	}
 }
