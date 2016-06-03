@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import io.dm848.microservices.webserverservice.SearchCriteria;
-import io.dm848.microservices.webserverservice.dto.Account;
-import io.dm848.microservices.webserverservice.service.WebAccountsService;
+import io.dm848.microservices.webserverservice.dto.User;
+import io.dm848.microservices.webserverservice.service.WebUsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,63 +18,63 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Client controller, fetches Account info from the microservice via
- * {@link WebAccountsService}.
+ * Client controller, fetches User info from the microservice via
+ * {@link WebUsersService}.
  */
 @Controller
-public class WebAccountsController {
+public class WebUsersController {
 
 	@Autowired
-	protected WebAccountsService accountsService;
+	protected WebUsersService usersService;
 
-	protected Logger logger = Logger.getLogger(WebAccountsController.class
+	protected Logger logger = Logger.getLogger(WebUsersController.class
 			.getName());
 
-	public WebAccountsController(WebAccountsService accountsService) {
-		this.accountsService = accountsService;
+	public WebUsersController(WebUsersService usersService) {
+		this.usersService = usersService;
 	}
 
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		binder.setAllowedFields("accountNumber", "searchText");
+		binder.setAllowedFields("userNumber", "searchText");
 	}
 
-	@RequestMapping("/accounts")
+	@RequestMapping("/users")
 	public String goHome() {
 		return "index";
 	}
 
-	@RequestMapping("/accounts/{accountNumber}")
+	@RequestMapping("/users/{userNumber}")
 	public String byNumber(Model model,
-			@PathVariable("accountNumber") String accountNumber) {
+			@PathVariable("userNumber") String userNumber) {
 
-		logger.info("web-service byNumber() invoked: " + accountNumber);
+		logger.info("web-service byNumber() invoked: " + userNumber);
 
-		Account account = accountsService.findByNumber(accountNumber);
-		logger.info("web-service byNumber() found: " + account);
-		model.addAttribute("account", account);
-		return "account";
+		User user = usersService.findByNumber(userNumber);
+		logger.info("web-service byNumber() found: " + user);
+		model.addAttribute("user", user);
+		return "user";
 	}
 
-    @RequestMapping("/accounts/owner/{text}")
+    @RequestMapping("/users/owner/{text}")
     public String ownerSearch(Model model, @PathVariable("text") String name) {
         logger.info("web-service byOwner() invoked: " + name);
 
-        List<Account> accounts = accountsService.byOwnerContains(name);
-        logger.info("web-service byOwner() found: " + accounts);
+        List<User> users = usersService.byOwnerContains(name);
+        logger.info("web-service byOwner() found: " + users);
         model.addAttribute("search", name);
-        if (accounts != null)
-            model.addAttribute("accounts", accounts);
-        return "accounts";
+        if (users != null)
+            model.addAttribute("users", users);
+        return "users";
     }
 
-	@RequestMapping(value = "/accounts/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/search", method = RequestMethod.GET)
 	public String searchForm(Model model) {
 		model.addAttribute("searchCriteria", new SearchCriteria());
-		return "accountSearch";
+		return "userSearch";
 	}
 
-	@RequestMapping(value = "/accounts/dosearch")
+	@RequestMapping(value = "/users/dosearch")
 	public String doSearch(Model model, SearchCriteria criteria,
 			BindingResult result) {
 		logger.info("web-service search() invoked: " + criteria);
@@ -82,11 +82,11 @@ public class WebAccountsController {
 		criteria.validate(result);
 
 		if (result.hasErrors())
-			return "accountSearch";
+			return "userSearch";
 
-		String accountNumber = criteria.getAccountNumber();
-		if (StringUtils.hasText(accountNumber)) {
-			return byNumber(model, accountNumber);
+		String userNumber = criteria.getUserNumber();
+		if (StringUtils.hasText(userNumber)) {
+			return byNumber(model, userNumber);
 		} else {
 			String searchText = criteria.getSearchText();
 			return ownerSearch(model, searchText);

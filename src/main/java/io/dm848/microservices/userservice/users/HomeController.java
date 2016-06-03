@@ -1,4 +1,4 @@
-package io.dm848.microservices.accountsservice.accounts;
+package io.dm848.microservices.userservice.users;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

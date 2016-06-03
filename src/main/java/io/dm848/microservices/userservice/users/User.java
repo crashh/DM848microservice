@@ -1,4 +1,4 @@
-package io.dm848.microservices.accountsservice.accounts;
+package io.dm848.microservices.userservice.users;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -9,12 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Persistent controller entity with JPA markup. Accounts are stored in an H2
+ * Persistent controller entity with JPA markup. Users are stored in an H2
  * relational database.
  */
 @Entity
-@Table(name = "T_ACCOUNT")
-public class Account implements Serializable {
+@Table(name = "T_USER")
+public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -46,11 +46,11 @@ public class Account implements Serializable {
 	/**
 	 * Default constructor for JPA only.
 	 */
-	protected Account() {
+	protected User() {
 		balance = BigDecimal.ZERO;
 	}
 
-	public Account(String number, String owner) {
+	public User(String number, String owner) {
 		id = getNextId();
 		this.number = number;
 		this.owner = owner;

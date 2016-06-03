@@ -9,11 +9,11 @@ import org.springframework.http.HttpStatus;
  * 404 instead of the usual 500.
  */
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class AccountNotFoundException extends RuntimeException {
+public class UserNotFoundException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
-	public AccountNotFoundException(String accountNumber) {
+	public UserNotFoundException(String accountNumber) {
 		super("No such controller: " + accountNumber);
 	}
 }

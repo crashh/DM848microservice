@@ -7,31 +7,31 @@
 <body>
 	<h1>Account Search</h1>
 
-	<p>Enter an account number or search for an account owner
+	<p>Enter an user number or search for an user owner
 		containing given specified text:</p>
 
 	<form action="#" th:object="${searchCriteria}" method="GET"
-		th:action="@{/accounts/dosearch}" class="form-horizontal">
+		th:action="@{/users/dosearch}" class="form-horizontal">
 
-		<!-- Account Number field -->
+		<!-- User Number field -->
 		<div class="form-group">
 			<label for="number" class="control-label col-xs-2">Account
 				Number</label>
 			<div class="col-xs-2">
 				<input type="text" class="form-control" id="number"
-					th:field="*{accountNumber}" placeholder="Enter account number"
+					th:field="*{userNumber}" placeholder="Enter user number"
 					style="width: 10em;" />
 			</div>
 			<div class="col-xs-8">Enter a valid 9 digit number</div>
 		</div>
 
-		<!-- Account Number errors (if any) -->
+		<!-- User Number errors (if any) -->
 		<div class="form-group">
 			<div class="control-label col-xs-2">&nbsp;</div>
 			<div class="col-xs-2">&nbsp;</div>
 			<div class="col-xs-8">
-				<span th:if="${#fields.hasErrors('accountNumber')}"
-					style="color: red; font-size: smaller" th:errors="*{accountNumber}">Incorrect
+				<span th:if="${#fields.hasErrors('userNumber')}"
+					style="color: red; font-size: smaller" th:errors="*{userNumber}">Incorrect
 					data</span>
 			</div>
 		</div>

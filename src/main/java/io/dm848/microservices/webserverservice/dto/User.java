@@ -3,13 +3,13 @@ package io.dm848.microservices.webserverservice.dto;
 import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
-import io.dm848.microservices.webserverservice.service.WebAccountsService;
+import io.dm848.microservices.webserverservice.service.WebUsersService;
 
 /**
- * Account DTO - used to interact with the {@link WebAccountsService}.
+ * User DTO - used to interact with the {@link WebUsersService}.
  */
-@JsonRootName("Account")
-public class Account {
+@JsonRootName("User")
+public class User {
 
 	protected Long id;
 	protected String number;
@@ -19,7 +19,7 @@ public class Account {
 	/**
 	 * Default constructor for JPA only.
 	 */
-	protected Account() {
+	protected User() {
 		balance = BigDecimal.ZERO;
 	}
 

@@ -1,12 +1,12 @@
 # Spring properties
 spring:
   application:
-     name: accounts-service  # Service registers under this name
+     name: user-service  # Service registers under this name
   freemarker:
     enabled: false           # Ignore Eureka dashboard FreeMarker templates
   thymeleaf:
     cache: false             # Allow Thymeleaf templates to be reloaded at runtime
-    prefix: classpath:/accounts-server/templates/    # Trailing / mandatory
+    prefix: classpath:/users-server/templates/    # Trailing / mandatory
                              # Template location for this application only
 
 # TODO: Delete this, or keep enabled to showcase it is working?

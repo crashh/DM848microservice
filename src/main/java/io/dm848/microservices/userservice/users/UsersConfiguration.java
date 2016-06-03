@@ -1,4 +1,4 @@
-package io.dm848.microservices.accountsservice.accounts;
+package io.dm848.microservices.userservice.users;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -18,18 +18,18 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 
 /**
- * The accountsservice Spring configuration.
+ * The userservice Spring configuration.
  */
 @Configuration
 @ComponentScan
-@EntityScan("io.dm848.microservices.accountsservice.accounts")
-@EnableJpaRepositories("io.dm848.microservices.accountsservice.accounts")
+@EntityScan("io.dm848.microservices.userservice.users")
+@EnableJpaRepositories("io.dm848.microservices.userservice.users")
 @PropertySource("classpath:db-config.properties")
-public class AccountsConfiguration {
+public class UsersConfiguration {
 
 	protected Logger logger;
 
-	public AccountsConfiguration() {
+	public UsersConfiguration() {
 		logger = Logger.getLogger(getClass().getName());
 	}
 
@@ -42,7 +42,7 @@ public class AccountsConfiguration {
 		logger.info("dataSource() invoked");
 
 		// Create an in-memory H2 relational database containing some demo
-		// accountsservice.
+		// userservice.
 		DataSource dataSource = (new EmbeddedDatabaseBuilder()).addScript("classpath:testdb/schema.sql")
 				.addScript("classpath:testdb/data.sql").build();
 
@@ -50,16 +50,16 @@ public class AccountsConfiguration {
 
 		// Sanity check
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		List<Map<String, Object>> accounts = jdbcTemplate.queryForList("SELECT number FROM T_ACCOUNT");
-		logger.info("System has " + accounts.size() + " accounts");
+		List<Map<String, Object>> users = jdbcTemplate.queryForList("SELECT number FROM T_USER");
+		logger.info("System has " + users.size() + " users");
 
 		// Populate with random balances
 		Random rand = new Random();
 
-		for (Map<String, Object> item : accounts) {
+		for (Map<String, Object> item : users) {
 			String number = (String) item.get("number");
 			BigDecimal balance = new BigDecimal(rand.nextInt(10000000) / 100.0).setScale(2, BigDecimal.ROUND_HALF_UP);
-			jdbcTemplate.update("UPDATE T_ACCOUNT SET balance = ? WHERE number = ?", balance, number);
+			jdbcTemplate.update("UPDATE T_USER SET balance = ? WHERE number = ?", balance, number);
 		}
 
 		return dataSource;

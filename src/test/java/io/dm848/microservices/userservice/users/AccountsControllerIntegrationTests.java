@@ -1,4 +1,4 @@
-package io.dm848.microservices.accountsservice.accounts;
+package io.dm848.microservices.userservice.users;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.SpringApplication;
@@ -7,22 +7,22 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import io.dm848.microservices.accountsservice.AccountsServer;
+import io.dm848.microservices.userservice.UserServer;
 
 /**
- * Imitates the {@link AccountsServer}, but without using any of the discovery
+ * Imitates the {@link UserServer}, but without using any of the discovery
  * client code. Allows the test to use the same configuration as the
- * <code>AccountsServer</code> would.
+ * <code>UserServer</code> would.
  * 
  * @author Paul Chapman
  *
  */
 @SpringBootApplication
-@Import(AccountsConfiguration.class)
+@Import(UsersConfiguration.class)
 class AccountsMain {
 	public static void main(String[] args) {
-		// Tell server to look for accountsservice-server.properties or
-		// accountsservice-server.yml
+		// Tell server to look for userservice-server.properties or
+		// userservice-server.yml
 		System.setProperty("spring.config.name", "accounts-server");
 		SpringApplication.run(AccountsMain.class, args);
 	}

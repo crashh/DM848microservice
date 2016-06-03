@@ -1,6 +1,6 @@
 package io.dm848.microservices;
 
-import io.dm848.microservices.accountsservice.AccountsServer;
+import io.dm848.microservices.userservice.UserServer;
 import io.dm848.microservices.registrationservice.RegistrationServer;
 import io.dm848.microservices.webserverservice.WebServer;
 
@@ -36,8 +36,8 @@ public class Main {
 
 		if (serverName.equals("registration") || serverName.equals("reg")) {
 			RegistrationServer.main(args);
-		} else if (serverName.equals("account") || serverName.equals("acc")) {
-			AccountsServer.main(args);
+		} else if (serverName.equals("user") || serverName.equals("users")) {
+			UserServer.main(args);
 		} else if (serverName.equals("webserver") || serverName.equals("web")) {
 			WebServer.main(args);
 		} else {
@@ -48,6 +48,6 @@ public class Main {
 
 	private static void usage() {
 		System.out.println("Usage: java -jar ... -name <server-name> -port [server-port]");
-		System.out.println("       where server-name is 'reg', 'registration', " + "'account' or 'webserver' and server-port > 1024");
+		System.out.println("       where server-name is 'registration', 'user' or 'webserver' and server-port > 1024");
 	}
 }
