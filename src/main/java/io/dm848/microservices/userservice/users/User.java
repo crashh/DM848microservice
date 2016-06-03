@@ -23,12 +23,11 @@ public class User implements Serializable {
 	@Id
 	protected Long id;
 
-	protected String number;
+    @Column(name = "user_name")
+	protected String userName;
 
-	@Column(name = "name")
-	protected String owner;
+	protected String name;
 
-	protected BigDecimal balance;
 
 	/**
 	 * This is a very simple, and non-scalable solution to generating unique
@@ -46,62 +45,38 @@ public class User implements Serializable {
 	/**
 	 * Default constructor for JPA only.
 	 */
-	protected User() {
-		balance = BigDecimal.ZERO;
-	}
+    public User() {
+    }
 
-	public User(String number, String owner) {
+	public User(String userName, String name) {
 		id = getNextId();
-		this.number = number;
-		this.owner = owner;
-		balance = BigDecimal.ZERO;
+		this.userName = userName;
+		this.name = name;
 	}
 
 	public long getId() {
 		return id;
 	}
 
-	/**
-	 * Set JPA id - for testing and JPA only. Not intended for normal use.
-	 * 
-	 * @param id
-	 *            The new id.
-	 */
-	protected void setId(long id) {
-		this.id = id;
+	public String getUserName() {
+		return userName;
 	}
 
-	public String getNumber() {
-		return number;
+	protected void setUserName(String name) {
+		this.userName = name;
 	}
 
-	protected void setNumber(String accountNumber) {
-		this.number = accountNumber;
+	public String getName() {
+		return name;
 	}
 
-	public String getOwner() {
-		return owner;
-	}
-
-	protected void setOwner(String owner) {
-		this.owner = owner;
-	}
-
-	public BigDecimal getBalance() {
-		return balance.setScale(2, BigDecimal.ROUND_HALF_EVEN);
-	}
-
-	public void withdraw(BigDecimal amount) {
-		balance.subtract(amount);
-	}
-
-	public void deposit(BigDecimal amount) {
-		balance.add(amount);
+	protected void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return number + " [" + owner + "]: $" + balance;
+		return userName + " [" + name + "]: $";
 	}
 
 }

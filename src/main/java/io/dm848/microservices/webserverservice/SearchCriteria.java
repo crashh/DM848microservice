@@ -4,16 +4,16 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 
 public class SearchCriteria {
-	private String userNumber;
+	private String userName;
 
 	private String searchText;
 
-	public String getUserNumber() {
-		return userNumber;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUserNumber(String userNumber) {
-		this.userNumber = userNumber;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getSearchText() {
@@ -25,35 +25,27 @@ public class SearchCriteria {
 	}
 
 	public boolean isValid() {
-		if (StringUtils.hasText(userNumber))
+		if (StringUtils.hasText(userName))
 			return !(StringUtils.hasText(searchText));
 		else
 			return (StringUtils.hasText(searchText));
 	}
 
 	public boolean validate(Errors errors) {
-		if (StringUtils.hasText(userNumber)) {
-			if (userNumber.length() != 9)
-				errors.rejectValue("userNumber", "badFormat",
-						"User number should be 9 digits");
-			else {
-				try {
-					Integer.parseInt(userNumber);
-				} catch (NumberFormatException e) {
-					errors.rejectValue("userNumber", "badFormat",
-							"User number should be 9 digits");
-				}
-			}
+		if (StringUtils.hasText(userName)) {
+			if (userName.length() < 3)
+				errors.rejectValue("userName", "badFormat",
+						"User userName should be atleast 3 digits");
 
 			if (StringUtils.hasText(searchText)) {
 				errors.rejectValue("searchText", "nonEmpty",
-						"Cannot specify controller number and search text");
+						"Cannot specify controller userName and search text");
 			}
 		} else if (StringUtils.hasText(searchText)) {
 			; // Nothing to do
 		} else {
-			errors.rejectValue("userNumber", "nonEmpty",
-					"Must specify either an controller number or search text");
+			errors.rejectValue("userName", "nonEmpty",
+					"Must specify either an controller userName or search text");
 
 		}
 
@@ -62,7 +54,7 @@ public class SearchCriteria {
 
 	@Override
 	public String toString() {
-		return (StringUtils.hasText(userNumber) ? "number: " + userNumber
+		return (StringUtils.hasText(userName) ? "userName: " + userName
 				: "")
 				+ (StringUtils.hasText(searchText) ? " text: " + searchText
 						: "");

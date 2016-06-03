@@ -50,17 +50,8 @@ public class UsersConfiguration {
 
 		// Sanity check
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		List<Map<String, Object>> users = jdbcTemplate.queryForList("SELECT number FROM T_USER");
+		List<Map<String, Object>> users = jdbcTemplate.queryForList("SELECT user_name FROM T_USER");
 		logger.info("System has " + users.size() + " users");
-
-		// Populate with random balances
-		Random rand = new Random();
-
-		for (Map<String, Object> item : users) {
-			String number = (String) item.get("number");
-			BigDecimal balance = new BigDecimal(rand.nextInt(10000000) / 100.0).setScale(2, BigDecimal.ROUND_HALF_UP);
-			jdbcTemplate.update("UPDATE T_USER SET balance = ? WHERE number = ?", balance, number);
-		}
 
 		return dataSource;
 	}

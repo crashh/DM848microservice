@@ -34,23 +34,23 @@ public class UsersController {
 	}
 
 	/**
-	 * Fetch an controller with the specified controller number.
+	 * Fetch an controller with the specified controller userName.
 	 * 
-	 * @param userNumber
-	 *            A numeric, 9 digit controller number.
+	 * @param userName
+	 *            A numeric, 9 digit controller userName.
 	 * @return The controller if found.
 	 * @throws UserNotFoundException
-	 *             If the number is not recognised.
+	 *             If the userName is not recognised.
 	 */
-	@RequestMapping("/users/{userNumber}")
-	public User byNumber(@PathVariable("userNumber") String userNumber) {
+	@RequestMapping("/users/{userName}")
+	public User byNumber(@PathVariable("userName") String userName) {
 
-		logger.info("user-service byNumber() invoked: " + userNumber);
-		User user = userRepository.findByNumber(userNumber);
+		logger.info("user-service byNumber() invoked: " + userName);
+		User user = userRepository.findByUserName(userName);
 		logger.info("user-service byNumber() found: " + user);
 
 		if (user == null)
-			throw new UserNotFoundException(userNumber);
+			throw new UserNotFoundException(userName);
 		else {
 			return user;
 		}
@@ -74,7 +74,7 @@ public class UsersController {
 				+ partialName);
 
 		List<User> users = userRepository
-				.findByOwnerContainingIgnoreCase(partialName);
+				.findByNameContainingIgnoreCase(partialName);
 
 		logger.info("user-service byOwner() found: " + users);
 

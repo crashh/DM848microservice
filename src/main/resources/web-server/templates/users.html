@@ -13,7 +13,7 @@
 
 	<div th:if="${users}">
 		<p>
-			Accounts whose owner contains ' <span th:text="${search}">text</span>'
+			Accounts whose name contains ' <span th:text="${search}">text</span>'
 			are:
 		</p>
 
@@ -29,9 +29,9 @@
 			<tbody>
 				<tr th:each="user : ${users}">
 					<td><a href="user.html"
-						th:href="@{|/users/${user.number}|}"
-						th:text="|${user.number}|">11111111</a></td>
-					<td th:text="${user.owner}">Owner</td>
+						th:href="@{|/users/${user.userName}|}"
+						th:text="|${user.userName}|">11111111</a></td>
+					<td th:text="${user.name}">Owner</td>
 					<td th:text="${user.balance}">0</td>
 				</tr>
 			</tbody>

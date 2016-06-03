@@ -49,7 +49,7 @@ public class WebUsersService {
 
 	public User findByNumber(String userNumber) {
 		logger.info("findByNumber() invoked: for " + userNumber);
-		return restTemplate.getForObject(serviceUrl + "/users/{number}",
+		return restTemplate.getForObject(serviceUrl + "/users/{userName}",
 				User.class, userNumber);
 	}
 
@@ -59,7 +59,7 @@ public class WebUsersService {
 
 		try {
 			users = restTemplate.getForObject(serviceUrl
-					+ "/users/owner/{name}", User[].class, name);
+					+ "/users/name/{name}", User[].class, name);
 		} catch (HttpClientErrorException e) { // 404
 			// Nothing found
 		}
@@ -72,7 +72,7 @@ public class WebUsersService {
 
 	public User getByNumber(String accountNumber) {
 		User user = restTemplate.getForObject(serviceUrl
-				+ "/users/{number}", User.class, accountNumber);
+				+ "/users/{userName}", User.class, accountNumber);
 
 		if (user == null)
 			throw new UserNotFoundException(accountNumber);

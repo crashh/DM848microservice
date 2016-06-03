@@ -84,7 +84,7 @@ public class WebUsersController {
 		if (result.hasErrors())
 			return "userSearch";
 
-		String userNumber = criteria.getUserNumber();
+		String userNumber = criteria.getUserName();
 		if (StringUtils.hasText(userNumber)) {
 			return byNumber(model, userNumber);
 		} else {

@@ -10,27 +10,27 @@ import org.springframework.data.repository.Repository;
  */
 public interface UserRepository extends Repository<User, Long> {
 	/**
-	 * Find an controller with the specified controller number.
+	 * Find an controller with the specified controller userName.
 	 *
-	 * @param userNumber
+	 * @param userName
 	 * @return The controller if found, null otherwise.
 	 */
-	public User findByNumber(String userNumber);
+	public User findByUserName(String userName);
 
 	/**
-	 * Find account whose owner name contains the specified string
+	 * Find account whose name name contains the specified string
 	 * 
 	 * @param partialName
 	 *            Any alphabetic string.
 	 * @return The list of matching userservice - always non-null, but may be
 	 *         empty.
 	 */
-	public List<User> findByOwnerContainingIgnoreCase(String partialName);
+	public List<User> findByNameContainingIgnoreCase(String partialName);
 
 	/**
-	 * Fetch the number of users known to the system.
+	 * Fetch the userName of users known to the system.
 	 * 
-	 * @return The number of users.
+	 * @return The userName of users.
 	 */
 	@Query("SELECT count(*) from User")
 	public int countUsers();

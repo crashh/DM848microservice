@@ -7,7 +7,7 @@
 <body>
 	<h1>Account Search</h1>
 
-	<p>Enter an user number or search for an user owner
+	<p>Enter an user userName or search for an user name
 		containing given specified text:</p>
 
 	<form action="#" th:object="${searchCriteria}" method="GET"
@@ -15,14 +15,14 @@
 
 		<!-- User Number field -->
 		<div class="form-group">
-			<label for="number" class="control-label col-xs-2">Account
+			<label for="userName" class="control-label col-xs-2">Account
 				Number</label>
 			<div class="col-xs-2">
-				<input type="text" class="form-control" id="number"
-					th:field="*{userNumber}" placeholder="Enter user number"
+				<input type="text" class="form-control" id="userName"
+					th:field="*{userName}" placeholder="Enter user userName"
 					style="width: 10em;" />
 			</div>
-			<div class="col-xs-8">Enter a valid 9 digit number</div>
+			<div class="col-xs-8">Enter a valid 9 digit userName</div>
 		</div>
 
 		<!-- User Number errors (if any) -->
@@ -30,8 +30,8 @@
 			<div class="control-label col-xs-2">&nbsp;</div>
 			<div class="col-xs-2">&nbsp;</div>
 			<div class="col-xs-8">
-				<span th:if="${#fields.hasErrors('userNumber')}"
-					style="color: red; font-size: smaller" th:errors="*{userNumber}">Incorrect
+				<span th:if="${#fields.hasErrors('userName')}"
+					style="color: red; font-size: smaller" th:errors="*{userName}">Incorrect
 					data</span>
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 				Search</label>
 			<div class="col-xs-2">
 				<input type="text" class="form-control" id="search"
-					th:field="*{searchText}" placeholder="Text from owner name"
+					th:field="*{searchText}" placeholder="Text from name name"
 					style="width: 10em;" />
 			</div>
 			<div class="col-xs-8">Case-insensitive, supports part name

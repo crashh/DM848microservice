@@ -13,7 +13,7 @@ public class UserNotFoundException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
-	public UserNotFoundException(String accountNumber) {
-		super("No such controller: " + accountNumber);
+	public UserNotFoundException(String userName) {
+		super("No such controller: " + userName);
 	}
 }
