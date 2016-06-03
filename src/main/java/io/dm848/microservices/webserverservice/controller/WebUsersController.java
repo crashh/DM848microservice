@@ -44,23 +44,23 @@ public class WebUsersController {
 		return "index";
 	}
 
-	@RequestMapping("/users/{userNumber}")
-	public String byNumber(Model model,
-			@PathVariable("userNumber") String userNumber) {
+	@RequestMapping("/users/{userName}")
+	public String byUserName(Model model,
+			@PathVariable("userName") String userName) {
 
-		logger.info("web-service byNumber() invoked: " + userNumber);
+		logger.info("web-service byUserName() invoked: " + userName);
 
-		User user = usersService.findByNumber(userNumber);
-		logger.info("web-service byNumber() found: " + user);
+		User user = usersService.findByUserName(userName);
+		logger.info("web-service byUserName() found: " + user);
 		model.addAttribute("user", user);
 		return "user";
 	}
 
-    @RequestMapping("/users/owner/{text}")
+    @RequestMapping("/users/name/{text}")
     public String ownerSearch(Model model, @PathVariable("text") String name) {
         logger.info("web-service byOwner() invoked: " + name);
 
-        List<User> users = usersService.byOwnerContains(name);
+        List<User> users = usersService.byNameContains(name);
         logger.info("web-service byOwner() found: " + users);
         model.addAttribute("search", name);
         if (users != null)
@@ -84,9 +84,9 @@ public class WebUsersController {
 		if (result.hasErrors())
 			return "userSearch";
 
-		String userNumber = criteria.getUserName();
-		if (StringUtils.hasText(userNumber)) {
-			return byNumber(model, userNumber);
+		String userName = criteria.getUserName();
+		if (StringUtils.hasText(userName)) {
+			return byUserName(model, userName);
 		} else {
 			String searchText = criteria.getSearchText();
 			return ownerSearch(model, searchText);

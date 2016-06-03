@@ -18,12 +18,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(useDefaultFilters = false) // Disable component scanner
 public class WebServer {
 
-	/**
-	 * URL uses the logical name of controller-service - upper or lower case,
-	 * doesn't matter.
-	 */
-	public static final String USER_SERVICE_URL = "http://USER-SERVICE";
-
 	public static void main(String[] args) {
 		// Tell server to look for web-server.properties or web-server.yml
 		System.setProperty("spring.config.name", "web-server");
@@ -31,25 +25,26 @@ public class WebServer {
 	}
 
 	/**
-	 * The AccountService encapsulates the interaction with the micro-service.
-	 * 
-	 * @return A new service instance.
+	 * URL uses the logical name of controller-service - upper or lower case,
+	 * doesn't matter.
+	 */
+	public static final String USER_SERVICE_URL = "USER-SERVICE";
+
+	/**
+	 * Create the controller, passing it the {@link WebUsersService} to use.
 	 */
 	@Bean
 	public WebUsersService usersService() {
 		return new WebUsersService(USER_SERVICE_URL);
 	}
-
-	/**
-	 * Create the controller, passing it the {@link WebUsersService} to use.
-	 * 
-	 * @return
-	 */
 	@Bean
 	public WebUsersController usersController() {
 		return new WebUsersController(usersService());
 	}
 
+	/***
+	 * Creating the home controller.
+     */
 	@Bean
 	public HomeController homeController() {
 		return new HomeController();

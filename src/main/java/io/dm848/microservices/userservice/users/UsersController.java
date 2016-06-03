@@ -58,7 +58,7 @@ public class UsersController {
 
 	/**
 	 * Fetch userservice with the specified name. A partial case-insensitive match
-	 * is supported. So <code>http://.../accounts/owner/a</code> will find any
+	 * is supported. So <code>http://.../users/owner/a</code> will find any
 	 * userservice with upper or lower case 'a' in their name.
 	 * 
 	 * @param partialName

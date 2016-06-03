@@ -40,28 +40,28 @@ public class WebUsersService {
 	 * this.
 	 */
 	@PostConstruct
-	public void demoOnly() {
+	public void onLoaded() {
 		// Can't do this in the constructor because the RestTemplate injection
 		// happens afterwards.
 		logger.warning("The RestTemplate request factory is "
 				+ restTemplate.getRequestFactory().getClass());
 	}
 
-	public User findByNumber(String userNumber) {
-		logger.info("findByNumber() invoked: for " + userNumber);
+	public User findByUserName(String userName) {
+		logger.info("findByUserName() invoked: for " + userName);
 		return restTemplate.getForObject(serviceUrl + "/users/{userName}",
-				User.class, userNumber);
+				User.class, userName);
 	}
 
-	public List<User> byOwnerContains(String name) {
-		logger.info("byOwnerContains() invoked:  for " + name);
+	public List<User> byNameContains(String name) {
+		logger.info("byNameContains() invoked:  for " + name);
 		User[] users = null;
 
 		try {
 			users = restTemplate.getForObject(serviceUrl
 					+ "/users/name/{name}", User[].class, name);
-		} catch (HttpClientErrorException e) { // 404
-			// Nothing found
+		} catch (HttpClientErrorException e) {
+            // 404 - Nothing found
 		}
 
 		if (users == null || users.length == 0)
@@ -70,12 +70,14 @@ public class WebUsersService {
 			return Arrays.asList(users);
 	}
 
-	public User getByNumber(String accountNumber) {
+	public User getByUserName(String userName) {
+        logger.info("getByUserName() invoked:  for " + userName);
+
 		User user = restTemplate.getForObject(serviceUrl
-				+ "/users/{userName}", User.class, accountNumber);
+				+ "/users/{userName}", User.class, userName);
 
 		if (user == null)
-			throw new UserNotFoundException(accountNumber);
+			throw new UserNotFoundException(userName);
 		else
 			return user;
 	}
