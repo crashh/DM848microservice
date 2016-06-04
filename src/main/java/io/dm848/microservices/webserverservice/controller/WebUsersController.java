@@ -53,7 +53,7 @@ public class WebUsersController {
 		User user = usersService.findByUserName(userName);
 		logger.info("web-service byUserName() found: " + user);
 		model.addAttribute("user", user);
-		return "user";
+		return "users/user";
 	}
 
     @RequestMapping("/users/name/{text}")
@@ -71,7 +71,7 @@ public class WebUsersController {
 	@RequestMapping(value = "/users/search", method = RequestMethod.GET)
 	public String searchForm(Model model) {
 		model.addAttribute("searchCriteria", new SearchCriteria());
-		return "userSearch";
+		return "users/userSearch";
 	}
 
 	@RequestMapping(value = "/users/dosearch")
@@ -100,10 +100,10 @@ public class WebUsersController {
 		List<User> users = usersService.findAll();
 
 		logger.info("web-service findAll() found: " + users);
-        model.addAttribute("all", "all");
+        model.addAttribute("search", "all");
         if (users != null)
-            model.addAttribute("all", users);
-        return "users";
+            model.addAttribute("users", users);
+        return "users/all";
 
 	}
 }
