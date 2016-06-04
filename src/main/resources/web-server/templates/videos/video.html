@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+
+    <section id="fh5co-top-intro">
+        <div class="container">
+            <div class="row row-bottom-padded-lg">
+                <h1>Video Details</h1>
+
+                <dl class="dl-horizontal">
+                    <dt>Video name</dt>
+                    <dd th:text="${video.name}">name</dd>
+                    <dt>Video link</dt>
+                    <dd th:text="${video.link}">link</dd>
+                    <dt>Video description</dt>
+                    <dd th:text="${video.description}">description</dd>
+                </dl>
+
+                <div style="height: 2cm">&nbsp;</div>
+            </div>
+        </div>
+    </section>
+
+    <div th:replace="footer :: copy"></div>
+
+    <!-- Main JS (Do not remove) -->
+    <script th:fragment="copy" src="/js/main_alt.js"></script>
+    <!-- Set active link -->
+    <script>
+        $("#navbar-elem li:nth-child(3)").addClass('active');
+    </script>
+</body>
+</html>

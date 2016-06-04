@@ -36,7 +36,7 @@ public class WebUsersController {
 
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		binder.setAllowedFields("userNumber", "searchText");
+		binder.setAllowedFields("userId", "searchText");
 	}
 
 	@RequestMapping("/users")
@@ -57,15 +57,15 @@ public class WebUsersController {
 	}
 
     @RequestMapping("/users/name/{text}")
-    public String ownerSearch(Model model, @PathVariable("text") String name) {
-        logger.info("web-service byOwner() invoked: " + name);
+    public String byName(Model model, @PathVariable("text") String name) {
+        logger.info("web-service byName() invoked: " + name);
 
         List<User> users = usersService.byNameContains(name);
-        logger.info("web-service byOwner() found: " + users);
+        logger.info("web-service byName() found: " + users);
         model.addAttribute("search", name);
         if (users != null)
             model.addAttribute("users", users);
-        return "users";
+        return "users/users";
     }
 
 	@RequestMapping(value = "/users/search", method = RequestMethod.GET)
@@ -89,7 +89,7 @@ public class WebUsersController {
 			return byUserName(model, userName);
 		} else {
 			String searchText = criteria.getSearchText();
-			return ownerSearch(model, searchText);
+			return byName(model, searchText);
 		}
 	}
 

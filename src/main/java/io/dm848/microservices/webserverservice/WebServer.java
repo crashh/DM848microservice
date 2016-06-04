@@ -2,7 +2,9 @@ package io.dm848.microservices.webserverservice;
 
 import io.dm848.microservices.webserverservice.controller.HomeController;
 import io.dm848.microservices.webserverservice.controller.WebUsersController;
+import io.dm848.microservices.webserverservice.controller.WebVideoController;
 import io.dm848.microservices.webserverservice.service.WebUsersService;
+import io.dm848.microservices.webserverservice.service.WebVideoService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -29,24 +31,34 @@ public class WebServer {
 	 * doesn't matter.
 	 */
 	public static final String USER_SERVICE_URL = "USER-SERVICE";
+	public static final String VIDEO_SERVICE_URL = "VIDEO-SERVICE";
 
 	/**
-	 * Create the controller, passing it the {@link WebUsersService} to use.
+	 * Create the services.
 	 */
 	@Bean
 	public WebUsersService usersService() {
 		return new WebUsersService(USER_SERVICE_URL);
 	}
 	@Bean
-	public WebUsersController usersController() {
-		return new WebUsersController(usersService());
+	public WebVideoService videoService() {
+		return new WebVideoService(VIDEO_SERVICE_URL);
 	}
 
-	/***
-	 * Creating the home controller.
-     */
+	/**
+	 * Create the controllers, passing them the service links to use.
+	 */
+
 	@Bean
 	public HomeController homeController() {
 		return new HomeController();
+	}
+	@Bean
+	public WebUsersController usersController() {
+		return new WebUsersController(usersService());
+	}
+	@Bean
+	public WebVideoController videoController() {
+		return new WebVideoController(videoService());
 	}
 }

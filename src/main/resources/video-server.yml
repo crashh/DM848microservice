@@ -1,14 +1,13 @@
 # Spring properties
 spring:
   application:
-     name: user-service  # Service registers under this name
+     name: video-service     # Service registers under this name
   freemarker:
     enabled: false           # Ignore Eureka dashboard FreeMarker templates
 
-
 # HTTP Server
 server:
-  port: 2222   # HTTP (Tomcat) port
+  port: 4444   # HTTP (Tomcat) port
 
 # Discovery Server Access
 #  1. Define URL of registrationservice server (defaultZone)

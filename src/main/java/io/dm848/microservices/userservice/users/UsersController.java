@@ -21,7 +21,7 @@ public class UsersController {
 	protected UserRepository userRepository;
 
 	/**
-	 * Create an instance plugging in the respository of Accounts.
+	 * Create an instance plugging in the respository of Users.
 	 * 
 	 * @param userRepository
 	 *            An controller repository implementation.
