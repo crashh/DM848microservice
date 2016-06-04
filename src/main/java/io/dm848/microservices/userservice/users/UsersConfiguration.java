@@ -1,9 +1,7 @@
 package io.dm848.microservices.userservice.users;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.logging.Logger;
 
 import javax.sql.DataSource;
@@ -43,8 +41,8 @@ public class UsersConfiguration {
 
 		// Create an in-memory H2 relational database containing some demo
 		// userservice.
-		DataSource dataSource = (new EmbeddedDatabaseBuilder()).addScript("classpath:testdb/schema.sql")
-				.addScript("classpath:testdb/data.sql").build();
+		DataSource dataSource = (new EmbeddedDatabaseBuilder()).addScript("classpath:testdb/users/schema.sql")
+				.addScript("classpath:testdb/users/data.sql").build();
 
 		logger.info("dataSource = " + dataSource);
 
