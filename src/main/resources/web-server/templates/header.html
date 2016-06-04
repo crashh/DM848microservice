@@ -1,81 +1,100 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head th:fragment="copy">
-<title>Web Server (Microservices Blog Demo)</title>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>dm848 &mdash; Microservice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta
-	content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"
-	id="Viewport" name="viewport" />
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-<!-- Bootstrap -->
-<link rel="stylesheet" media="screen"
-	href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico"></link>
 
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'></link>
 
-<link rel="stylesheet" href="/styles.css" />
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/css/animate.css"></link>
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/css/icomoon.css"></link>
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="/css/simple-line-icons.css"></link>
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/css/magnific-popup.css"></link>
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/css/bootstrap.css"></link>
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]
-	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	    <![endif]-->
+	<!--
+	Default Theme Style
+	You can change the style.css (default color purple) to one of these styles
+
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="/css/style3.css"/>
+
+	<!-- Modernizr JS -->
+	<script src="/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/js/respond.min.js"></script>
+	<![endif]-->
 </head>
 
-<body th:fragment="copy" class="container">
-	<nav class="navbar navbar-default navbar-inverse" role="navigation"
-		style="margin-bottom: 2px;">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span>
-				<!-- Logo -->
-				<span class="icon-bar"></span>
-				<!-- Home -->
-				<span class="icon-bar"></span>
-				<!-- This Blog -->
-				<span class="icon-bar"></span>
-				<!-- Other Blogs -->
-			</button>
-			<a title="Spring IO" href="http://www.spring.io"><img height="50"
-				th:src="@{/spring-trans.png}" src="spring-trans.png" /></a>
-			&nbsp;&nbsp;&nbsp;
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="/" th:href="@{/}">Home</a></li>
-				<li><a
-					href="https://spring.io/blog/2015/07/14/microservices-with-spring">This
-						Blog</a></li>
-				<li><a href="http://spring.io/blog">Other Blogs</a></li>
-			</ul>
-
-			<ul class="nav navbar-nav navbar-right">
-				<!-- <li><a href="http://run.pivotal.io"><img
-						alt="Powered by CloudFoundry" title="Powered by CloudFoundry"
-						height="30" th:src="@{/pws-header-logo_new.png}"
-						src="pws-header-logo_new.png" /></a></li> -->
-				<li><a href="http://www.pivotal.io"><img alt="Pivotal"
-						title="Pivotal" height="25" th:src="@{/pivotal-logo-600.png}"
-						src="pivotal-logo-600.png" /></a></li>
-
-			</ul>
-		</div>
-		<!-- /.navbar-collapse -->
-	</nav>
-<!-- 	<div style="font-size: 80%; text-align: right;"> -->
-<!-- 		<a href="http://run.pivotal.io">Powered by CloudFoundry </a> -->
-<!-- 	</div> -->
+<body th:fragment="copy">
+<header role="banner" id="fh5co-header">
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="navbar-brand" href="index.html">DM848 Microservices</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul id="navbar-elem" class="nav navbar-nav navbar-right">
+					<li><a th:href="@{/}"><span>Home</span></a></li>
+                    <li><a th:href="@{/}"><span>Videos</span></a></li>
+                    <li><a th:href="@{/users/all}"><span>Users</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Behind the scene<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+                            <li><a href="http://localhost:1111"><span style="color: rgba(0, 0, 0, 0.5)">Eureka Dashboard</span></a></li>
+                            <li><a href="http://localhost:1111/eureka/apps/"><span style="color: rgba(0, 0, 0, 0.5)">Registered Apps</span></a></li>
+							<li><a th:href="@{/users/123456789}"><span style="color: rgba(0, 0, 0, 0.5)">Fetch user 123456789</span></a></li>
+							<li><a th:href="@{/users/name/Keri}"><span style="color: rgba(0, 0, 0, 0.5)">Fetch user Keri</span></a></li>
+							<li role="separator" class="divider" style="color: rgba(0, 0, 0, 0.5)"></li>
+							<li><a th:href="@{/beans}"><span style="color: rgba(0, 0, 0, 0.5)">The beans</span></a></li>
+							<li><a th:href="@{/env}"><span style="color: rgba(0, 0, 0, 0.5)">The environment</span></a></li>
+							<li><a th:href="@{/dump}"><span style="color: rgba(0, 0, 0, 0.5)">Thread dump</span></a></li>
+							<li><a th:href="@{/health}"><span style="color: rgba(0, 0, 0, 0.5)">Application health</span></a></li>
+							<li><a th:href="@{/info}"><span style="color: rgba(0, 0, 0, 0.5)">Application information</span></a></li>
+							<li><a th:href="@{/metrics}"><span style="color: rgba(0, 0, 0, 0.5)">Application metrics</span></a></li>
+							<li><a th:href="@{/trace}"><span style="color: rgba(0, 0, 0, 0.5)">Request call trace</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
 </body>
 </html>

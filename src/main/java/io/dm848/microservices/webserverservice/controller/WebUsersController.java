@@ -92,4 +92,18 @@ public class WebUsersController {
 			return ownerSearch(model, searchText);
 		}
 	}
+
+	@RequestMapping(value = "/users/all/")
+	public String findAll(Model model) {
+		logger.info("web-service findAll() invoked.");
+
+		List<User> users = usersService.findAll();
+
+		logger.info("web-service findAll() found: " + users);
+        model.addAttribute("all", "all");
+        if (users != null)
+            model.addAttribute("all", users);
+        return "users";
+
+	}
 }

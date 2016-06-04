@@ -70,15 +70,15 @@ public class WebUsersService {
 			return Arrays.asList(users);
 	}
 
-	public User getByUserName(String userName) {
-        logger.info("getByUserName() invoked:  for " + userName);
+	public List<User> findAll() {
+        logger.info("findAll() invoked.");
 
-		User user = restTemplate.getForObject(serviceUrl
-				+ "/users/{userName}", User.class, userName);
+		User[] users = restTemplate.getForObject(serviceUrl
+				+ "/users/all/", User[].class);
 
-		if (user == null)
-			throw new UserNotFoundException(userName);
+		if (users == null)
+			return null;
 		else
-			return user;
+			return Arrays.asList(users);
 	}
 }

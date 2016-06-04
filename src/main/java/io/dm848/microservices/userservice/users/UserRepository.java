@@ -28,9 +28,16 @@ public interface UserRepository extends Repository<User, Long> {
 	public List<User> findByNameContainingIgnoreCase(String partialName);
 
 	/**
-	 * Fetch the userName of users known to the system.
+	 * Find all users in the database
+	 *
+	 * @return The list of all Users in the database.
+     */
+	public List<User> findAll();
+
+	/**
+	 * Fetch the number of users known to the system.
 	 * 
-	 * @return The userName of users.
+	 * @return The number of users.
 	 */
 	@Query("SELECT count(*) from User")
 	public int countUsers();

@@ -1,5 +1,6 @@
 package io.dm848.microservices.userservice.users;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -34,7 +35,7 @@ public class UsersController {
 	}
 
 	/**
-	 * Fetch an controller with the specified controller userName.
+	 * Fetch an user with the specified userName.
 	 * 
 	 * @param userName
 	 *            A numeric, 9 digit controller userName.
@@ -43,11 +44,11 @@ public class UsersController {
 	 *             If the userName is not recognised.
 	 */
 	@RequestMapping("/users/{userName}")
-	public User byNumber(@PathVariable("userName") String userName) {
+	public User byUserName(@PathVariable("userName") String userName) {
 
-		logger.info("user-service byNumber() invoked: " + userName);
+		logger.info("user-service byUserName() invoked: " + userName);
 		User user = userRepository.findByUserName(userName);
-		logger.info("user-service byNumber() found: " + user);
+		logger.info("user-service byUserName() found: " + user);
 
 		if (user == null)
 			throw new UserNotFoundException(userName);
@@ -62,24 +63,46 @@ public class UsersController {
 	 * userservice with upper or lower case 'a' in their name.
 	 * 
 	 * @param partialName
-	 * @return A non-null, non-empty set of userservice.
+	 * @return A non-null, non-empty set of users.
 	 * @throws UserNotFoundException
 	 *             If there are no matches at all.
 	 */
-	@RequestMapping("/users/owner/{name}")
-	public List<User> byOwner(@PathVariable("name") String partialName) {
+	@RequestMapping("/users/name/{name}")
+	public List<User> byName(@PathVariable("name") String partialName) {
 
-		logger.info("user-service byOwner() invoked: "
+		logger.info("user-service byName() invoked: "
 				+ userRepository.getClass().getName() + " for "
 				+ partialName);
 
 		List<User> users = userRepository
 				.findByNameContainingIgnoreCase(partialName);
 
-		logger.info("user-service byOwner() found: " + users);
+		logger.info("user-service byName() found: " + users);
 
 		if (users == null || users.size() == 0)
 			throw new UserNotFoundException(partialName);
+		else {
+			return users;
+		}
+	}
+
+    /**
+     * Fetch all Users
+     *
+     * @return a list containing all users.
+     */
+	@RequestMapping("/users/all/")
+	public List<User> findAll() {
+
+		logger.info("user-service findAll() invoked: "
+				+ userRepository.getClass().getName());
+
+		List<User> users = userRepository.findAll();
+
+		logger.info("user-service findAll() found: " + users);
+
+		if (users == null || users.size() == 0)
+			return new ArrayList<>();
 		else {
 			return users;
 		}

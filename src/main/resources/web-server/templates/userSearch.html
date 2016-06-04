@@ -5,67 +5,74 @@
 <head th:replace="header :: copy"></head>
 
 <body>
-	<h1>Account Search</h1>
+	<section id="fh5co-top-intro">
+	<div class="container">
+		<div class="row row-bottom-padded-lg">
+			<h1>Account Search</h1>
 
-	<p>Enter an user userName or search for an user name
-		containing given specified text:</p>
+			<p>Enter an user userName or search for an user name
+				containing given specified text:</p>
 
-	<form action="#" th:object="${searchCriteria}" method="GET"
-		th:action="@{/users/dosearch}" class="form-horizontal">
+			<form action="#" th:object="${searchCriteria}" method="GET"
+				  th:action="@{/users/dosearch}" class="form-horizontal">
 
-		<!-- User Number field -->
-		<div class="form-group">
-			<label for="userName" class="control-label col-xs-2">Account
-				Number</label>
-			<div class="col-xs-2">
-				<input type="text" class="form-control" id="userName"
-					th:field="*{userName}" placeholder="Enter user userName"
-					style="width: 10em;" />
-			</div>
-			<div class="col-xs-8">Enter a valid 9 digit userName</div>
-		</div>
+				<!-- User Number field -->
+				<div class="form-group">
+					<label for="userName" class="control-label col-xs-2">Account
+						Number</label>
+					<div class="col-xs-2">
+						<input type="text" class="form-control" id="userName"
+							   th:field="*{userName}" placeholder="Enter user userName"
+							   style="width: 10em;" />
+					</div>
+					<div class="col-xs-8">Enter a valid 9 digit userName</div>
+				</div>
 
-		<!-- User Number errors (if any) -->
-		<div class="form-group">
-			<div class="control-label col-xs-2">&nbsp;</div>
-			<div class="col-xs-2">&nbsp;</div>
-			<div class="col-xs-8">
+				<!-- User Number errors (if any) -->
+				<div class="form-group">
+					<div class="control-label col-xs-2">&nbsp;</div>
+					<div class="col-xs-2">&nbsp;</div>
+					<div class="col-xs-8">
 				<span th:if="${#fields.hasErrors('userName')}"
-					style="color: red; font-size: smaller" th:errors="*{userName}">Incorrect
+					  style="color: red; font-size: smaller" th:errors="*{userName}">Incorrect
 					data</span>
-			</div>
-		</div>
+					</div>
+				</div>
 
-		<!-- Owner name field -->
-		<div class="form-group">
-			<label for="search" class="control-label col-xs-2">Owner
-				Search</label>
-			<div class="col-xs-2">
-				<input type="text" class="form-control" id="search"
-					th:field="*{searchText}" placeholder="Text from name name"
-					style="width: 10em;" />
-			</div>
-			<div class="col-xs-8">Case-insensitive, supports part name
-				matching</div>
-		</div>
+				<!-- Owner name field -->
+				<div class="form-group">
+					<label for="search" class="control-label col-xs-2">Owner
+						Search</label>
+					<div class="col-xs-2">
+						<input type="text" class="form-control" id="search"
+							   th:field="*{searchText}" placeholder="Text from name name"
+							   style="width: 10em;" />
+					</div>
+					<div class="col-xs-8">Case-insensitive, supports part name
+						matching</div>
+				</div>
 
-		<!-- Owner name errors (if any) -->
-		<div class="form-group">
-			<div class="control-label col-xs-2">&nbsp;</div>
-			<div class="col-xs-2">&nbsp;</div>
-			<div class="col-xs-8">
+				<!-- Owner name errors (if any) -->
+				<div class="form-group">
+					<div class="control-label col-xs-2">&nbsp;</div>
+					<div class="col-xs-2">&nbsp;</div>
+					<div class="col-xs-8">
 				<span th:if="${#fields.hasErrors('searchText')}"
-					style="color: red; font-size: smaller" th:errors="*{searchText}"></span>
-			</div>
-		</div>
+					  style="color: red; font-size: smaller" th:errors="*{searchText}"></span>
+					</div>
+				</div>
 
-		<!--  Submit button -->
-		<div class="form-group">
-			<div class="col-xs-offset-2 col-xs-10">
-				<button type="submit" class="btn btn-primary">Find</button>
-			</div>
+				<!--  Submit button -->
+				<div class="form-group">
+					<div class="col-xs-offset-2 col-xs-10">
+						<button type="submit" class="btn btn-primary">Find</button>
+					</div>
+				</div>
+			</form>
 		</div>
-	</form>
+	</div>
+	</section>
+
 
 	<div th:replace="footer :: copy"></div>
 
