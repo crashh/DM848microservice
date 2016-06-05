@@ -1,15 +1,12 @@
 package io.dm848.microservices.webserverservice.controller;
 
-import io.dm848.microservices.webserverservice.SearchCriteria;
-import io.dm848.microservices.webserverservice.dto.User;
+
 import io.dm848.microservices.webserverservice.dto.Video;
 import io.dm848.microservices.webserverservice.service.WebUsersService;
 import io.dm848.microservices.webserverservice.service.WebVideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
@@ -76,6 +73,10 @@ public class WebVideoController {
 
 		List<Video> videos = videoService.findAll();
         videos = videos.subList(0, 3); //Only need 3!
+        for (Video video: videos) {
+            String embeddedLink = video.getLink().replace("watch?v=", "embed/");
+            video.setEmbeddedLink(embeddedLink + "?autoplay=0");
+        }
 
 		logger.info("web-service ajax/spotlight() found: " + videos);
 

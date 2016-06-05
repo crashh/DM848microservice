@@ -6,7 +6,7 @@
 
 <!-- Index content -->
 <body>
-	<section id="fh5co-home" data-section="home" style="background-image: url(/images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+	<section id="fh5co-home" data-section="home" style="background-image: url(/images/front.png);">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
@@ -27,39 +27,39 @@
 		<div class="container">
 			<div class="row row-bottom-padded-lg">
                 <h2 class="to-animate" style="color: white">Spotlight videos</h2>
-				<div class="fh5co-block to-animate" style="background-image: url('images/img_7.jpg');">
+				<div class="fh5co-block to-animate">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text" id="spotlight1">
-						<i class="fh5co-intro-icon icon-bulb"></i>
-						<h2>[placeholder] Video1</h2>
+						<!--<i class="fh5co-intro-icon icon-bulb"></i>-->
+                        <iframe id="ytplayer" type="text/html" width="240" height="210" src="" frameborder="1"></iframe>
+                        <h2>[placeholder] Video1</h2>
 						<p>[placeholder] Description </p>
-						<a href="#" class="btn btn-primary">Watch</a>
-					</div>
+						<a href="#" class="btn btn-primary">Go to</a>
+                        </div>
 				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/img_8.jpg);">
+				<div class="fh5co-block to-animate">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text" id="spotlight2">
-						<i class="fh5co-intro-icon icon-wrench"></i>
-						<h2>[placeholder] Video2</h2>
+						<!--<i class="fh5co-intro-icon icon-wrench"></i>-->
+                        <iframe id="ytplayer2" type="text/html" width="240" height="210" src="" frameborder="1"></iframe>
+                        <h2>[placeholder] Video2</h2>
 						<p>[placeholder] Description</p>
-						<a href="#" class="btn btn-primary">Watch</a>
+						<a href="#" class="btn btn-primary">Go to</a>
 					</div>
 				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(/images/img_10.jpg);">
+				<div class="fh5co-block to-animate">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text" id="spotlight3">
-						<i class="fh5co-intro-icon icon-rocket"></i>
-						<h2>[placeholder] Video3</h2>
+						<!--<i class="fh5co-intro-icon icon-rocket"></i>-->
+                        <iframe id="ytplayer3" type="text/html" width="240" height="210" src="" frameborder="1"></iframe>
+                        <h2>[placeholder] Video3</h2>
 						<p>[placeholder] Description</p>
-						<a href="#" class="btn btn-primary">Watch</a>
+						<a href="#" class="btn btn-primary">Go to</a>
 					</div>
 				</div>
-			</div>
-			<div class="row watch-video text-center to-animate">
-				<span>Watch the video</span>
 			</div>
 		</div>
 	</section>
@@ -68,10 +68,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate">More Videos</h2>
+					<h2 class="to-animate">Newest Videos</h2>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>Lorem ipsum dolor sit amet, congue magna iaculis pretium sodales tellus, vitae luctus ante, nulla dictumst bibendum sed ac, bibendum orci felis per turpis id magna, quisque convallis vel. Vestibulum tristique, nam risus non in, mauris feugiat tempor. A pretium ipsum in. Quam luctus, placerat lacus semper felis placerat laoreet, pretium elit id cras maecenas curabitur cum, ac augue tellus et.</h3>
+							<h3>A draft of the newest videos!</h3>
 						</div>
 					</div>
 				</div>
@@ -79,10 +79,10 @@
 			<div class="row row-bottom-padded-sm">
 				<div class="col-md-4 col-sm-6 col-xxs-12">
 					<a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate">
-						<img src="images/work_1.jpg" alt="Image" class="img-responsive"/>
-						<div class="fh5co-text">
-						<h2>Video 1</h2>
-						<span>Branding</span>
+                        <iframe id="ytplayer4" type="text/html" width="360" height="253" src="" frameborder="1"></iframe>
+                        <div class="fh5co-text">
+						<h2>Example of manual embed</h2>
+						<span>Youtube</span>
 						</div>
 					</a>
 				</div>
@@ -91,7 +91,7 @@
 						<img src="images/work_2.jpg" alt="Image" class="img-responsive"/>
 						<div class="fh5co-text">
 						<h2>Video2 2</h2>
-						<span>Web</span>
+						<span>Youtube</span>
 						</div>
 					</a>
 				</div>
@@ -103,7 +103,7 @@
 						<img src="images/work_3.jpg" alt="Image" class="img-responsive"/>
 						<div class="fh5co-text">
 						<h2>Video 3</h2>
-						<span>Web</span>
+						<span>Youtube</span>
 						</div>
 					</a>
 				</div>
@@ -112,7 +112,7 @@
 						<img src="images/work_4.jpg" alt="Image" class="img-responsive"/>
 						<div class="fh5co-text">
 						<h2>Video 4</h2>
-						<span>UI/UX</span>
+						<span>Youtube</span>
 						</div>
 					</a>
 				</div>
@@ -135,16 +135,20 @@
                 var spotlight1 = $('#spotlight1');
                 var spotlight2 = $('#spotlight2');
                 var spotlight3 = $('#spotlight3');
+                spotlight1.children().eq(0).attr("src", result[0].embeddedLink);
                 spotlight1.children().eq(1).text(result[0].name);
                 spotlight1.children().eq(2).text(result[0].description);
                 spotlight1.children().eq(3).attr("href", result[0].link);
+                spotlight2.children().eq(0).attr("src", result[1].embeddedLink);
                 spotlight2.children().eq(1).text(result[1].name);
                 spotlight2.children().eq(2).text(result[1].description);
                 spotlight2.children().eq(3).attr("href", result[1].link);
+                spotlight3.children().eq(0).attr("src", result[2].embeddedLink);
                 spotlight3.children().eq(1).text(result[2].name);
                 spotlight3.children().eq(2).text(result[2].description);
                 spotlight3.children().eq(3).attr("href", result[2].link);
-				console.log(result);
+                $('#ytplayer4').attr("src", result[2].embeddedLink);
+				//console.log(result);
 			}});
 		}
 		spotlight();

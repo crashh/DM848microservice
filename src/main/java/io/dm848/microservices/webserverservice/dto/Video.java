@@ -13,6 +13,7 @@ public class Video {
 	protected Long id;
 	protected String name;
 	protected String link;
+	protected String embeddedLink; // Null by default
 	protected String description;
 
 
@@ -32,6 +33,14 @@ public class Video {
 
 	protected void setLink(String link) {
 		this.link = link;
+	}
+
+	public String getEmbeddedLink() {
+		return embeddedLink;
+	}
+
+	public void setEmbeddedLink(String link) {
+		this.embeddedLink = link;
 	}
 
 	public String getName() {

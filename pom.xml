@@ -70,6 +70,12 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-youtube</artifactId>
+			<version>v3-rev174-1.22.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -84,6 +90,14 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

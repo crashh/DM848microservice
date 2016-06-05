@@ -1,11 +1,9 @@
 package io.dm848.microservices.webserverservice.service;
 
-import io.dm848.microservices.webserverservice.dto.User;
 import io.dm848.microservices.webserverservice.dto.Video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
