@@ -26,35 +26,35 @@
 	<section id="fh5co-intro">
 		<div class="container">
 			<div class="row row-bottom-padded-lg">
-                <h2 class="to-animate" style="color: white">Top videos</h2>
-				<div class="fh5co-block to-animate" style="background-image: url(/images/img_7.jpg);">
+                <h2 class="to-animate" style="color: white">Spotlight videos</h2>
+				<div class="fh5co-block to-animate" style="background-image: url('images/img_7.jpg');">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
-					<div class="fh5co-text">
+					<div class="fh5co-text" id="spotlight1">
 						<i class="fh5co-intro-icon icon-bulb"></i>
-						<h2>Video1</h2>
-						<p>Example 1 orem ipsum dolor sit amet, congue magna iaculis pretium sodales tellus, vitae luctus ante, nulla dictumst bibendum sed ac, bibendum orci felis per turpis id magna, quisque convallis vel. Vestibulum tristique, nam risus non in, mauris feugiat tempor. A pretium ipsum in. </p>
-						<p><a href="#" class="btn btn-primary">Watch</a></p>
+						<h2>[placeholder] Video1</h2>
+						<p>[placeholder] Description </p>
+						<a href="#" class="btn btn-primary">Watch</a>
 					</div>
 				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(/images/img_8.jpg);">
+				<div class="fh5co-block to-animate" style="background-image: url(images/img_8.jpg);">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
-					<div class="fh5co-text">
+					<div class="fh5co-text" id="spotlight2">
 						<i class="fh5co-intro-icon icon-wrench"></i>
-						<h2>Video2</h2>
-						<p>Example 2 orem ipsum dolor sit amet, congue magna iaculis pretium sodales tellus, vitae luctus ante, nulla dictumst bibendum sed ac, bibendum orci felis per turpis id magna, quisque convallis vel. Vestibulum tristique, nam risus non in, mauris feugiat tempor. A pretium ipsum in. </p>
-						<p><a href="#" class="btn btn-primary">Watch</a></p>
+						<h2>[placeholder] Video2</h2>
+						<p>[placeholder] Description</p>
+						<a href="#" class="btn btn-primary">Watch</a>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(/images/img_10.jpg);">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
-					<div class="fh5co-text">
+					<div class="fh5co-text" id="spotlight3">
 						<i class="fh5co-intro-icon icon-rocket"></i>
-						<h2>Video3</h2>
-						<p>Example 3 orem ipsum dolor sit amet, congue magna iaculis pretium sodales tellus, vitae luctus ante, nulla dictumst bibendum sed ac, bibendum orci felis per turpis id magna, quisque convallis vel. Vestibulum tristique, nam risus non in, mauris feugiat tempor. A pretium ipsum in. </p>
-						<p><a href="#" class="btn btn-primary">Watch</a></p>
+						<h2>[placeholder] Video3</h2>
+						<p>[placeholder] Description</p>
+						<a href="#" class="btn btn-primary">Watch</a>
 					</div>
 				</div>
 			</div>
@@ -129,6 +129,25 @@
     <!-- Set active link -->
     <script>
         $("#navbar-elem li:nth-child(1)").addClass('active');
+
+		function spotlight(){
+			$.ajax({url: "http://minegen2:3333/videos/ajax/spotlight", success: function(result){
+                var spotlight1 = $('#spotlight1');
+                var spotlight2 = $('#spotlight2');
+                var spotlight3 = $('#spotlight3');
+                spotlight1.children().eq(1).text(result[0].name);
+                spotlight1.children().eq(2).text(result[0].description);
+                spotlight1.children().eq(3).attr("href", result[0].link);
+                spotlight2.children().eq(1).text(result[1].name);
+                spotlight2.children().eq(2).text(result[1].description);
+                spotlight2.children().eq(3).attr("href", result[1].link);
+                spotlight3.children().eq(1).text(result[2].name);
+                spotlight3.children().eq(2).text(result[2].description);
+                spotlight3.children().eq(3).attr("href", result[2].link);
+				console.log(result);
+			}});
+		}
+		spotlight();
     </script>
 
 </body>

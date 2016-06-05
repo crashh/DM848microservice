@@ -11,10 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -70,6 +67,19 @@ public class WebVideoController {
         if (videos != null)
             model.addAttribute("videos", videos);
         return "videos/all";
+	}
+
+	@RequestMapping(value = "/videos/ajax/spotlight", method = RequestMethod.GET)
+	public @ResponseBody // <- Enables ajax response type.
+    List<Video> spotlight() {
+		logger.info("web-service ajax/spotlight() invoked.");
+
+		List<Video> videos = videoService.findAll();
+        videos = videos.subList(0, 3); //Only need 3!
+
+		logger.info("web-service ajax/spotlight() found: " + videos);
+
+		return videos;
 
 	}
 }

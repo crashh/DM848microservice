@@ -22,7 +22,7 @@ public interface UserRepository extends Repository<User, Long> {
 	 * 
 	 * @param partialName
 	 *            Any alphabetic string.
-	 * @return The list of matching userservice - always non-null, but may be
+	 * @return The list of matching users - always non-null, but may be
 	 *         empty.
 	 */
 	public List<User> findByNameContainingIgnoreCase(String partialName);
