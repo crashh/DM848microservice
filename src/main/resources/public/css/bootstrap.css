@@ -4521,7 +4521,6 @@ tbody.collapse.in {
   cursor: not-allowed;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #eeeeee;
   border-color: #337ab7;
 }
 .nav .nav-divider {
@@ -5048,7 +5047,6 @@ tbody.collapse.in {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
   color: #555;
 }
 @media (max-width: 767px) {

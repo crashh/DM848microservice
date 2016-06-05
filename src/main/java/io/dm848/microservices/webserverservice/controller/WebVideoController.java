@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.logging.Logger;
 
 /**
@@ -71,16 +73,50 @@ public class WebVideoController {
     List<Video> spotlight() {
 		logger.info("web-service ajax/spotlight() invoked.");
 
+        /*
+        * Spotlight is just 3 randomy chosen videos, ince this is just
+        * to demo actual methods a microservice might offer.
+        */
+
+        Random rand = new Random();
+
+        List<Video> spotlights = new ArrayList<>();
 		List<Video> videos = videoService.findAll();
-        videos = videos.subList(0, 3); //Only need 3!
+
+        spotlights.add(videos.get(rand.nextInt(videos.size()-1)));
+        spotlights.add(videos.get(rand.nextInt(videos.size()-1)));
+        spotlights.add(videos.get(rand.nextInt(videos.size()-1)));
+
+        for (Video video: spotlights) {
+            String embeddedLink = video.getLink().replace("watch?v=", "embed/");
+            video.setEmbeddedLink(embeddedLink + "?autoplay=0");
+        }
+
+		logger.info("web-service ajax/spotlight() found: " + spotlights);
+
+		return spotlights;
+	}
+
+    @RequestMapping(value = "/videos/ajax/newest", method = RequestMethod.GET)
+    public @ResponseBody // <- Enables ajax response type.
+    List<Video> newestVideos() {
+        logger.info("web-service ajax/newestVideos() invoked.");
+
+        /*
+        * Not really the newest videos, just the 6 first from the query, since this is just
+        * to demo actual methods a microservice might offer.
+        */
+
+        List<Video> videos = videoService.findAll();
+        videos = videos.subList(0, 6); //Limit this to 6 videos.
+
         for (Video video: videos) {
             String embeddedLink = video.getLink().replace("watch?v=", "embed/");
             video.setEmbeddedLink(embeddedLink + "?autoplay=0");
         }
 
-		logger.info("web-service ajax/spotlight() found: " + videos);
+        logger.info("web-service ajax/newestVideos() found: " + videos);
 
-		return videos;
-
-	}
+        return videos;
+    }
 }
