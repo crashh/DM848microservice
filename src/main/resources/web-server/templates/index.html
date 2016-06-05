@@ -69,75 +69,10 @@
 
 	<section id="fh5co-work" data-section="work">
 		<div class="container">
-			<div class="row row-bottom-padded-sm">
+			<div id="newestvideossection" class="row row-bottom-padded-sm">
                 <h2 class="to-animate" style="color: white; margin: 0 0 5px 0;">Newest videos</h2>
 
-                <!-- Template for video entry. -->
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-					<div class="fh5co-project-item image-popup to-animate">
-                        <iframe id="ytplayer4" type="text/html" width="390" height="260" src="" frameborder="0"></iframe>
-                        <div class="fh5co-text">
-                            <h2 style="color: whitesmoke">Example of manual embed</h2>
-                            <span>Youtube</span>
-						</div>
-					</div>
-				</div>
-
-                <!-- TODO: Remaining templates, remove these. -->
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <div class="fh5co-project-item image-popup to-animate">
-                        <iframe id="ytplayer5" type="text/html" width="390" height="260" src="" frameborder="0"></iframe>
-                        <div class="fh5co-text">
-                            <h2 style="color: whitesmoke">Example of manual embed</h2>
-                            <span>Youtube</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <div class="fh5co-project-item image-popup to-animate">
-                        <iframe id="ytplayer6" type="text/html" width="390" height="260" src="" frameborder="0"></iframe>
-                        <div class="fh5co-text">
-                            <h2 style="color: whitesmoke">Example of manual embed</h2>
-                            <span>Youtube</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <div class="fh5co-project-item image-popup to-animate">
-                        <iframe id="ytplayer7" type="text/html" width="390" height="260" src="" frameborder="0"></iframe>
-                        <div class="fh5co-text">
-                            <h2 style="color: whitesmoke">Example of manual embed</h2>
-                            <span>Youtube</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <div class="fh5co-project-item image-popup to-animate">
-                        <iframe id="ytplayer8" type="text/html" width="390" height="260" src="" frameborder="0"></iframe>
-                        <div class="fh5co-text">
-                            <h2 style="color: whitesmoke">Example of manual embed</h2>
-                            <span>Youtube</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xxs-12">
-                    <div class="fh5co-project-item image-popup to-animate">
-                        <iframe id="ytplayer9" type="text/html" width="390" height="260" src="" frameborder="0"></iframe>
-                        <div class="fh5co-text">
-                            <h2 style="color: whitesmoke">Example of manual embed</h2>
-                            <span>Youtube</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clearfix visible-sm-block"></div>
+                <!-- Section for video entry. -->
 
 			</div>
 
@@ -153,7 +88,7 @@
         $("#navbar-elem li:nth-child(1)").addClass('active');
 
 		function spotlight(){
-			$.ajax({url: "http://minegen2:3333/videos/ajax/spotlight", success: function(result){
+			$.ajax({url: "/videos/ajax/spotlight", success: function(result){
                 var spotlight1 = $('#spotlight1');
                 var spotlight2 = $('#spotlight2');
                 var spotlight3 = $('#spotlight3');
@@ -170,19 +105,21 @@
 			}});
 		}
         function newest(){
-            $.ajax({url: "http://minegen2:3333/videos/ajax/newest", success: function(result){
-                //TODO: Loop this along with html injection.
-                $('#ytplayer4').attr("src", result[0].embeddedLink);
-                $('#ytplayer5').attr("src", result[1].embeddedLink);
-                $('#ytplayer6').attr("src", result[2].embeddedLink);
-                $('#ytplayer7').attr("src", result[3].embeddedLink);
-                $('#ytplayer8').attr("src", result[4].embeddedLink);
-                $('#ytplayer9').attr("src", result[5].embeddedLink);
-                //console.log(result);
-                //result.each(function( index ) {
-                //    console.log( index + ": " + $( this ).text() );
-                //});
-            }});
+            $.ajax({url: "/videos/ajax/newest", success: function(result){
+                    for(var vid in result) {
+                        var content =
+                            '<div class="col-md-4 col-sm-6 col-xxs-12">'+
+                            '<div class="fh5co-project-item image-popup to-animate">'+
+                            '<iframe class="ytplayer" type="text/html" width="390" height="260" src="'+result[vid].embeddedLink+'" frameborder="0"></iframe>'+
+                            '<div class="fh5co-text">'+
+                            '<h2>'+result[vid].name+'</h2>'+
+                            '<span>Youtube</span>'+
+                            '</div></div></div>';
+                        $('#newestvideossection').append(content);
+                    };
+                    //console.log(result);
+                }
+            });
         }
 		spotlight();
         newest();

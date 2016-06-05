@@ -99,8 +99,8 @@ public class WebVideoController {
 
     @RequestMapping(value = "/videos/ajax/newest", method = RequestMethod.GET)
     public @ResponseBody // <- Enables ajax response type.
-    List<Video> newestVideos() {
-        logger.info("web-service ajax/newestVideos() invoked.");
+    List<Video> newest() {
+        logger.info("web-service ajax/newest() invoked.");
 
         /*
         * Not really the newest videos, just the 6 first from the query, since this is just
@@ -115,7 +115,29 @@ public class WebVideoController {
             video.setEmbeddedLink(embeddedLink + "?autoplay=0");
         }
 
-        logger.info("web-service ajax/newestVideos() found: " + videos);
+        logger.info("web-service ajax/newest() found: " + videos);
+
+        return videos;
+    }
+
+    @RequestMapping(value = "/videos/ajax/all", method = RequestMethod.GET)
+    public @ResponseBody // <- Enables ajax response type.
+    List<Video> findAll() {
+        logger.info("web-service ajax/findAll() invoked.");
+
+        /*
+        * Not really the newest videos, just the 6 first from the query, since this is just
+        * to demo actual methods a microservice might offer.
+        */
+
+        List<Video> videos = videoService.findAll();
+
+        for (Video video: videos) {
+            String embeddedLink = video.getLink().replace("watch?v=", "embed/");
+            video.setEmbeddedLink(embeddedLink + "?autoplay=0");
+        }
+
+        logger.info("web-service ajax/findAll() found: " + videos);
 
         return videos;
     }

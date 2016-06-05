@@ -5,52 +5,73 @@
 
 <body>
 
-	<section id="fh5co-top-intro">
-		<div class="container">
-            <div class="row row-bottom-padded-lg" style="width: 100%">
-				<h1>All videos</h1>
+<section id="fh5co-top-intro">
+    <div id="allvid" class="container">
+        <div class="row row-bottom-padded-lg" style="width: 100%">
+            <h1>All videos</h1>
 
-				<div th:if="not ${videos}" class="error">
-					No videos found.
-					<div style="height: 2cm">&nbsp;</div>
-				</div>
+            <div th:if="not ${videos}" class="error">
+                No videos found.
+                <div style="height: 2cm">&nbsp;</div>
+            </div>
 
-				<div th:if="${videos}">
-					<p>
-						All videos in the system:
-					</p>
+            <div th:if="${videos}">
+                <p>
+                    All videos in the system:
+                </p>
 
-					<table class="table table-striped" style="width: 100%">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Link</th>
-								<th>Description</th>
-							</tr>
-						</thead>
+                <table class="table table-striped" style="width: 100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
 
-						<tbody>
-							<tr th:each="video : ${videos}">
-								<td><a href="video.html"
-									th:href="@{|/videos/${video.id}|}"
-									th:text="|${video.name}|">Name</a></td>
-								<td th:text="${video.link}">Link</td>
-								<td th:text="${video.description}">Description</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</section>
+                    <tbody>
+                    <tr th:each="video : ${videos}">
+                        <td><a href="video.html"
+                               th:href="@{|/videos/${video.id}|}"
+                               th:text="|${video.name}|">Name</a></td>
+                        <td th:text="${video.link}">Link</td>
+                        <td th:text="${video.description}">Description</td>
+                    </tr>
+                    </tbody>
+                </table>
 
-	<div th:replace="footer :: copy"></div>
+                <button id="button" onclick="newest()">See graphical</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Main JS (Do not remove) -->
-    <script th:fragment="copy" src="/js/main_alt.js"></script>
-    <!-- Set active link -->
-    <script>
-        $("#navbar-elem li:nth-child(2)").addClass('active');
-    </script>
+<div th:replace="footer :: copy"></div>
+
+<!-- Main JS (Do not remove) -->
+<script th:fragment="copy" src="/js/main_alt.js"></script>
+<!-- Set active link -->
+<script>
+    $("#navbar-elem li:nth-child(2)").addClass('active');
+
+    function newest(){
+        $('#allvid').html("");
+        $.ajax({url: "/videos/ajax/all", success: function(result){
+            for(var vid in result) {
+                var content =
+                        '<div class="col-md-4 col-sm-6 col-xxs-12">'+
+                        '<div class="fh5co-project-item image-popup">'+
+                        '<iframe class="ytplayer" type="text/html" width="390" height="260" src="'+result[vid].embeddedLink+'" frameborder="0"></iframe>'+
+                        '<div class="fh5co-text">'+
+                        '<h2>'+result[vid].name+'</h2>'+
+                        '<span>Youtube</span>'+
+                        '</div></div></div>';
+                $('#allvid').append(content);
+            };
+            //console.log(result);
+        }
+        });
+    }
+</script>
 </body>
 </html>
