@@ -845,6 +845,25 @@
 .icon-spinner:before {
 	content: "\f110";
 }
+.icon-spinner-2:before {
+	content: "\e001";
+}
+.icon-spinner-3:before {
+	content: "\e002";
+}
+.icon-spinner-4:before {
+	content: "\e003";
+}
+.icon-spinner-5:before {
+	content: "\e004";
+}
+.icon-spinner-6:before {
+	content: "\e005";
+}
+.icon-spinner-7:before {
+	content: "\e006";
+}
+
 .icon-circle:before {
 	content: "\f111";
 }
@@ -2434,5 +2453,29 @@
 }
 .icon-ellipsis:before {
 	content: "\e129";
+}
+@keyframes anim-rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.spinner {
+	display: inline-block;
+	font-size:4em;
+	height: 1em;
+	line-height: 1;
+	margin: .5em;
+	animation: anim-rotate 2s infinite linear;
+	color: #000000;
+	text-shadow: 0 0 .25em rgba(69, 69, 69, 0.3);
+}
+.spinner--steps {
+	animation: anim-rotate 1s infinite steps(8);
+}
+.spinner--steps2 {
+	animation: anim-rotate 1s infinite steps(12);
 }
 

@@ -23,3 +23,10 @@
 .dropdown-darken-text:hover {
   color: #c24d67 !important;
 }
+.right-padding {
+  padding-right: 1em;
+}
+.fh5co-text > span {
+  position: absolute;
+  bottom: 0;
+}

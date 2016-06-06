@@ -7,8 +7,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.logging.Logger;
 
 /**
@@ -44,15 +46,14 @@ public class WebVideoService {
 				+ restTemplate.getRequestFactory().getClass());
 	}
 
-	public Video findById(String userName) {
-		logger.info("findByUserName() invoked: for " + userName);
+	public Video findById(String id) {
+		logger.info("service-findById() invoked: for " + id);
 		return restTemplate.getForObject(serviceUrl + "/videos/{id}",
-				Video.class, userName);
+				Video.class, id);
 	}
 
-
 	public List<Video> findAll() {
-        logger.info("findAll() invoked.");
+        logger.info("service-findAll() invoked.");
 
 		Video[] Videos = restTemplate.getForObject(serviceUrl
 				+ "/videos/all/", Video[].class);
@@ -61,5 +62,29 @@ public class WebVideoService {
 			return null;
 		else
 			return Arrays.asList(Videos);
+	}
+
+	public List<Video> findSpotlight() {
+		logger.info("service-findSpotlight() invoked.");
+
+		Video[] videos = restTemplate.getForObject(serviceUrl
+				+ "/videos/all/", Video[].class);
+
+		Random rand = new Random();
+		List<Video> spotlights = new ArrayList<>();
+
+		if (videos == null || videos.length == 0) {
+			return spotlights;
+		}
+
+		Video picked = null;
+		for(int i=0; i<3; i++) {
+			while (picked == null || spotlights.contains(picked)) {
+				picked = videos[rand.nextInt(videos.length-1)];
+			}
+			spotlights.add(picked);
+		}
+
+		return spotlights;
 	}
 }
