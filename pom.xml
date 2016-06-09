@@ -82,6 +82,16 @@
 			<artifactId>google-api-services-youtube</artifactId>
 			<version>v3-rev174-1.22.0</version>
 		</dependency>-->
+
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
