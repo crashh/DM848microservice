@@ -2,7 +2,6 @@ package io.dm848.microservices.webserverservice.controller;
 
 
 import io.dm848.microservices.webserverservice.dto.Video;
-import io.dm848.microservices.webserverservice.service.WebUsersService;
 import io.dm848.microservices.webserverservice.service.WebVideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

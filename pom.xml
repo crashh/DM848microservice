@@ -15,6 +15,7 @@
 	<properties>
 		<!-- Stand-alone RESTFul application for testing only -->
 		<start-class>io.dm848.microservices.Main</start-class>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -72,10 +73,15 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
+		</dependency>
+
+		<!--<dependency>
 			<groupId>com.google.apis</groupId>
 			<artifactId>google-api-services-youtube</artifactId>
 			<version>v3-rev174-1.22.0</version>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>

@@ -3,11 +3,11 @@ spring:
   application:
      name: video-service     # Service registers under this name
   freemarker:
-    enabled: false           # Ignore Eureka dashboard FreeMarker templates
+    enabled: true            # Ignore Eureka dashboard FreeMarker templates
 
 # HTTP Server
 server:
-  port: 4444   # HTTP (Tomcat) port
+  port: 8103   # HTTP (Tomcat) port
 
 # Discovery Server Access
 #  1. Define URL of registrationservice server (defaultZone)
@@ -19,7 +19,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://localhost:8100/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}} # unique ID

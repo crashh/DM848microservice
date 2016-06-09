@@ -68,7 +68,7 @@ public class VideosController {
 
 		List<Video> videos = videoRepository.findAll();
 
-		logger.info("video-service findAll() found: " + videos);
+		logger.info("video-service findAll() found: " + videos.size());
 
 		if (videos == null || videos.size() == 0)
 			return new ArrayList<>();

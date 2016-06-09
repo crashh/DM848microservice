@@ -1,0 +1,31 @@
+# Spring properties
+spring:
+  application:
+     name: edge-service     # Service registers under this name
+  freemarker:
+    enabled: true           # Ignore Eureka dashboard FreeMarker templates
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  routes:
+    web-service: /**
+    registration-service: /eureka/**
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}} # unique ID
+    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
