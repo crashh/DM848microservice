@@ -4,6 +4,18 @@ spring:
      name: edge-service     # Service registers under this name
   freemarker:
     enabled: true           # Ignore Eureka dashboard FreeMarker templates
+#  oauth2:
+#    sso:
+#      home:
+#        secure: false
+#        path: /,/**/*.html
+#    client:
+#      accessTokenUri: http://localhost:9999/uaa/oauth/token
+#      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+#      clientId: acme
+#      clientSecret: acmesecret
+#    resource:
+#      userInfoUri: http://localhost:9999/uaa/user
 
 endpoints:
   restart:
@@ -17,9 +29,13 @@ zuul:
   routes:
     web-service: /**
     registration-service: /eureka/**
+#  user:
+#    path: /user/**
+#    url: http://localhost:9999/uaa/user
+
 
 server:
-  port: 8080
+  port: 8081
 
 eureka:
   client:

@@ -22,12 +22,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="dm848microservice" />
-        <module name="microservice-demo" />
+        <module name="comment-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="dm848microservice" target="1.7" />
+    <bytecodeTargetLevel>
+      <module name="auth-service" target="1.8" />
+      <module name="comment-service" target="1.8" />
+      <module name="login-service" target="1.8" />
+      <module name="microservice-project" target="1.8" />
+      <module name="spring-auth-service" target="1.8" />
+      <module name="spring-comment-service" target="1.8" />
+      <module name="spring-edge-service" target="1.8" />
+      <module name="spring-registration-service" target="1.8" />
+      <module name="spring-user-service" target="1.8" />
+      <module name="spring-video-service" target="1.8" />
+      <module name="spring-web-service" target="1.8" />
+      <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
