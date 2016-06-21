@@ -2,25 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a54bf324-e72b-4159-bdf6-ff19d58c4b49" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/blue.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/blue.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/icomoon.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/magnific-popup.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/simple-line-icons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/style3.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/style3.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/bootstrap/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/bootstrap/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/Read Me.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/demo-files/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/demo-files/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/fonts/icomoon.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/fonts/icomoon.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/fonts/icomoon.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/fonts/icomoon.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/selection.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/icomoon/icomoon/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/simple-line-icons/Simple-Line-Icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/simple-line-icons/Simple-Line-Icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/simple-line-icons/Simple-Line-Icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/simple-line-icons/Simple-Line-Icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/fonts/simple-line-icons/Simple-Line-Icons.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/front.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/full_image_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/full_image_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/img_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/img_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/img_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/loc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/person1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/person2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/person3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/person4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/work_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.countTo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.easing.1.3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.magnific-popup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.stellar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.style.switcher.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.waypoints.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/magnific-popup-options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/main_alt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/modernizr-2.6.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/respond.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/pom.xml" afterPath="$PROJECT_DIR$/comment-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/spring-comment-service.iml" afterPath="$PROJECT_DIR$/comment-service/spring-comment-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java" afterPath="$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/Comment.java" afterPath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/Comment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentRepository.java" afterPath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentsController.java" afterPath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/resources/testdb/comments/data.sql" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/testdb/comments/data.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/resources/testdb/comments/schema.sql" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/testdb/comments/schema.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/src/main/java/dm848/users/UsersConfiguration.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/dm848/users/UsersConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video-service/src/main/java/dm848/VideoServer.java" afterPath="$PROJECT_DIR$/video-service/src/main/java/dm848/VideoServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video-service/src/main/java/dm848/videos/VideoRepository.java" afterPath="$PROJECT_DIR$/video-service/src/main/java/dm848/videos/VideoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video-service/src/main/java/dm848/videos/VideosConfiguration.java" afterPath="$PROJECT_DIR$/video-service/src/main/java/dm848/videos/VideosConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/header.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/header.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentConfiguration.java" afterPath="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentsConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/web-service/src/main/resources/public/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web-service/src/main/resources/public/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/public/images/error.png" afterPath="$PROJECT_DIR$/web-service/src/main/resources/public/img/error.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/empty.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/empty.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/error.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/error.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/footer.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/header.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/header.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/users/all.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/users/all.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/users/user.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/users/user.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/users/userSearch.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/users/userSearch.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/users/users.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/users/users.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/videos/all.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/videos/all.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/videos/video.html" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/videos/video.html" />
     </list>
     <ignored path="microservice-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +118,18 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.5237484">
+                  <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-11.207547">
+                  <caret line="458" column="20" selection-start-line="458" selection-start-column="20" selection-end-line="458" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -68,11 +139,34 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/header.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.24257426">
-                  <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+                <state vertical-scroll-proportion="-5.018182">
+                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/footer.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.33663365">
+                  <caret line="100" column="75" selection-start-line="100" selection-start-column="75" selection-end-line="100" selection-end-column="75" />
+                  <folding>
+                    <marker date="1466537351882" expanded="true" signature="4219:4490" placeholder="..." />
+                    <marker date="1466537351882" expanded="true" signature="4277:4484" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="WebVideoController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/controller/WebVideoController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="117" column="76" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="76" />
                   <folding />
                 </state>
               </provider>
@@ -112,7 +206,6 @@
         <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/controller/WebUsersController.java" />
         <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/dto/Video.java" />
         <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/dto/User.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/controller/WebVideoController.java" />
         <option value="$PROJECT_DIR$/web-service/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/users/UsersConfiguration.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/users/UsersController.java" />
@@ -144,7 +237,14 @@
         <option value="$PROJECT_DIR$/comment-service/pom.xml" />
         <option value="$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java" />
         <option value="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/header.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/index.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/footer.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/public/js/custom.js" />
         <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/header.html" />
+        <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/controller/WebVideoController.java" />
       </list>
     </option>
   </component>
@@ -283,6 +383,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates_OLD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -306,6 +436,146 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm848" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DM848microservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm848" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -708,15 +978,18 @@
     <property name="project.structure.side.proportion" value="0.35886675" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Repos\DM848microservice\web-service\src\main\resources\templates_OLD" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dm848" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Repos\DM848microservice\web-service\src\main\resources\templates" />
       <recent name="$PROJECT_DIR$/comment-service/src/main/java/dm848/comments" />
       <recent name="$PROJECT_DIR$/comment-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/auth-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/user-service/src/main/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CommentServer">
@@ -1429,12 +1702,12 @@
       <workItem from="1466509781446" duration="1048000" />
       <workItem from="1466510840798" duration="1642000" />
       <workItem from="1466512556719" duration="4808000" />
-      <workItem from="1466520406132" duration="4329000" />
+      <workItem from="1466520406132" duration="15375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15855000" />
+    <option name="totallyTimeSpent" value="26901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1454,16 +1727,16 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.48139352" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.49722883" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281372" sideWeight="0.38993415" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281372" sideWeight="0.3900415" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281372" sideWeight="0.6100659" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281372" sideWeight="0.6099585" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.49722883" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969603" sideWeight="0.49811852" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15500794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07869634" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281372" sideWeight="0.49200377" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1496,104 +1769,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/dto/Video.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/SearchCriteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/web-server.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/db-config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/resources/auth-server.templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edge-service/spring-edge-service.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/spring-auth-service.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/resources/auth-server.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/java/dm848/AuthServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/resources/templates/authorize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edge-service/src/main/resources/edge-server.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17741935">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
@@ -1681,7 +1856,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1750,34 +1925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video-service/src/main/resources/testdb/videos/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.574074">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-service/src/main/resources/testdb/videos/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8333333">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/testdb/comments/data.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2592592">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/dm848/videos/VideosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1813,7 +1964,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1831,7 +1982,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1857,7 +2008,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1896,7 +2047,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1904,10 +2055,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10519802">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.115099">
+          <caret line="71" column="63" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.isotope.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="12" column="2146" selection-start-line="12" selection-start-column="2146" selection-end-line="12" selection-end-column="2146" />
+          <folding>
+            <element signature="e#0#318#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/js/jquery.prettyPhoto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/js/retina-1.1.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.448276">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates_OLD/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.34653464">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/css/prettyPhoto.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48652118">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/users/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15841584">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.207547">
+          <caret line="458" column="20" selection-start-line="458" selection-start-column="20" selection-end-line="458" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24257426">
-          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+        <state vertical-scroll-proportion="-5.018182">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/dm848/videos/VideosController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51079136">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-service/src/main/resources/testdb/videos/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19615385">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-service/src/main/resources/testdb/videos/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10897436">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10191847">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/controller/WebVideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="76" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33663365">
+          <caret line="100" column="75" selection-start-line="100" selection-start-column="75" selection-end-line="100" selection-end-column="75" />
+          <folding>
+            <marker date="1466537351882" expanded="true" signature="4219:4490" placeholder="..." />
+            <marker date="1466537351882" expanded="true" signature="4277:4484" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5237484">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding />
         </state>
       </provider>

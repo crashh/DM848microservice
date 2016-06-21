@@ -1,0 +1,136 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<!-- Import header and navbar  -->
+<head th:replace="header :: copy"></head>
+
+<!-- Index content -->
+<body>
+	<section id="fh5co-home" data-section="home" style="background-image: url(/images/front.png);">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="to-animate">DM848 Microservice</h1>
+							<h2 class="to-animate">Exam project.</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
+
+	<section id="fh5co-intro">
+		<div class="container">
+			<div class="row">
+                <h2 class="to-animate" style="color: white; margin: 0 0 5px 0;">Spotlight videos</h2>
+
+                <!-- Spotlight 1 -->
+				<div class="fh5co-block to-animate">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text" id="spotlight1">
+                        <div class="spinner icon-spinner" aria-hidden="true" style="margin-top: 1em"></div>
+						<!--<i class="fh5co-intro-icon icon-bulb"></i>-->
+                        <iframe id="ytplayer" type="text/html" width="310" height="210" src="" frameborder="0"></iframe>
+                        <h2>[placeholder] Video1</h2>
+						<p>[placeholder] Description </p>
+					</div>
+				</div>
+
+                <!-- Spotlight 2 -->
+				<div class="fh5co-block to-animate">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text" id="spotlight2">
+                        <div class="spinner icon-spinner" aria-hidden="true" style="margin-top: 1em"></div>
+						<!--<i class="fh5co-intro-icon icon-wrench"></i>-->
+                        <iframe id="ytplayer2" type="text/html" width="310" height="210" src="" frameborder="0"></iframe>
+                        <h2>[placeholder] Video2</h2>
+						<p>[placeholder] Description</p>
+					</div>
+				</div>
+
+                <!-- Spotlight 3 -->
+				<div class="fh5co-block to-animate">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text" id="spotlight3">
+                        <div class="spinner icon-spinner" aria-hidden="true" style="margin-top: 1em"></div>
+						<!--<i class="fh5co-intro-icon icon-rocket"></i>-->
+                        <iframe id="ytplayer3" type="text/html" width="310" height="210" src="" frameborder="0"></iframe>
+                        <h2>[placeholder] Video3</h2>
+						<p>[placeholder] Description</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-work" data-section="work">
+		<div class="container">
+			<div id="newestvideossection" class="row row-bottom-padded-sm">
+                <h2 class="to-animate" style="color: white; margin: 0 0 5px 0;">Newest videos</h2>
+
+                <!-- Section for video entry. -->
+
+			</div>
+
+		</div>
+	</section>
+
+	<div th:replace="footer :: copy"></div>
+
+    <!-- Main JS (Do not remove) -->
+    <script th:fragment="copy" src="/js/main.js"></script>
+    <!-- Set active link -->
+    <script>
+        $("#navbar-elem li:nth-child(1)").addClass('active');
+
+		function spotlight(){
+			$.ajax({url: "/videos/ajax/spotlight", success: function(result){
+                $('.spinner').remove();
+                var spotlight1 = $('#spotlight1');
+                var spotlight2 = $('#spotlight2');
+                var spotlight3 = $('#spotlight3');
+                spotlight1.children().eq(0).attr("src", result[0].embeddedLink);
+                spotlight1.children().eq(1).text(result[0].name);
+                spotlight1.children().eq(2).text(result[0].description);
+                spotlight2.children().eq(0).attr("src", result[1].embeddedLink);
+                spotlight2.children().eq(1).text(result[1].name);
+                spotlight2.children().eq(2).text(result[1].description);
+                spotlight3.children().eq(0).attr("src", result[2].embeddedLink);
+                spotlight3.children().eq(1).text(result[2].name);
+                spotlight3.children().eq(2).text(result[2].description);
+				//console.log(result);
+			}});
+		}
+        function newest(){
+            $.ajax({url: "/videos/ajax/newest", success: function(result){
+                    for(var vid in result) {
+                        var content =
+                            '<div class="portfolio-item graphic-design">'+
+                            '<div class="he-wrap tpl6">'+
+                            '<iframe class="ytplayer" type="text/html" width="390" height="260" src="'+result[vid].embeddedLink+'" frameborder="0"></iframe>'+
+                            '<div class="fh5co-text">'+
+                            '<h2>'+result[vid].name+'</h2>'+
+                            '<span>Youtube</span>'+
+                            '</div></div></div>';
+                        $('#newestvideossection').append(content);
+                    };
+                    //console.log(result);
+                }
+            });
+        }
+		spotlight();
+        newest();
+    </script>
+
+</body>
+
+
+</html>

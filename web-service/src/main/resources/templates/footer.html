@@ -1,42 +1,136 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-<body>
-	<footer th:fragment="copy" id="footer" role="contentinfo">
-		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>&copy; DM848 Microservice project <br>by latho12.</br></p>
-				</div>
+<body th:fragment="copy">
+<!-- *****************************************************************************************************************
+ FOOTER
+ ***************************************************************************************************************** -->
+<div id="footerwrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h4>About</h4>
+				<div class="hline-w"></div>
+				<p>Lorem Ipsum is simply</p>
 			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul class="social social-circle">
-						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-youtube"></i></a></li>
-					</ul>
-				</div>
+			<div class="col-lg-4">
+				<h4>Credits</h4>
+				<div class="hline-w"></div>
+				<p>
+					latho12, Lars Thomasen<br/>
+					lthomasen@gmail.com<br/>
+
+				</p>
 			</div>
 		</div>
-	</footer>
+	</div>
+</div>
 
-    <!-- jQuery -->
-    <script th:fragment="copy" src="/js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script th:fragment="copy" src="/js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script th:fragment="copy" src="/js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script th:fragment="copy" src="/js/jquery.waypoints.min.js"></script>
-    <!-- Counter -->
-    <script th:fragment="copy" src="/js/jquery.countTo.js"></script>
-    <!-- Magnific Popup -->
-    <script th:fragment="copy" src="/js/jquery.magnific-popup.min.js"></script>
-    <script th:fragment="copy" src="/js/magnific-popup-options.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/retina-1.1.0.js"></script>
+<script src="js/jquery.hoverdir.js"></script>
+<script src="js/jquery.hoverex.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/custom.js"></script>
 
+<script>
+    (function($) {
+        "use strict";
+        function getColumnNumber() {
+            var winWidth = $(window).width(),
+                    columnNumber = 1;
+
+            if (winWidth > 1200) {
+                columnNumber = 5;
+            } else if (winWidth > 950) {
+                columnNumber = 4;
+            } else if (winWidth > 600) {
+                columnNumber = 3;
+            } else if (winWidth > 400) {
+                columnNumber = 2;
+            } else if (winWidth > 250) {
+                columnNumber = 1;
+            }
+            return columnNumber;
+        }
+
+        function setColumns() {
+            var winWidth = $(window).width(),
+                    columnNumber = getColumnNumber(),
+                    itemWidth = Math.floor(winWidth / columnNumber);
+
+            $(".ytplayer").each(
+                    function(index, elem) {
+                        elem.setAttribute("width",itemWidth.toString());
+                    }
+            );
+        }
+
+        function setPortfolio() {
+            var $container = $('.portfolio'),
+                    $items = $container.find('.portfolio-item');
+
+            $container.isotope({
+                layoutMode: 'masonry',
+                masonry: {
+                }
+            });
+            setColumns();
+        }
+
+        $(window).on('resize', function () {
+            setPortfolio();
+        });
+
+        function spotlight(){
+            $.ajax({url: "web-service/videos/ajax/spotlight", success: function(result){
+                $('.spinner').remove();
+                var spotlight1 = $('#spotlight1');
+                var spotlight2 = $('#spotlight2');
+                var spotlight3 = $('#spotlight3');
+                spotlight1.children().eq(0).attr("src", result[0].embeddedLink);
+                spotlight1.children().eq(1).text(result[0].name);
+                spotlight1.children().eq(2).text(result[0].description);
+                spotlight2.children().eq(0).attr("src", result[1].embeddedLink);
+                spotlight2.children().eq(1).text(result[1].name);
+                spotlight2.children().eq(2).text(result[1].description);
+                spotlight3.children().eq(0).attr("src", result[2].embeddedLink);
+                spotlight3.children().eq(1).text(result[2].name);
+                spotlight3.children().eq(2).text(result[2].description);
+                //console.log(result);
+            }});
+        }
+        function newest(){
+            $.ajax({url: "web-service/videos/ajax/newest", success: function(result){
+                var winWidth = $(window).width(),
+                        columnNumber = getColumnNumber(),
+                        itemWidth = Math.floor(winWidth / columnNumber);
+                for(var vid in result) {
+                    var content =
+                            '<div class="portfolio-item graphic-design">'+
+                            '<div class="he-wrap tpl6">'+
+                            '<iframe class="ytplayer" type="text/html" width="'+itemWidth+'" height="210" src="'+result[vid].embeddedLink+'" frameborder="0"></iframe>'+
+                            '</div></div>';
+                    $('#newestvideossection').append(content);
+                };
+                var $container = $('.portfolio');
+
+                $container.isotope({
+                    layoutMode: 'masonry',
+                    masonry: {
+                    }
+                });
+                //console.log(result);
+            }
+            });
+        }
+        spotlight();
+        newest();
+    })(jQuery);
+</script>
 </body>
-
 </html>

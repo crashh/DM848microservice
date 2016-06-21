@@ -1,0 +1,89 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:fragment="copy">
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>dm848 &mdash; Microservice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="" />
+	<meta name="keywords" content="dm848 microservice" />
+	<meta name="author" content="latho12" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'/>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/css/animate.css"/>
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/css/icomoon.css"/>
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="/css/simple-line-icons.css"/>
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/css/magnific-popup.css"/>
+	<!-- Bootstrap  -->
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+	<!-- Added styling -->
+	<link rel="stylesheet" href="/css/style3.css"/>
+    <!-- Custom -->
+    <link rel="stylesheet" href="/css/custom.css"/>
+
+	<!-- Modernizr JS -->
+	<script src="/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body th:fragment="copy">
+<header role="banner" id="fh5co-header">
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<!-- Mobile Toggle Menu Button -->
+				<a a th:href="@{/}" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="navbar-brand" href="index.html">DM848 Microservices</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul id="navbar-elem" class="nav navbar-nav navbar-right">
+					<li><a th:href="@{/}"><span>Home</span></a></li>
+                    <li><a th:href="@{/templates_OLD/videos/all/}"><span>Videos</span></a></li>
+                    <li><a th:href="@{/dm848.users/all/}"><span>Users</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Behind the scene &#x25BC;</a>
+						<ul class="dropdown-menu">
+                            <li><a href="http://localhost:1111"><span class="dropdown-darken-text">Eureka Dashboard</span></a></li>
+                            <li><a href="http://localhost:1111/eureka/apps/"><span class="dropdown-darken-text">Registered Apps</span></a></li>
+							<li><a th:href="@{/dm848.users/kelee01}"><span class="dropdown-darken-text">Fetch user kelee01</span></a></li>
+							<li><a th:href="@{/dm848.users/name/Keri}"><span class="dropdown-darken-text">Fetch user Keri</span></a></li>
+							<li role="separator" class="divider"></li>
+							<li><a th:href="@{/beans}"><span class="dropdown-darken-text">The beans</span></a></li>
+							<li><a th:href="@{/env}"><span class="dropdown-darken-text">The environment</span></a></li>
+							<li><a th:href="@{/dump}"><span class="dropdown-darken-text">Thread dump</span></a></li>
+							<li><a th:href="@{/health}"><span class="dropdown-darken-text">Application health</span></a></li>
+							<li><a th:href="@{/info}"><span class="dropdown-darken-text">Application information</span></a></li>
+							<li><a th:href="@{/metrics}"><span class="dropdown-darken-text">Application metrics</span></a></li>
+							<li><a th:href="@{/trace}"><span class="dropdown-darken-text">Request call trace</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+</body>
+</html>
