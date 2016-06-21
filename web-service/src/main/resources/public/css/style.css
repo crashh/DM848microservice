@@ -47,7 +47,6 @@ p {
 }
 
 img {
-	height: auto;
 	max-width: 100%;
 }
 
@@ -457,8 +456,4 @@ csmall2 {
 .share i {
 	padding-right: 15px;
 	font-size: 18px;
-}
-
-.iframe-center {
-	text-align:center;
 }

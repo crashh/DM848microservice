@@ -115,8 +115,8 @@ public class WebVideoController {
         videos = videos.subList(0, 6); //Limit this to 6 videos.
 
         for (Video video: videos) {
-            String embeddedLink = video.getLink().replace("watch?v=", "embed/");
-            video.setEmbeddedLink(embeddedLink + "?autoplay=0");
+            String embeddedLink = video.getLink();
+            video.setEmbeddedLink(embeddedLink);
         }
 
         logger.info("web-service ajax/newest() found: " + videos.size());

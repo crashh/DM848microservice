@@ -35,56 +35,89 @@
 <script src="js/jquery.hoverdir.js"></script>
 <script src="js/jquery.hoverex.min.js"></script>
 <script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/custom.js"></script>
 
 <script>
-    (function($) {
-        "use strict";
-        function getColumnNumber() {
-            var winWidth = $(window).width(),
-                    columnNumber = 1;
-
-            if (winWidth > 1200) {
-                columnNumber = 5;
-            } else if (winWidth > 950) {
-                columnNumber = 4;
-            } else if (winWidth > 600) {
-                columnNumber = 3;
-            } else if (winWidth > 400) {
-                columnNumber = 2;
-            } else if (winWidth > 250) {
+    function getColumnNumber() {
+        var winWidth = $(window).width(),
                 columnNumber = 1;
-            }
-            return columnNumber;
+
+        if (winWidth > 1200) {
+            columnNumber = 5;
+        } else if (winWidth > 950) {
+            columnNumber = 4;
+        } else if (winWidth > 600) {
+            columnNumber = 3;
+        } else if (winWidth > 400) {
+            columnNumber = 2;
+        } else if (winWidth > 250) {
+            columnNumber = 1;
         }
+        return columnNumber;
+    }
+
+    function latest() {
+        "use strict";
+        var $container = $('.portfolio'),
+                $items = $container.find('.portfolio-item'),
+                portfolioLayout = 'fitRows';
+
+        if( $container.hasClass('portfolio-centered') ) {
+            portfolioLayout = 'masonry';
+        }
+
+        $container.isotope({
+            filter: '*',
+            animationEngine: 'best-available',
+            layoutMode: portfolioLayout,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            },
+            masonry: {
+            }
+        }, refreshWaypoints());
+
+        function refreshWaypoints() {
+            setTimeout(function() {
+            }, 1000);
+        }
+
+        $('nav.portfolio-filter ul a').on('click', function() {
+            var selector = $(this).attr('data-filter');
+            $container.isotope({ filter: selector }, refreshWaypoints());
+            $('nav.portfolio-filter ul a').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        });
 
         function setColumns() {
             var winWidth = $(window).width(),
                     columnNumber = getColumnNumber(),
                     itemWidth = Math.floor(winWidth / columnNumber);
 
-            $(".ytplayer").each(
-                    function(index, elem) {
-                        elem.setAttribute("width",itemWidth.toString());
-                    }
-            );
+            $container.find('.portfolio-item').each(function() {
+                $(this).css( {
+                    width : itemWidth + 'px'
+                });
+            });
         }
 
         function setPortfolio() {
-            var $container = $('.portfolio'),
-                    $items = $container.find('.portfolio-item');
-
-            $container.isotope({
-                layoutMode: 'masonry',
-                masonry: {
-                }
-            });
             setColumns();
+            $container.isotope('reLayout');
         }
+
+        $container.imagesLoaded(function () {
+            setPortfolio();
+        });
 
         $(window).on('resize', function () {
             setPortfolio();
         });
+    }
 
         function spotlight(){
             $.ajax({url: "web-service/videos/ajax/spotlight", success: function(result){
@@ -104,33 +137,33 @@
                 //console.log(result);
             }});
         }
+
         function newest(){
             $.ajax({url: "web-service/videos/ajax/newest", success: function(result){
                 var winWidth = $(window).width(),
                         columnNumber = getColumnNumber(),
                         itemWidth = Math.floor(winWidth / columnNumber);
+
                 for(var vid in result) {
                     var content =
-                            '<div class="portfolio-item graphic-design">'+
+                            '<div class="portfolio-item">'+
                             '<div class="he-wrap tpl6">'+
-                            '<iframe class="ytplayer" type="text/html" width="'+itemWidth+'" height="210" src="'+result[vid].embeddedLink+'" frameborder="0"></iframe>'+
-                            '</div></div>';
+                            '<img src="'+result[vid].embeddedLink+'" height="'+Math.floor(itemWidth / 1.8)+'" width="'+itemWidth+'" alt=""/>'+
+                            '<div class="he-view">'+
+                            '<h3 class="a1" data-animate="fadeInDown">A Book Design Item</h3>'+
+                            '<a data-rel="prettyPhoto" href="'+result[vid].embeddedLink+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
+                            '<a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>'+
+                            '</div></div></div>';
                     $('#newestvideossection').append(content);
                 };
-                var $container = $('.portfolio');
-
-                $container.isotope({
-                    layoutMode: 'masonry',
-                    masonry: {
-                    }
-                });
-                //console.log(result);
+                latest();
+               //console.log(result);
             }
             });
         }
         spotlight();
         newest();
-    })(jQuery);
+
 </script>
 </body>
 </html>
