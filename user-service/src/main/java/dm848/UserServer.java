@@ -27,10 +27,7 @@ public class UserServer {
 	protected Logger logger = Logger.getLogger(UserServer.class.getName());
 
 	public static void main(String[] args) {
-		// Tell server to look for users-server.properties or
-		// user-server.yml
 		System.setProperty("spring.config.name", "user-server");
-
 		SpringApplication.run(UserServer.class, args);
 	}
 }

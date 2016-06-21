@@ -20,7 +20,7 @@ public class CommentsController {
 	protected CommentRepository commentRepository;
 
 	/**
-	 * Create an instance plugging in the respository of Comments.
+	 * Create an instance plugging in the repository of Comments.
 	 * 
 	 * @param commentRepository
 	 *            An controller repository implementation.

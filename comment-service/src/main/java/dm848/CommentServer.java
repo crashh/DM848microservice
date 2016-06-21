@@ -1,7 +1,7 @@
 package dm848;
 
-import dm848.comments.CommentConfiguration;
 import dm848.comments.CommentRepository;
+import dm848.comments.CommentsConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -14,11 +14,11 @@ import java.util.logging.Logger;
  * Run as a micro-service, registering with the Discovery Server (Eureka).
  * <p>
  * Note that the configuration for this application is imported from
- * {@link CommentConfiguration}. This is a deliberate separation of concerns.
+ * {@link CommentsConfiguration}. This is a deliberate separation of concerns.
  */
 @EnableAutoConfiguration
 @EnableDiscoveryClient
-@Import(CommentConfiguration.class)
+@Import(CommentsConfiguration.class)
 public class CommentServer {
 
     @Autowired
@@ -27,10 +27,7 @@ public class CommentServer {
     protected Logger logger = Logger.getLogger(CommentServer.class.getName());
 
     public static void main(String[] args) {
-        // Tell server to look for dm848.users-server.properties or
-        // user-server.yml
         System.setProperty("spring.config.name", "comment-server");
-
         SpringApplication.run(CommentServer.class, args);
     }
 }

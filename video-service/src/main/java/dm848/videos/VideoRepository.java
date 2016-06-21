@@ -18,7 +18,6 @@ public interface VideoRepository extends Repository<Video, Long> {
 	 */
 	public Video findById(Long id);
 
-
 	/**
 	 * Find all videos in the database
 	 *

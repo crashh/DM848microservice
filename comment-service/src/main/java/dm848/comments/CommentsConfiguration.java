@@ -22,11 +22,11 @@ import java.util.logging.Logger;
 @EntityScan("dm848.comments")
 @EnableJpaRepositories("dm848.comments")
 @PropertySource("classpath:db-config.properties")
-public class CommentConfiguration {
+public class CommentsConfiguration {
 
 	protected Logger logger;
 
-	public CommentConfiguration() {
+	public CommentsConfiguration() {
 		logger = Logger.getLogger(getClass().getName());
 	}
 
@@ -38,8 +38,7 @@ public class CommentConfiguration {
 	public DataSource dataSource() {
 		logger.info("dataSource() invoked");
 
-		// Create an in-memory H2 relational database containing some demo
-		// comments.
+		// Create an in-memory H2 relational database containing some demo comments.
 		DataSource dataSource = (new EmbeddedDatabaseBuilder()).addScript("classpath:testdb/comments/schema.sql")
 				.addScript("classpath:testdb/comments/data.sql").build();
 
@@ -47,8 +46,8 @@ public class CommentConfiguration {
 
 		// Sanity check
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		List<Map<String, Object>> users = jdbcTemplate.queryForList("SELECT id FROM T_COMMENT");
-		logger.info("System has " + users.size() + " comments");
+		List<Map<String, Object>> comments = jdbcTemplate.queryForList("SELECT id FROM T_COMMENT");
+		logger.info("System has " + comments.size() + " comments");
 
 		return dataSource;
 	}

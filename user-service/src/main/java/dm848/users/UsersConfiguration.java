@@ -38,8 +38,7 @@ public class UsersConfiguration {
 	public DataSource dataSource() {
 		logger.info("dataSource() invoked");
 
-		// Create an in-memory H2 relational database containing some demo
-		// userservice.
+		// Create an in-memory H2 relational database containing some demo userservice.
 		DataSource dataSource = (new EmbeddedDatabaseBuilder()).addScript("classpath:testdb/users/schema.sql")
 				.addScript("classpath:testdb/users/data.sql").build();
 

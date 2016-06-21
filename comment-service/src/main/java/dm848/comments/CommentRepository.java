@@ -18,17 +18,12 @@ public interface CommentRepository extends Repository<Comment, Long> {
 	 */
 	public Comment findById(Long id);
 
-
 	/**
 	 * Find all comments in the database
 	 *
 	 * @return The list of all comments in the database.
      */
 	public List<Comment> findAll();
-
-	public List<Comment> findByUserId();
-
-	public List<Comment> findByVideoId();
 
 	/**
 	 * Fetch the number of comments known to the system.

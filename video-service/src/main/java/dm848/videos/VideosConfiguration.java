@@ -38,8 +38,7 @@ public class VideosConfiguration {
 	public DataSource dataSource() {
 		logger.info("dataSource() invoked");
 
-		// Create an in-memory H2 relational database containing some demo
-		// videoservice.
+		// Create an in-memory H2 relational database containing some demo videoservice.
 		DataSource dataSource = (new EmbeddedDatabaseBuilder()).addScript("classpath:testdb/videos/schema.sql")
 				.addScript("classpath:testdb/videos/data.sql").build();
 

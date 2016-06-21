@@ -27,10 +27,7 @@ public class VideoServer {
     protected Logger logger = Logger.getLogger(VideoServer.class.getName());
 
     public static void main(String[] args) {
-        // Tell server to look for dm848.users-server.properties or
-        // user-server.yml
         System.setProperty("spring.config.name", "video-server");
-
         SpringApplication.run(VideoServer.class, args);
     }
 }

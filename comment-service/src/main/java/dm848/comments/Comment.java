@@ -1,5 +1,6 @@
 package dm848.comments;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -20,8 +21,10 @@ public class Comment implements Serializable {
 	@Id
 	protected Long id;
 
+	@Column(name = "video_id")
 	protected Long videoId;
 
+	@Column(name = "user_id")
 	protected Long userId;
 
 	protected String comment;
@@ -75,6 +78,10 @@ public class Comment implements Serializable {
 
 	public Long getVideoId() {
 		return videoId;
+	}
+
+	protected void setVideoId(Long id) {
+		this.videoId = id;
 	}
 
 	@Override
