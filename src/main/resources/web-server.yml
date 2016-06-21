@@ -2,6 +2,7 @@
 spring:
   application:
     name: web-service  # Identify this application
+    host: springbox-config-server-${random-word}
   freemarker:
     enabled: false     # Ignore Eureka dashboard FreeMarker templates
   thymeleaf:

@@ -5,7 +5,7 @@ eureka:
   client:  # Not a client, don't register with yourself
     registerWithEureka: false
     fetchRegistry: false
-     
+
 server:
   port: 8100   # HTTP (Tomcat) port
 
