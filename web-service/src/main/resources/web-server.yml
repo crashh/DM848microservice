@@ -21,8 +21,8 @@ eureka:
      leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
   client:
     serviceUrl:
-      defaultZone: http://localhost:8100/eureka/
+      defaultZone: http://localhost:9998/eureka/
 
 # HTTP Server
 server:
-  port: 8101   # HTTP (Tomcat) port
+  port: 9994   # HTTP (Tomcat) port

@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="comment-service" />
+        <module name="spring-comment-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

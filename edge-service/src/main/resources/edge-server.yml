@@ -35,12 +35,12 @@ zuul:
 
 
 server:
-  port: 8081
+  port: 9999
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8100/eureka/
+      defaultZone: http://localhost:9998/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}} # unique ID

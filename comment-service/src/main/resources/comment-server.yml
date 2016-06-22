@@ -7,7 +7,7 @@ spring:
 
 # HTTP Server
 server:
-  port: 8109   # HTTP (Tomcat) port
+  port: 9992   # HTTP (Tomcat) port
 
 # Discovery Server Access
 #  1. Define URL of registrationservice server (defaultZone)
@@ -19,7 +19,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8100/eureka/
+      defaultZone: http://localhost:9998/eureka/
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}} # unique ID
