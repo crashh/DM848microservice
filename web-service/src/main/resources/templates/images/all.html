@@ -1,0 +1,151 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Import header and navbar  -->
+<head th:replace="header :: copy"></head>
+
+<body>
+
+<!-- *****************************************************************************************************************
+ TITLE & CONTENT
+ ***************************************************************************************************************** -->
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+            <h2>All images in the database</h2>
+            <br/>
+            <div class="hline"></div>
+        </div>
+    </div>
+</div>
+
+<!-- *****************************************************************************************************************
+ IMAGE SECTION
+ ***************************************************************************************************************** -->
+<div id="portfoliowrap">
+    <div class="portfolio-centered centered">
+        <div id="newestvideossection" class="recentitems portfolio">
+            <!-- Ajax will insert data here. -->
+        </div>
+    </div>
+</div>
+
+<div th:replace="footer :: copy"></div>
+
+<script>
+    function getColumnNumber() {
+        var winWidth = $(window).width(),
+                columnNumber = 1;
+
+        if (winWidth > 1200) {
+            columnNumber = 5;
+        } else if (winWidth > 950) {
+            columnNumber = 4;
+        } else if (winWidth > 600) {
+            columnNumber = 3;
+        } else if (winWidth > 400) {
+            columnNumber = 2;
+        } else if (winWidth > 250) {
+            columnNumber = 1;
+        }
+        return columnNumber;
+    }
+
+    function latest() {
+        "use strict";
+        var $container = $('.portfolio'),
+                $items = $container.find('.portfolio-item'),
+                portfolioLayout = 'fitRows';
+
+        if( $container.hasClass('portfolio-centered') ) {
+            portfolioLayout = 'masonry';
+        }
+
+        $container.isotope({
+            filter: '*',
+            animationEngine: 'best-available',
+            layoutMode: portfolioLayout,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            },
+            masonry: {
+            }
+        }, refreshWaypoints());
+
+        function refreshWaypoints() {
+            setTimeout(function() {
+            }, 1000);
+        }
+
+        $('nav.portfolio-filter ul a').on('click', function() {
+            var selector = $(this).attr('data-filter');
+            $container.isotope({ filter: selector }, refreshWaypoints());
+            $('nav.portfolio-filter ul a').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        });
+
+        function setColumns() {
+            var winWidth = $(window).width(),
+                    columnNumber = getColumnNumber(),
+                    itemWidth = Math.floor(winWidth / columnNumber);
+
+            $container.find('.portfolio-item').each(function() {
+                $(this).css( {
+                    width : itemWidth + 'px'
+                });
+            });
+        }
+
+        function setPortfolio() {
+            setColumns();
+            $container.isotope('reLayout');
+        }
+
+        $container.imagesLoaded(function () {
+            setPortfolio();
+        });
+
+        $(window).on('resize', function () {
+            setPortfolio();
+        });
+    }
+
+    function newest(){
+        $.ajax({
+            url: "/images/ajax/all",
+            type: 'GET',
+            success: function(result){
+                var winWidth = $(window).width(),
+                        columnNumber = getColumnNumber(),
+                        itemWidth = Math.floor(winWidth / columnNumber);
+
+                for(var vid in result) {
+                    var content =
+                            '<div class="portfolio-item">'+
+                            '<div class="he-wrap tpl6">'+
+                            '<img src="'+result[vid].embeddedLink+'" height="'+Math.floor(itemWidth / 1.8)+'" width="'+itemWidth+'" alt=""/>'+
+                            '<div class="he-view">'+
+                            '<h3 class="a1" data-animate="fadeInDown">'+result[vid].name+'</h3>'+
+                            '<a data-rel="prettyPhoto" href="'+result[vid].embeddedLink+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
+                            '<a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>'+
+                            '</div></div></div>';
+                    $('#newestvideossection').append(content);
+                };
+                latest();
+                //console.log(result);
+            }
+        });
+    }
+
+    $(function() {
+        newest();
+    });
+
+</script>
+
+</body>
+</html>

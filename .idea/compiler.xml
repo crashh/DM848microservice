@@ -33,6 +33,7 @@
       <module name="spring-auth-service" target="1.8" />
       <module name="spring-comment-service" target="1.8" />
       <module name="spring-edge-service" target="1.8" />
+      <module name="spring-image-service" target="1.8" />
       <module name="spring-registration-service" target="1.8" />
       <module name="spring-user-service" target="1.8" />
       <module name="spring-video-service" target="1.8" />

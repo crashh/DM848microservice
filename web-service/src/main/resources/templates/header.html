@@ -8,14 +8,14 @@
 	<meta name="author" content=""/>
 	<link rel="shortcut icon" href="ico/favicon.ico"/>
 
-	<title>SOLID - Bootstrap 3 Theme</title>
+	<title>dm848 Microservices - Exam Project</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<link href="/css/bootstrap.css" rel="stylesheet"/>
 
 	<!-- Custom styles for this template -->
-	<link href="css/style.css" rel="stylesheet"/>
-	<link href="css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="/css/style.css" rel="stylesheet"/>
+	<link href="/css/font-awesome.min.css" rel="stylesheet"/>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -41,26 +41,36 @@
 		<div class="navbar-collapse collapse navbar-right">
 			<ul class="nav navbar-nav">
 				<li class="active"><a th:href="@{/}">HOME</a></li>
-				<li><a th:href="@{video-service/videos/all/}"><span>Videos</span></a></li>
-				<li><a th:href="@{user-service/users/all/}"><span>Users</span></a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USERS &#x25BC;</a>
 					<ul class="dropdown-menu">
-						<li><a href="blog.html">BLOG</a></li>
-						<li><a href="single-post.html">SINGLE POST</a></li>
-						<li><a href="portfolio.html">PORTFOLIO</a></li>
-						<li><a href="single-project.html">SINGLE PROJECT</a></li>
+						<li><a th:href="@{/users/all/}"><span class="dropdown-darken-text">All</span></a></li>
+						<li><a th:href="@{/users/active/}"><span class="dropdown-darken-text">Most active</span></a></li>
+						<li role="separator" class="divider"></li>
+						<li><a th:href="@{/users/search/}"><span class="dropdown-darken-text">Search</span></a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">IMAGES &#x25BC;</a>
+					<ul class="dropdown-menu">
+						<li><a th:href="@{/images/all}"><span class="dropdown-darken-text">All</span></a></li>
+						<li><a th:href="@{/images/newest/}"><span class="dropdown-darken-text">Newest</span></a></li>
+						<li><a th:href="@{/images/commented/}"><span class="dropdown-darken-text">Most commented</span></a></li>
+						<li role="separator" class="divider"></li>
+						<li><a th:href="@{/images/search/}"><span class="dropdown-darken-text">Search</span></a></li>
+					</ul>
+				</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMMENTS &#x25BC;</a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{/comment/all}"><span class="dropdown-darken-text">All</span></a></li>
+                    </ul>
+                </li>
+				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Behind the scene &#x25BC;</a>
 					<ul class="dropdown-menu">
-						<li><a href="http://localhost:1111"><span class="dropdown-darken-text">Eureka Dashboard</span></a></li>
-						<li><a href="http://localhost:1111/eureka/apps/"><span class="dropdown-darken-text">Registered Apps</span></a></li>
-						<li><a th:href="@{/users/kelee01}"><span class="dropdown-darken-text">Fetch user kelee01</span></a></li>
-						<li><a th:href="@{/users/name/Keri}"><span class="dropdown-darken-text">Fetch user Keri</span></a></li>
+						<li><a href="http://localhost:8100"><span class="dropdown-darken-text">Eureka Dashboard</span></a></li>
+						<li><a href="http://localhost:8100/eureka/apps/"><span class="dropdown-darken-text">Registered Apps</span></a></li>
 						<li role="separator" class="divider"></li>
 						<li><a th:href="@{/beans}"><span class="dropdown-darken-text">The beans</span></a></li>
 						<li><a th:href="@{/env}"><span class="dropdown-darken-text">The environment</span></a></li>

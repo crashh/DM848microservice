@@ -19,6 +19,16 @@ public interface CommentRepository extends Repository<Comment, Long> {
 	public Comment findById(Long id);
 
 	/**
+	 * Find an comment with the specified comment id.
+	 *
+	 * @param username
+	 * @return The comment if found, null otherwise.
+	 */
+	public List<Comment> findByUserId(String username);
+
+	public List<Comment> findByVideoId(Long id);
+
+	/**
 	 * Find all comments in the database
 	 *
 	 * @return The list of all comments in the database.

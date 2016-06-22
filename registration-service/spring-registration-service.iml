@@ -4,7 +4,7 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/RegistrationServer.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/dm848/RegistrationServer.java</file>
         </fileset>
       </configuration>
     </facet>

@@ -1,10 +1,9 @@
 package dm848.service;
 
-import dm848.dto.User;
+import dm848.dto.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
@@ -16,7 +15,7 @@ import java.util.logging.Logger;
  * Hide the access to the microservice inside this local service.
  */
 @Service
-public class WebUsersService {
+public class WebCommentService {
 
 	@Autowired
 	@LoadBalanced
@@ -24,10 +23,10 @@ public class WebUsersService {
 
 	protected String serviceUrl;
 
-	protected Logger logger = Logger.getLogger(WebUsersService.class
+	protected Logger logger = Logger.getLogger(WebCommentService.class
 			.getName());
 
-	public WebUsersService(String serviceUrl) {
+	public WebCommentService(String serviceUrl) {
 		this.serviceUrl = serviceUrl.startsWith("http") ? serviceUrl
 				: "http://" + serviceUrl;
 	}
@@ -45,38 +44,43 @@ public class WebUsersService {
 				+ restTemplate.getRequestFactory().getClass());
 	}
 
-	public User findByUserName(String userName) {
-		logger.info("findByUserName() invoked: for " + userName);
-		return restTemplate.getForObject(serviceUrl + "/users/{userName}",
-				User.class, userName);
+	public List<Comment> findAll() {
+		logger.info("service-findAll() invoked.");
+
+		Comment[] comment = restTemplate.getForObject(serviceUrl
+				+ "/comments/all/", Comment[].class);
+
+		return Arrays.asList(comment);
 	}
 
-	public List<User> byNameContains(String name) {
-		logger.info("byNameContains() invoked:  for " + name);
-		User[] users = null;
+	public Comment findById(String id) {
+		logger.info("service-findById() invoked: for " + id);
+		return restTemplate.getForObject(serviceUrl + "/comments/{id}",
+				Comment.class, id);
+	}
 
-		try {
-			users = restTemplate.getForObject(serviceUrl
-					+ "/users/name/{name}", User[].class, name);
-		} catch (HttpClientErrorException e) {
-            // 404 - Nothing found
-		}
+	public List<Comment> byUserName(String username) {
+        logger.info("service-byUserName() invoked.");
 
-		if (users == null || users.length == 0)
+		Comment[] comment = restTemplate.getForObject(serviceUrl
+				+ "/comments/user/{username}", Comment[].class, username);
+
+		if (comment == null)
 			return null;
 		else
-			return Arrays.asList(users);
+			return Arrays.asList(comment);
 	}
 
-	public List<User> findAll() {
-        logger.info("findAll() invoked.");
+	public List<Comment> byVideoId(Long id) {
+		logger.info("service-byVideoId() invoked.");
 
-		User[] users = restTemplate.getForObject(serviceUrl
-				+ "/users/all/", User[].class);
+		Comment[] comment = restTemplate.getForObject(serviceUrl
+				+ "/comments/image/{id}", Comment[].class, id);
 
-		if (users == null)
+		if (comment == null)
 			return null;
 		else
-			return Arrays.asList(users);
+			return Arrays.asList(comment);
 	}
+
 }

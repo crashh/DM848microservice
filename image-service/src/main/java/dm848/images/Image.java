@@ -1,4 +1,4 @@
-package dm848.comments;
+package dm848.images;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +11,8 @@ import java.io.Serializable;
  * relational database.
  */
 @Entity
-@Table(name = "T_COMMENT")
-public class Comment implements Serializable {
+@Table(name = "T_IMAGE")
+public class Image implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -21,13 +21,14 @@ public class Comment implements Serializable {
 	@Id
 	protected Long id;
 
-	@Column(name = "video_id")
-	protected Long videoId;
+	protected String name;
 
-	@Column(name = "user_id")
-	protected String userId;
+	protected String link;
 
-	protected String comment;
+	protected String description;
+
+	@Column(name = "user_name")
+	protected String userName;
 
 
 	/**
@@ -46,47 +47,54 @@ public class Comment implements Serializable {
 	/**
 	 * Default constructor for JPA only.
 	 */
-    public Comment() {
+    public Image() {
     }
 
-	public Comment(String comment, Long videoId, String userId) {
+	public Image(String name, String link, String description, String username) {
 		id = getNextId();
-		this.videoId = videoId;
-		this.userId = userId;
-		this.comment = comment;
+		this.name = name;
+		this.link = link;
+		this.description = description;
+		this.userName = username;
 	}
 
 	public long getId() {
 		return id;
 	}
 
-	public String getComment() {
-		return comment;
+	public String getLink() {
+		return link;
 	}
 
-	protected void setComment(String comment) {
-		this.comment = comment;
+	protected void setLink(String link) {
+		this.link = link;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getName() {
+		return name;
 	}
 
-	protected void setUserId(String id) {
-		this.userId = id;
+	protected void setName(String name) {
+		this.name = name;
 	}
 
-	public Long getVideoId() {
-		return videoId;
+	public String getDescription() {
+		return description;
 	}
 
-	protected void setVideoId(Long id) {
-		this.videoId = id;
+	protected void setDescription(String desc) {
+		this.description = desc;
+	}
+
+	public String getUserName() { return userName; }
+
+	protected void setUserName(String username) {
+		this.userName = username;
 	}
 
 	@Override
 	public String toString() {
-		return comment;
+		return name + " [" + link + "]";
 	}
 
 }

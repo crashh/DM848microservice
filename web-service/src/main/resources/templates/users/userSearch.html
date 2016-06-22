@@ -5,16 +5,27 @@
 <head th:replace="header :: copy"></head>
 
 <body>
+
+	<!-- *****************************************************************************************************************
+	BLUE WRAP
+	***************************************************************************************************************** -->
+	<div id="blue">
+		<div class="container">
+			<div class="row">
+				<h3>User Search</h3>
+				<h5 style="padding-left: 1em">Enter a username or search for a username
+					containing given specified text:</h5>
+			</div><!-- /row -->
+		</div> <!-- /container -->
+	</div><!-- /blue -->
+
 	<section id="fh5co-top-intro">
 	<div class="container">
 		<div class="row row-bottom-padded-lg" style="width: 100%">
-			<h1>User Search</h1>
 
-			<p>Enter a username or search for a username
-				containing given specified text:</p>
 
 			<form action="#" th:object="${searchCriteria}" method="GET"
-				  th:action="@{/dm848.users/dosearch}" class="form-horizontal">
+				  th:action="@{/users/dosearch}" class="form-horizontal">
 
 				<!-- Username field -->
 				<div class="form-group">

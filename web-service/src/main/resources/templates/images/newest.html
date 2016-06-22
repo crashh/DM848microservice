@@ -7,64 +7,11 @@
 <body>
 
 <!-- *****************************************************************************************************************
- HEADER TITLE
- ***************************************************************************************************************** -->
-<div id="headerwrap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h3>DM848 Microservice</h3>
-                <h1>Exam project.</h1>
-                <h5>Exam project for the course DM848 Microservices.</h5>
-            </div>
-        </div><!-- /row -->
-    </div> <!-- /container -->
-</div><!-- /headerwrap -->
-
-<!-- *****************************************************************************************************************
- SPOTLIGHT LOGOS
- ***************************************************************************************************************** -->
-<div id="service">
-    <div class="container">
-        <h2>Spotlight images</h2>
-        <div class="row centered">
-            <div class="col-md-4">
-                <div class="fh5co-text" id="spotlight1">
-                    <div class="spinner icon-spinner" aria-hidden="true" style="margin-top: 1em"></div>
-                    <!--<i class="fh5co-intro-icon icon-bulb"></i>-->
-                    <img width="350" height="230" src="" alt=""/>
-                    <h4>[placeholder] Image1</h4>
-                    <p>[placeholder] Description </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="fh5co-text" id="spotlight2">
-                    <div class="spinner icon-spinner" aria-hidden="true" style="margin-top: 1em"></div>
-                    <!--<i class="fh5co-intro-icon icon-wrench"></i>-->
-                    <img width="350" height="230" src="" alt=""/>
-                    <h4>[placeholder] Image2</h4>
-                    <p>[placeholder] Description</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="fh5co-text" id="spotlight3">
-                    <div class="spinner icon-spinner" aria-hidden="true" style="margin-top: 1em"></div>
-                    <!--<i class="fh5co-intro-icon icon-rocket"></i>-->
-                    <img width="350" height="230" src="" alt=""/>
-                    <h4>[placeholder] Image3</h4>
-                    <p>[placeholder] Description</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- *****************************************************************************************************************
  IMAGE SECTION
  ***************************************************************************************************************** -->
 <div id="portfoliowrap">
     <div class="container">
-        <h2>Latest Ten Images</h2>
+        <h2>LATEST IMAGES</h2>
     </div>
 
     <div class="portfolio-centered centered">
@@ -157,29 +104,11 @@
         });
     }
 
-    function spotlight(){
-        $.ajax({url: "/images/ajax/spotlight", success: function(result){
-            $('.spinner').remove();
-            var spotlight1 = $('#spotlight1');
-            var spotlight2 = $('#spotlight2');
-            var spotlight3 = $('#spotlight3');
-            spotlight1.children().eq(0).attr("src", result[0].embeddedLink);
-            spotlight1.children().eq(1).text(result[0].name);
-            spotlight1.children().eq(2).text(result[0].description);
-            spotlight2.children().eq(0).attr("src", result[1].embeddedLink);
-            spotlight2.children().eq(1).text(result[1].name);
-            spotlight2.children().eq(2).text(result[1].description);
-            spotlight3.children().eq(0).attr("src", result[2].embeddedLink);
-            spotlight3.children().eq(1).text(result[2].name);
-            spotlight3.children().eq(2).text(result[2].description);
-            //console.log(result);
-        }});
-    }
-
     function newest(){
         $.ajax({
             url: "/images/ajax/newest",
-            data: { amount: "10", },
+            data: { amount: "all", },
+            type: 'GET',
             success: function(result){
             var winWidth = $(window).width(),
                     columnNumber = getColumnNumber(),
@@ -192,7 +121,8 @@
                         '<img src="'+result[vid].embeddedLink+'" height="'+Math.floor(itemWidth / 1.8)+'" width="'+itemWidth+'" alt=""/>'+
                         '<div class="he-view">'+
                         '<h3 class="a1" data-animate="fadeInDown">'+result[vid].name+'</h3>'+
-                        '<a data-rel="prettyPhoto" href="/images/'+result[vid].id+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
+                        '<a data-rel="prettyPhoto" href="'+result[vid].embeddedLink+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
+                        '<a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>'+
                         '</div></div></div>';
                 $('#newestvideossection').append(content);
             };
@@ -203,7 +133,6 @@
     }
 
     $(function() {
-        spotlight();
         newest();
     });
 

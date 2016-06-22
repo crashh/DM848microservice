@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+
+    <!-- *****************************************************************************************************************
+    BLUE WRAP
+    ***************************************************************************************************************** -->
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>Comment Details</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
+
+    <div id="portfoliowrap">
+        <div class="container">
+
+            <dl class="dl-horizontal">
+                <dt>Comment</dt>
+                <dd th:text="${comment.comment}">Comment</dd>
+                <dt>UserName</dt>
+                <dd th:text="${comment.userId}">UserName</dd>
+                <dt>Video ID</dt>
+                <dd th:text="${comment.videoId}">Video ID</dd>
+            </dl>
+
+            <div style="height: 2cm">&nbsp;</div>
+        </div>
+    </div>
+
+    <div th:replace="footer :: copy"></div>
+
+</body>
+</html>

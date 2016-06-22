@@ -1,7 +1,11 @@
 package dm848.controller;
 
 import dm848.SearchCriteria;
+import dm848.dto.Comment;
+import dm848.dto.Image;
 import dm848.dto.User;
+import dm848.service.WebCommentService;
+import dm848.service.WebImageService;
 import dm848.service.WebUsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +30,10 @@ public class WebUsersController {
 
 	@Autowired
 	protected WebUsersService usersService;
+	@Autowired
+	protected WebCommentService commentService;
+	@Autowired
+	protected WebImageService imageService;
 
 	protected Logger logger = Logger.getLogger(WebUsersController.class
 			.getName());
@@ -39,24 +47,29 @@ public class WebUsersController {
 		binder.setAllowedFields("userId", "searchText");
 	}
 
-	@RequestMapping("/dm848.users")
+	@RequestMapping("/users")
 	public String goHome() {
 		return "index";
 	}
 
-	@RequestMapping("/dm848.users/{userName}")
+	@RequestMapping("/users/{userName}")
 	public String byUserName(Model model,
 			@PathVariable("userName") String userName) {
 
 		logger.info("web-service byUserName() invoked: " + userName);
 
 		User user = usersService.findByUserName(userName);
+		List<Comment> comments = commentService.byUserName(user.getUserName());
+		List<Image> images = imageService.findByUserName(user.getUserName());
+
 		logger.info("web-service byUserName() found: " + user);
 		model.addAttribute("user", user);
-		return "dm848.users/user";
+		model.addAttribute("comments", comments);
+		model.addAttribute("images", images);
+		return "users/user";
 	}
 
-    @RequestMapping("/dm848.users/name/{text}")
+    @RequestMapping("/users/name/{text}")
     public String byName(Model model, @PathVariable("text") String name) {
         logger.info("web-service byName() invoked: " + name);
 
@@ -65,16 +78,16 @@ public class WebUsersController {
         model.addAttribute("search", name);
         if (users != null)
             model.addAttribute("users", users);
-        return "dm848.users/dm848.users";
+        return "users/users";
     }
 
-	@RequestMapping(value = "/dm848.users/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/search", method = RequestMethod.GET)
 	public String searchForm(Model model) {
 		model.addAttribute("searchCriteria", new SearchCriteria());
-		return "dm848.users/userSearch";
+		return "users/userSearch";
 	}
 
-	@RequestMapping(value = "/dm848.users/dosearch")
+	@RequestMapping(value = "/users/dosearch")
 	public String doSearch(Model model, SearchCriteria criteria,
 						   BindingResult result) {
 		logger.info("web-service search() invoked: " + criteria);
@@ -82,7 +95,7 @@ public class WebUsersController {
 		criteria.validate(result);
 
 		if (result.hasErrors())
-			return "userSearch";
+			return "users/userSearch";
 
 		String userName = criteria.getUserName();
 		if (StringUtils.hasText(userName)) {
@@ -93,7 +106,7 @@ public class WebUsersController {
 		}
 	}
 
-	@RequestMapping(value = "/dm848.users/all/")
+	@RequestMapping(value = "/users/all/")
 	public String findAll(Model model) {
 		logger.info("web-service findAll() invoked.");
 
@@ -103,7 +116,7 @@ public class WebUsersController {
         model.addAttribute("search", "all");
         if (users != null)
             model.addAttribute("users", users);
-        return "dm848.users/all";
+        return "users/all";
 
 	}
 }

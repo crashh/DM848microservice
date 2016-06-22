@@ -8,17 +8,18 @@
 <div id="footerwrap">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<h4>About</h4>
 				<div class="hline-w"></div>
-				<p>Lorem Ipsum is simply</p>
+				<p>A technical demo showcasing a microservice architecture, built using <b>Spring cloud</b> and the <b>Netflix Open Source</b>.</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<h4>Credits</h4>
 				<div class="hline-w"></div>
 				<p>
 					latho12, Lars Thomasen<br/>
 					lthomasen@gmail.com<br/>
+                    <a href="http://crashh.me">Homepage</a>
 
 				</p>
 			</div>
@@ -30,140 +31,14 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/retina-1.1.0.js"></script>
-<script src="js/jquery.hoverdir.js"></script>
-<script src="js/jquery.hoverex.min.js"></script>
-<script src="js/jquery.isotope.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/custom.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/retina-1.1.0.js"></script>
+<script src="/js/jquery.hoverdir.js"></script>
+<script src="/js/jquery.hoverex.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/jquery.prettyPhoto.js"></script>
+<script src="/js/custom.js"></script>
 
-<script>
-    function getColumnNumber() {
-        var winWidth = $(window).width(),
-                columnNumber = 1;
 
-        if (winWidth > 1200) {
-            columnNumber = 5;
-        } else if (winWidth > 950) {
-            columnNumber = 4;
-        } else if (winWidth > 600) {
-            columnNumber = 3;
-        } else if (winWidth > 400) {
-            columnNumber = 2;
-        } else if (winWidth > 250) {
-            columnNumber = 1;
-        }
-        return columnNumber;
-    }
-
-    function latest() {
-        "use strict";
-        var $container = $('.portfolio'),
-                $items = $container.find('.portfolio-item'),
-                portfolioLayout = 'fitRows';
-
-        if( $container.hasClass('portfolio-centered') ) {
-            portfolioLayout = 'masonry';
-        }
-
-        $container.isotope({
-            filter: '*',
-            animationEngine: 'best-available',
-            layoutMode: portfolioLayout,
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            },
-            masonry: {
-            }
-        }, refreshWaypoints());
-
-        function refreshWaypoints() {
-            setTimeout(function() {
-            }, 1000);
-        }
-
-        $('nav.portfolio-filter ul a').on('click', function() {
-            var selector = $(this).attr('data-filter');
-            $container.isotope({ filter: selector }, refreshWaypoints());
-            $('nav.portfolio-filter ul a').removeClass('active');
-            $(this).addClass('active');
-            return false;
-        });
-
-        function setColumns() {
-            var winWidth = $(window).width(),
-                    columnNumber = getColumnNumber(),
-                    itemWidth = Math.floor(winWidth / columnNumber);
-
-            $container.find('.portfolio-item').each(function() {
-                $(this).css( {
-                    width : itemWidth + 'px'
-                });
-            });
-        }
-
-        function setPortfolio() {
-            setColumns();
-            $container.isotope('reLayout');
-        }
-
-        $container.imagesLoaded(function () {
-            setPortfolio();
-        });
-
-        $(window).on('resize', function () {
-            setPortfolio();
-        });
-    }
-
-        function spotlight(){
-            $.ajax({url: "web-service/videos/ajax/spotlight", success: function(result){
-                $('.spinner').remove();
-                var spotlight1 = $('#spotlight1');
-                var spotlight2 = $('#spotlight2');
-                var spotlight3 = $('#spotlight3');
-                spotlight1.children().eq(0).attr("src", result[0].embeddedLink);
-                spotlight1.children().eq(1).text(result[0].name);
-                spotlight1.children().eq(2).text(result[0].description);
-                spotlight2.children().eq(0).attr("src", result[1].embeddedLink);
-                spotlight2.children().eq(1).text(result[1].name);
-                spotlight2.children().eq(2).text(result[1].description);
-                spotlight3.children().eq(0).attr("src", result[2].embeddedLink);
-                spotlight3.children().eq(1).text(result[2].name);
-                spotlight3.children().eq(2).text(result[2].description);
-                //console.log(result);
-            }});
-        }
-
-        function newest(){
-            $.ajax({url: "web-service/videos/ajax/newest", success: function(result){
-                var winWidth = $(window).width(),
-                        columnNumber = getColumnNumber(),
-                        itemWidth = Math.floor(winWidth / columnNumber);
-
-                for(var vid in result) {
-                    var content =
-                            '<div class="portfolio-item">'+
-                            '<div class="he-wrap tpl6">'+
-                            '<img src="'+result[vid].embeddedLink+'" height="'+Math.floor(itemWidth / 1.8)+'" width="'+itemWidth+'" alt=""/>'+
-                            '<div class="he-view">'+
-                            '<h3 class="a1" data-animate="fadeInDown">A Book Design Item</h3>'+
-                            '<a data-rel="prettyPhoto" href="'+result[vid].embeddedLink+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
-                            '<a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>'+
-                            '</div></div></div>';
-                    $('#newestvideossection').append(content);
-                };
-                latest();
-               //console.log(result);
-            }
-            });
-        }
-        spotlight();
-        newest();
-
-</script>
 </body>
 </html>

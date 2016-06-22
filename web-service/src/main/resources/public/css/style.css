@@ -227,8 +227,8 @@ a:focus {
 
 /* Services Wrap */
 #service {
-	margin-top: 100px;
-	margin-bottom: 80px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 #service i {
@@ -242,7 +242,6 @@ a:focus {
 	padding-top: 60px;
 	margin-bottom: 60px;
 	display: block;
-	text-align: center
 }
 
 #portfoliowrap h3 {
@@ -456,4 +455,18 @@ csmall2 {
 .share i {
 	padding-right: 15px;
 	font-size: 18px;
+}
+
+.dl-horizontal dt { !important;
+	float: left;
+	 width: auto;
+	overflow: hidden;
+	clear: left;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dl-horizontal dd { !important;
+	margin-left: 1em;
 }

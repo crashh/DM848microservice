@@ -6,9 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/auth-service/spring-auth-service.iml" filepath="$PROJECT_DIR$/auth-service/spring-auth-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/comment-service/spring-comment-service.iml" filepath="$PROJECT_DIR$/comment-service/spring-comment-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/edge-service/spring-edge-service.iml" filepath="$PROJECT_DIR$/edge-service/spring-edge-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/image-service/spring-image-service.iml" filepath="$PROJECT_DIR$/image-service/spring-image-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/registration-service/spring-registration-service.iml" filepath="$PROJECT_DIR$/registration-service/spring-registration-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/spring-user-service.iml" filepath="$PROJECT_DIR$/user-service/spring-user-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/video-service/spring-video-service.iml" filepath="$PROJECT_DIR$/video-service/spring-video-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-service/spring-web-service.iml" filepath="$PROJECT_DIR$/web-service/spring-web-service.iml" />
     </modules>
   </component>

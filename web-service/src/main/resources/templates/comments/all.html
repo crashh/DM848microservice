@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+
+<!-- *****************************************************************************************************************
+TITLE & CONTENT
+***************************************************************************************************************** -->
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+            <h2>All comments in the database</h2>
+            <h4>Click on any of the details to see details for that reference.</h4>
+            <br/>
+            <div class="hline"></div>
+        </div>
+    </div>
+</div>
+
+	<div id="portfoliowrap">
+		<div class="container">
+
+			<div th:if="${comments}">
+
+				<table class="table table-striped" style="width: 100%">
+					<thead>
+					<tr>
+						<th>Comment</th>
+						<th>Username</th>
+						<th>Image ID</th>
+					</tr>
+					</thead>
+
+					<tbody>
+					<tr th:each="comment : ${comments}">
+						<td><a href="comment.html"
+							   th:href="@{|/comment/${comment.id}|}"
+							   th:text="|${comment.comment}|">11111111</a></td>
+						<td><a href="comment.html"
+							   th:href="@{|/users/${comment.userId}|}"
+							   th:text="|${comment.userId}|">11111111</a></td>
+						<td><a href="comment.html"
+							   th:href="@{|/images/${comment.videoId}|}"
+							   th:text="|${comment.videoId}|">11111111</a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+	<div th:replace="footer :: copy"></div>
+
+</body>
+</html>

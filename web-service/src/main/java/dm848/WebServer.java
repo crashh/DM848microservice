@@ -1,10 +1,12 @@
 package dm848;
 
 import dm848.controller.HomeController;
+import dm848.controller.WebCommentController;
 import dm848.controller.WebUsersController;
-import dm848.controller.WebVideoController;
+import dm848.controller.WebImageController;
+import dm848.service.WebCommentService;
 import dm848.service.WebUsersService;
-import dm848.service.WebVideoService;
+import dm848.service.WebImageService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -31,7 +33,8 @@ public class WebServer {
 	 * doesn't matter.
 	 */
 	public static final String USER_SERVICE_URL = "USER-SERVICE";
-	public static final String VIDEO_SERVICE_URL = "VIDEO-SERVICE";
+	public static final String IMAGE_SERVICE_URL = "IMAGE-SERVICE";
+	public static final String COMMENT_SERVICE_URL = "COMMENT-SERVICE";
 
 	/**
 	 * Create the services.
@@ -41,8 +44,12 @@ public class WebServer {
 		return new WebUsersService(USER_SERVICE_URL);
 	}
 	@Bean
-	public WebVideoService videoService() {
-		return new WebVideoService(VIDEO_SERVICE_URL);
+	public WebImageService imageService() {
+		return new WebImageService(IMAGE_SERVICE_URL);
+	}
+	@Bean
+	public WebCommentService commentService() {
+		return new WebCommentService(COMMENT_SERVICE_URL);
 	}
 
 	/**
@@ -58,7 +65,11 @@ public class WebServer {
 		return new WebUsersController(usersService());
 	}
 	@Bean
-	public WebVideoController videoController() {
-		return new WebVideoController(videoService());
+	public WebImageController videoController() {
+		return new WebImageController(imageService());
+	}
+	@Bean
+	public WebCommentController commentController() {
+		return new WebCommentController(commentService());
 	}
 }

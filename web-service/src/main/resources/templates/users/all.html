@@ -5,47 +5,57 @@
 
 <body>
 
-	<section id="fh5co-top-intro">
+<!-- *****************************************************************************************************************
+TITLE & CONTENT
+***************************************************************************************************************** -->
+
+<div class="container mtb">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 centered">
+			<h2>All users in the database</h2>
+			<h4>Click on a username to see details about that user, including comments and pictures posted by
+				that user.</h4>
+			<br/>
+			<div class="hline"></div>
+		</div>
+	</div>
+</div>
+
+	<div id="portfoliowrap">
 		<div class="container">
-            <div class="row row-bottom-padded-lg" style="width: 100%">
-				<h1>All dm848.users</h1>
 
-				<div th:if="not ${users}" class="error">
-					No dm848.users found containing '<span th:text="${search}">text</span>'.
-					<div style="height: 2cm">&nbsp;</div>
-				</div>
+			<div th:if="not ${users}" class="error">
+				No users found containing '<span th:text="${search}">text</span>'.
+				<div style="height: 2cm">&nbsp;</div>
+			</div>
 
-				<div th:if="${users}">
-					<p>
-						All dm848.users in the system:
-					</p>
+			<div th:if="${users}">
 
-					<table class="table table-striped" style="width: 100%">
-						<thead>
-							<tr>
-								<th>Username</th>
-								<th>Name</th>
-							</tr>
-						</thead>
+				<table class="table table-striped" style="width: 100%">
+					<thead>
+					<tr>
+						<th>Username</th>
+						<th>Name</th>
+					</tr>
+					</thead>
 
-						<tbody>
-							<tr th:each="user : ${users}">
-								<td><a href="user.html"
-									th:href="@{|/dm848.users/${user.userName}|}"
-									th:text="|${user.userName}|">11111111</a></td>
-								<td th:text="${user.name}">Name</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+					<tbody>
+					<tr th:each="user : ${users}">
+						<td><a href="user.html"
+							   th:href="@{|/users/${user.userName}|}"
+							   th:text="|${user.userName}|">11111111</a></td>
+						<td th:text="${user.name}">Name</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
 
-				<div style="text-align: right">
-					Options: <a th:href="@{/}">Home</a> | <a
-						th:href="@{/dm848.users/search}">User Search</a>
-				</div>
+			<div style="text-align: right">
+				Options: <a th:href="@{/}">Home</a> | <a
+					th:href="@{/users/search}">User Search</a>
 			</div>
 		</div>
-	</section>
+	</div>
 
 	<div th:replace="footer :: copy"></div>
 

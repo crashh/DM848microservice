@@ -54,6 +54,34 @@ public class CommentsController {
 		}
 	}
 
+	@RequestMapping("/comments/user/{username}")
+	public List<Comment> byUserName(@PathVariable("username") String username) {
+
+		logger.info("comment-service byCommentId() invoked: " + username);
+		List<Comment> comment = commentRepository.findByUserId(username);
+		logger.info("comment-service byCommentId() found: " + comment);
+
+		if (comment == null)
+			return null;
+		else {
+			return comment;
+		}
+	}
+
+	@RequestMapping("/comments/image/{id}")
+	public List<Comment> byVideoId(@PathVariable("id") Long id) {
+
+		logger.info("comment-service byCommentId() invoked: " + id);
+		List<Comment> comment = commentRepository.findByVideoId(id);
+		logger.info("comment-service byCommentId() found: " + comment);
+
+		if (comment == null)
+			return null;
+		else {
+			return comment;
+		}
+	}
+
 
     /**
 	 * Fetch all comments
