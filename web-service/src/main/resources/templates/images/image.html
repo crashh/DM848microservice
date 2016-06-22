@@ -46,22 +46,31 @@
                 </div>
             </div>
 
-            <div class="col-lg-5 col-lg-offset-1">
+            <div class="col-lg-2 col-lg-offset-1">
                 <div class="spacing"></div>
-                <h4><span th:text="${image.name}"></span></h4>
+                <h1><span th:text="${image.name}"></span></h1>
                 <p><span th:text="${image.description}"></span></p>
             </div>
 
-            <div class="col-lg-4 col-lg-offset-1">
+            <div class="col-lg-3 col-lg-offset-1">
+                <div class="spacing"></div>
+                <h4>Image Comments</h4>
+                <div class="hline"></div>
+                <div th:each="comment : ${comments}">
+                    <h4><span th:text="${comment.userId}"></span></h4>
+                    <p><span th:text="${comment.comment}"></span></p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-lg-offset-1">
                 <div class="spacing"></div>
                 <h4>Image Details</h4>
                 <div class="hline"></div>
-                <p><b>Date:</b> April 18, 2014</p>
-                <p><b>Author:</b> Marcel Newman</p>
-                <p><b>Categories:</b> Illustration, Web Design, Wordpress</p>
-                <p><b>Tagged:</b> Flat, UI, Development</p>
-                <p><b>Client:</b> Wonder Corp.</p>
-                <p><b>Website:</b> <a href="http://blacktie.co">http://blacktie.co</a></p>
+                <p><b>Date:</b><span th:text="${image.date}"></span></p>
+                <p><b>Author:</b> -</p>
+                <p><b>Categories:</b> -</p>
+                <p><b>Tagged:</b> -</p>
+                <p><b>Client:</b> -</p>
             </div>
 
         </div>

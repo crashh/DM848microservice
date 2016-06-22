@@ -15,6 +15,8 @@ public class Image {
 	protected String link;
 	protected String embeddedLink; // Null by default
 	protected String description;
+	protected String date;
+	protected String userName;
 
 
 	/**
@@ -58,6 +60,14 @@ public class Image {
 	protected void setDescription(String desc) {
 		this.description = desc;
 	}
+
+	public String getUserName() { return userName; }
+
+	protected void setUserName(String username) {
+		this.userName = username;
+	}
+
+	public String getDate() { return date; }
 
 	@Override
 	public String toString() {

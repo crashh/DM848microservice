@@ -29,14 +29,12 @@
                 columnNumber = 1;
 
         if (winWidth > 1200) {
-            columnNumber = 5;
-        } else if (winWidth > 950) {
             columnNumber = 4;
-        } else if (winWidth > 600) {
+        } else if (winWidth > 950) {
             columnNumber = 3;
-        } else if (winWidth > 400) {
+        } else if (winWidth > 600) {
             columnNumber = 2;
-        } else if (winWidth > 250) {
+        } else if (winWidth > 400) {
             columnNumber = 1;
         }
         return columnNumber;
@@ -121,8 +119,8 @@
                         '<img src="'+result[vid].embeddedLink+'" height="'+Math.floor(itemWidth / 1.8)+'" width="'+itemWidth+'" alt=""/>'+
                         '<div class="he-view">'+
                         '<h3 class="a1" data-animate="fadeInDown">'+result[vid].name+'</h3>'+
-                        '<a data-rel="prettyPhoto" href="'+result[vid].embeddedLink+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
-                        '<a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>'+
+                        '<p class="a1" data-animate="fadeInDown" style="color: white">Date added: '+result[vid].date+'</p>'+
+                        '<a data-rel="prettyPhoto" href="/images/'+result[vid].id+'" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>'+
                         '</div></div></div>';
                 $('#newestvideossection').append(content);
             };

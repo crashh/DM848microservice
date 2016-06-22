@@ -27,6 +27,9 @@ public class Image implements Serializable {
 
 	protected String description;
 
+	@Column(name = "cdate")
+	protected String date;
+
 	@Column(name = "user_name")
 	protected String userName;
 
@@ -50,12 +53,13 @@ public class Image implements Serializable {
     public Image() {
     }
 
-	public Image(String name, String link, String description, String username) {
+	public Image(String name, String link, String description, String username, String date) {
 		id = getNextId();
 		this.name = name;
 		this.link = link;
 		this.description = description;
 		this.userName = username;
+		this.date = date;
 	}
 
 	public long getId() {
@@ -91,6 +95,8 @@ public class Image implements Serializable {
 	protected void setUserName(String username) {
 		this.userName = username;
 	}
+
+	public String getDate() { return date; }
 
 	@Override
 	public String toString() {

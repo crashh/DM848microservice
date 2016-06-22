@@ -1,7 +1,9 @@
 package dm848.controller;
 
 
+import dm848.dto.Comment;
 import dm848.dto.Image;
+import dm848.service.WebCommentService;
 import dm848.service.WebImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -21,6 +24,8 @@ public class WebImageController {
 
 	@Autowired
 	protected WebImageService imageService;
+    @Autowired
+    protected WebCommentService commentService;
 
 	protected Logger logger = Logger.getLogger(WebImageController.class
 			.getName());
@@ -45,9 +50,11 @@ public class WebImageController {
 		logger.info("web-service byImageId() invoked: " + id);
 
 		Image image = imageService.findById(id);
+        List<Comment> comments = commentService.byVideoId(image.getId());
 
 		logger.info("web-service byImageId() found: " + image);
 		model.addAttribute("image", image);
+        model.addAttribute("comments", comments);
 		return "images/image";
 	}
 
@@ -112,12 +119,8 @@ public class WebImageController {
     List<Image> newest(@RequestParam("amount") String amount) {
         logger.info("web-service ajax/newest() invoked with amount "+amount+".");
 
-        /*
-        * Not really the newest images, just the first from the query, since this is just
-        * to demo actual methods a microservice might offer.
-        */
-
         List<Image> images = imageService.findAll();
+        Collections.sort(images, (o1, o2) -> o1.getDate().compareTo(o2.getDate()));
 
 		if (!amount.equals("all")) {
 			images = images.subList(0, Integer.parseInt(amount));

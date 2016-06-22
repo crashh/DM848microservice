@@ -15,7 +15,6 @@ desktop.ini
 .~lock.*
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
