@@ -12,7 +12,7 @@
     <artifactId>spring-comment-service</artifactId>
     <groupId>spring-comment-service</groupId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <start-class>dm848.CommentServer</start-class>
