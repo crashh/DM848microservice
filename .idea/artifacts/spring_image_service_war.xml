@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-image-service:war">
+    <output-path>$PROJECT_DIR$/image-service/target</output-path>
+    <root id="archive" name="spring-video-service-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring-image-service:war exploded" />
+    </root>
+  </artifact>
+</component>

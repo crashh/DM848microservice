@@ -3,6 +3,14 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/comment-service" />
+    <file type="web" url="file://$PROJECT_DIR$/edge-service" />
+    <file type="web" url="file://$PROJECT_DIR$/image-service" />
+    <file type="web" url="file://$PROJECT_DIR$/registration-service" />
+    <file type="web" url="file://$PROJECT_DIR$/user-service" />
+    <file type="web" url="file://$PROJECT_DIR$/web-service" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

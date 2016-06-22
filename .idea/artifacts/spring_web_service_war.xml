@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-web-service:war">
+    <output-path>$PROJECT_DIR$/web-service/target</output-path>
+    <root id="archive" name="spring-web-service-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring-web-service:war exploded" />
+    </root>
+  </artifact>
+</component>

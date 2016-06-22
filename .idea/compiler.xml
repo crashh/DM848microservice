@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="comment-service" />
-        <module name="microservice-project" />
         <module name="spring-comment-service" />
         <module name="spring-edge-service" />
         <module name="spring-image-service" />

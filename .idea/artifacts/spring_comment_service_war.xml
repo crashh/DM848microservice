@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-comment-service:war">
+    <output-path>$PROJECT_DIR$/comment-service/target</output-path>
+    <root id="archive" name="spring-comment-service-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring-comment-service:war exploded" />
+    </root>
+  </artifact>
+</component>
