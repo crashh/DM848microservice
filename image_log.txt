@@ -1,0 +1,275 @@
+2016-06-24 00:29:05.557  INFO 4955 --- [           main] dm848.ImageServer                        : Starting ImageServer v1.0.0-SNAPSHOT on minegen2 with PID 4955 (/home/crashh/Repos/dm848/microservices-demo/spring-video-service-1.0.0-SNAPSHOT.jar started by crashh in /home/crashh/Repos/dm848/microservices-demo)
+2016-06-24 00:29:06.039  INFO 4955 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3312476c: startup date [Fri Jun 24 00:29:06 CEST 2016]; root of context hierarchy
+2016-06-24 00:29:08.196  INFO 4955 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-24 00:29:11.382  INFO 4955 --- [           main] dm848.ImageServer                        : Started ImageServer in 7.646 seconds (JVM running for 9.691)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.2.3.RELEASE)
+
+2016-06-24 00:29:12.273  INFO 4955 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fb34b83: startup date [Fri Jun 24 00:29:12 CEST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3312476c
+2016-06-24 00:29:14.581  WARN 4955 --- [           main] .i.s.PathMatchingResourcePatternResolver : Skipping [/tmp/spring-boot-libs/06f98804e83cf4a94380b46591b976b1d17c36b8-eureka-client-1.1.147.jar] because it does not denote a directory
+2016-06-24 00:29:21.903  INFO 4955 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-06-24 00:29:23.540  INFO 4955 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'infoEndpoint': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration; factoryMethodName=infoEndpoint; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$InfoEndpointRebinderConfiguration; factoryMethodName=infoEndpoint; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/autoconfigure/RefreshAutoConfiguration$InfoEndpointRebinderConfiguration.class]]
+2016-06-24 00:29:23.775  INFO 4955 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'default.null.RibbonClientSpecification': replacing [Generic bean: class [org.springframework.cloud.netflix.ribbon.RibbonClientSpecification]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.cloud.netflix.ribbon.RibbonClientSpecification]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2016-06-24 00:29:25.690  INFO 4955 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d566cfa-2eeb-39bb-b639-9dc2626fa8d0
+2016-06-24 00:29:25.759  INFO 4955 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-24 00:29:27.295  INFO 4955 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$806f46af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-24 00:29:27.655  INFO 4955 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-24 00:29:27.814  INFO 4955 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-24 00:29:27.970  INFO 4955 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-24 00:29:28.369  INFO 4955 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$ConfigurationPropertiesRebinderConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$ConfigurationPropertiesRebinderConfiguration$$EnhancerBySpringCGLIB$$717233c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-24 00:29:32.941  INFO 4955 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9991 (http)
+2016-06-24 00:29:35.749  INFO 4955 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-06-24 00:29:35.779  INFO 4955 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2016-06-24 00:29:37.420  INFO 4955 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-06-24 00:29:37.422  INFO 4955 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 25163 ms
+2016-06-24 00:29:49.698  INFO 4955 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-06-24 00:29:49.866  INFO 4955 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-06-24 00:29:49.867  INFO 4955 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-06-24 00:29:49.875  INFO 4955 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-06-24 00:29:49.878  INFO 4955 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-06-24 00:29:49.879  INFO 4955 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-06-24 00:29:50.509  INFO 4955 --- [ost-startStop-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [212] milliseconds.
+2016-06-24 00:29:51.120  INFO 4955 --- [           main] uration$$EnhancerBySpringCGLIB$$c5621f8a : dataSource() invoked
+2016-06-24 00:29:51.165  INFO 4955 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Creating embedded database 'testdb'
+2016-06-24 00:29:54.252  INFO 4955 --- [           main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from class path resource [testdb/images/schema.sql]
+2016-06-24 00:29:54.273  INFO 4955 --- [           main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from class path resource [testdb/images/schema.sql] in 21 ms.
+2016-06-24 00:29:54.273  INFO 4955 --- [           main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from class path resource [testdb/images/data.sql]
+2016-06-24 00:29:54.348  INFO 4955 --- [           main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from class path resource [testdb/images/data.sql] in 75 ms.
+2016-06-24 00:29:54.353  INFO 4955 --- [           main] uration$$EnhancerBySpringCGLIB$$c5621f8a : dataSource = org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@7b68a87e
+2016-06-24 00:29:54.444  INFO 4955 --- [           main] uration$$EnhancerBySpringCGLIB$$c5621f8a : System has 15 images
+2016-06-24 00:29:55.797  INFO 4955 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-06-24 00:29:55.894  INFO 4955 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-06-24 00:29:56.419  INFO 4955 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.8.Final}
+2016-06-24 00:29:56.459  INFO 4955 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-06-24 00:29:56.467  INFO 4955 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-06-24 00:29:58.900  INFO 4955 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-24 00:29:59.215  INFO 4955 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-06-24 00:29:59.263  WARN 4955 --- [           main] org.hibernate.dialect.H2Dialect          : HHH000431: Unable to determine H2 database version, certain features may not work
+2016-06-24 00:29:59.927  INFO 4955 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-06-24 00:30:01.666  INFO 4955 --- [           main] o.h.tool.hbm2ddl.SchemaValidator         : HHH000229: Running schema validator
+2016-06-24 00:30:01.679  INFO 4955 --- [           main] o.h.tool.hbm2ddl.SchemaValidator         : HHH000102: Fetching database metadata
+2016-06-24 00:30:02.032  INFO 4955 --- [           main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: PUBLIC.PUBLIC.T_IMAGE
+2016-06-24 00:30:02.043  INFO 4955 --- [           main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [cdate, user_name, name, link, description, id]
+Hibernate: select count(*) as col_0_0_ from t_image image0_
+2016-06-24 00:30:06.409  INFO 4955 --- [           main] dm848.images.ImageController             : Imagerepository says system has 15 images
+2016-06-24 00:30:06.974  WARN 4955 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-06-24 00:30:06.979  INFO 4955 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-06-24 00:30:07.044  INFO 4955 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4f4f47b8
+2016-06-24 00:30:09.241  INFO 4955 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fb34b83: startup date [Fri Jun 24 00:29:12 CEST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3312476c
+2016-06-24 00:30:10.098  INFO 4955 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/images/{id}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public dm848.images.Image dm848.images.ImageController.byVideoId(java.lang.String)
+2016-06-24 00:30:10.098  INFO 4955 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/images/user/{username}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<dm848.images.Image> dm848.images.ImageController.findByUserName(java.lang.String)
+2016-06-24 00:30:10.099  INFO 4955 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/images/all/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<dm848.images.Image> dm848.images.ImageController.findAll()
+2016-06-24 00:30:10.101  INFO 4955 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2016-06-24 00:30:10.102  INFO 4955 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-06-24 00:30:10.272  INFO 4955 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-24 00:30:10.272  INFO 4955 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-24 00:30:10.548  INFO 4955 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-24 00:30:15.510  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.512  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.513  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-06-24 00:30:15.530  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.531  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-06-24 00:30:15.532  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.532  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.533  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2016-06-24 00:30:15.533  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2016-06-24 00:30:15.534  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.535  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.535  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-06-24 00:30:15.536  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.539  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-06-24 00:30:15.540  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.541  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-06-24 00:30:15.542  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-06-24 00:30:15.543  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-24 00:30:15.543  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2016-06-24 00:30:15.547  INFO 4955 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2016-06-24 00:30:16.810  WARN 4955 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-06-24 00:30:16.819  INFO 4955 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-06-24 00:30:16.999  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-06-24 00:30:17.055  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2016-06-24 00:30:17.056  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2016-06-24 00:30:17.057  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2016-06-24 00:30:17.058  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2016-06-24 00:30:17.059  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2016-06-24 00:30:17.079  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2016-06-24 00:30:17.155  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2016-06-24 00:30:17.235  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2016-06-24 00:30:17.312  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,type=ConfigurationPropertiesRebinder]
+2016-06-24 00:30:17.358  INFO 4955 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.bootstrap.config:name=refreshEndpoint,type=RefreshEndpoint]
+2016-06-24 00:30:17.380  INFO 4955 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-06-24 00:30:17.386  INFO 4955 --- [           main] .p.EurekaConfigBasedInstanceInfoProvider : Setting initial instance status as: STARTING
+2016-06-24 00:30:19.510  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-06-24 00:30:19.514  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-06-24 00:30:19.514  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-06-24 00:30:19.515  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-06-24 00:30:19.515  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-06-24 00:30:19.515  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-06-24 00:30:20.286  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-06-24 00:30:20.528  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-06-24 00:30:20.555  INFO 4955 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2016-06-24 00:30:20.581  INFO 4955 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application image-service with eureka with status UP
+2016-06-24 00:30:21.250  INFO 4955 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9991 (http)
+2016-06-24 00:30:21.253  INFO 4955 --- [           main] dm848.ImageServer                        : Started ImageServer in 77.961 seconds (JVM running for 79.562)
+2016-06-24 00:30:25.600  INFO 4955 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - Re-registering apps/IMAGE-SERVICE
+2016-06-24 00:30:25.601  INFO 4955 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991: registering service...
+2016-06-24 00:30:25.643  INFO 4955 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - registration status: 204
+2016-06-24 00:30:50.534  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-06-24 00:30:50.534  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-06-24 00:30:50.534  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-06-24 00:30:50.535  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-06-24 00:30:50.535  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-06-24 00:30:50.535  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2016-06-24 00:30:50.542  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-06-24 00:30:50.561  INFO 4955 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-06-24 00:31:00.561  INFO 4955 --- [scoveryClient-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - retransmit instance info with status UP
+2016-06-24 00:31:00.561  INFO 4955 --- [scoveryClient-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991: registering service...
+2016-06-24 00:31:00.573  INFO 4955 --- [scoveryClient-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - registration status: 204
+2016-06-24 00:31:00.716  INFO 4955 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - Re-registering apps/IMAGE-SERVICE
+2016-06-24 00:31:00.717  INFO 4955 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991: registering service...
+2016-06-24 00:31:00.728  INFO 4955 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - registration status: 204
+2016-06-24 00:31:08.059  INFO 4955 --- [nio-9991-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-06-24 00:31:08.060  INFO 4955 --- [nio-9991-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-06-24 00:31:08.195  INFO 4955 --- [nio-9991-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 135 ms
+2016-06-24 00:31:08.333  INFO 4955 --- [nio-9991-exec-1] dm848.images.ImageController             : image-service findAll() invoked: com.sun.proxy.$Proxy83
+2016-06-24 00:31:08.334  INFO 4955 --- [nio-9991-exec-2] dm848.images.ImageController             : image-service findAll() invoked: com.sun.proxy.$Proxy83
+Hibernate: select image0_.id as id1_0_, image0_.cdate as cdate2_0_, image0_.description as descript3_0_, image0_.link as link4_0_, image0_.name as name5_0_, image0_.user_name as user_nam6_0_ from t_image image0_
+Hibernate: select image0_.id as id1_0_, image0_.cdate as cdate2_0_, image0_.description as descript3_0_, image0_.link as link4_0_, image0_.name as name5_0_, image0_.user_name as user_nam6_0_ from t_image image0_
+2016-06-24 00:31:08.515  INFO 4955 --- [nio-9991-exec-2] dm848.images.ImageController             : image-service findAll() found: 15
+2016-06-24 00:31:08.518  INFO 4955 --- [nio-9991-exec-1] dm848.images.ImageController             : image-service findAll() found: 15
+2016-06-24 00:31:21.561  INFO 4955 --- [       Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3312476c: startup date [Fri Jun 24 00:29:06 CEST 2016]; root of context hierarchy
+2016-06-24 00:31:21.562  INFO 4955 --- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fb34b83: startup date [Fri Jun 24 00:29:12 CEST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3312476c
+2016-06-24 00:31:21.602  INFO 4955 --- [       Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-06-24 00:31:21.710  INFO 4955 --- [       Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-06-24 00:31:21.712  INFO 4955 --- [       Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2016-06-24 00:31:21.715  INFO 4955 --- [       Thread-2] o.s.c.n.servo.ServoMetricCollector       : Stopping Servo PollScheduler
+2016-06-24 00:31:21.768  INFO 4955 --- [       Thread-2] c.n.e.EurekaDiscoveryClientConfiguration : Closing DiscoveryClient.jerseyClient
+2016-06-24 00:31:21.776  INFO 4955 --- [       Thread-2] c.n.e.EurekaDiscoveryClientConfiguration : Removing application image-service from eureka
+2016-06-24 00:31:21.844  INFO 4955 --- [       Thread-2] o.a.http.impl.client.DefaultHttpClient   : I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:9998: Connection reset
+2016-06-24 00:31:21.855  INFO 4955 --- [       Thread-2] o.a.http.impl.client.DefaultHttpClient   : Retrying request to {}->http://localhost:9998
+2016-06-24 00:31:21.891 ERROR 4955 --- [       Thread-2] com.netflix.discovery.DiscoveryClient    : Can't get a response from http://localhost:9998/eureka/apps/IMAGE-SERVICE/minegen2:image-service:9991
+Can't contact any eureka nodes - possibly a security group issue?
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:184)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:120)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:28)
+	at com.sun.jersey.api.client.Client.handle(Client.java:648)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:680)
+	at com.sun.jersey.api.client.WebResource.delete(WebResource.java:272)
+	at com.netflix.discovery.DiscoveryClient.makeRemoteCall(DiscoveryClient.java:1134)
+	at com.netflix.discovery.DiscoveryClient.makeRemoteCall(DiscoveryClient.java:1060)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:694)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:684)
+	at com.netflix.discovery.DiscoveryManager.shutdownComponent(DiscoveryManager.java:94)
+	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.close(EurekaDiscoveryClientConfiguration.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:349)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:314)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:153)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:239)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:900)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.doClose(EmbeddedWebApplicationContext.java:150)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:836)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:151)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:331)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:804)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:674)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:115)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:170)
+	... 35 common frames omitted
+
+2016-06-24 00:31:21.893 ERROR 4955 --- [       Thread-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/minegen2:image-service:9991 - de-registration failedjava.net.ConnectException: Connection refused
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:184)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:120)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:28)
+	at com.sun.jersey.api.client.Client.handle(Client.java:648)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:680)
+	at com.sun.jersey.api.client.WebResource.delete(WebResource.java:272)
+	at com.netflix.discovery.DiscoveryClient.makeRemoteCall(DiscoveryClient.java:1134)
+	at com.netflix.discovery.DiscoveryClient.makeRemoteCall(DiscoveryClient.java:1060)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:694)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:684)
+	at com.netflix.discovery.DiscoveryManager.shutdownComponent(DiscoveryManager.java:94)
+	at org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.close(EurekaDiscoveryClientConfiguration.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:349)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:314)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:153)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:239)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:900)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.doClose(EmbeddedWebApplicationContext.java:150)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:836)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:102)
+	at org.springframework.boot.builder.ParentContextCloserApplicationListener$ContextCloserListener.onApplicationEvent(ParentContextCloserApplicationListener.java:86)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:151)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:331)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:804)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:674)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:115)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:170)
+	... 35 common frames omitted
+
+2016-06-24 00:31:21.894  INFO 4955 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
