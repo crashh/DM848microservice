@@ -1,0 +1,166 @@
+\documentclass[a4paper,11pt,oneside]{book}
+
+\usepackage[english]{babel}
+\usepackage[showframe=false]{geometry}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{changepage}
+\usepackage[]{algorithm2e}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{verbatimbox}
+\usepackage{ulem}
+\usepackage{fancyvrb}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage{tikz}
+\usepackage{pdflscape}
+\usepackage{minted}
+\usepackage{titlesec}
+\usepackage{titleps}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+%Following overwrites the page style for chapters
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{ruledChapter}}{}{}
+
+%New page style for chapters
+\newpagestyle{ruledChapter}{
+	\setfoot{}{\thepage\ of \pageref{LastPage}}{}
+	\footrule
+	\renewcommand\makefootrule{\color{black}\rule[\baselineskip]{\linewidth}{0.4pt}}
+}
+%New page style for rest
+\newpagestyle{ruled}{
+	\sethead{\raggedright \chaptername\ \thechapter :\ \chaptertitle}{}{}
+	\headrule
+	\setfoot{}{\thepage\ of \pageref{LastPage}}{}
+	\footrule
+	\renewcommand\makeheadrule{\color{black}\rule[-.3\baselineskip]{\linewidth}{0.4pt}}
+	\renewcommand\makefootrule{\color{black}\rule[\baselineskip]{\linewidth}{0.4pt}}
+}
+
+\expandafter\def\csname PY@tok@err\endcsname{}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+\title{}
+\author{}
+\date{} 
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+
+%-----------------------------------------------------------------
+%							FRONTPAGE
+%-----------------------------------------------------------------
+\thispagestyle{empty}
+\includegraphics[width=0.55\textwidth]{logo.pdf}\\[1cm]    
+\textsc{\Large DM848 Microservice}\\[0.5cm]
+
+% Title
+\begin{Huge}
+\textbf{WebApplication using the microservice architecture}
+\end{Huge}
+
+\vspace{4cm}
+
+% Author and supervisor
+\begin{minipage}{1\textwidth}
+\begin{center}
+\emph{}\\
+
+Lars \textsc{Thomasen}\\
+\verb!<latho12@student.sdu.dk>!\\
+
+\end{center}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large Spring 2016}\\
+
+\end{center}
+\end{titlepage}
+
+%-----------------------------------------------------------------
+%							   TOC
+%-----------------------------------------------------------------
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\thispagestyle{empty}
+
+%-----------------------------------------------------------------
+%						  ACTUAL REPORT
+%-----------------------------------------------------------------
+\pagestyle{ruled}
+
+%
+% INTRODUCTION
+% Contains all nessecary information needed in order to understand the 
+% remaining report.
+%
+\chapter{Introduction}
+\setcounter{section}{1}
+
+
+
+\section{Introduction to the chosen topic}
+
+
+\section{Background}
+
+
+\section{Problem formulation}
+
+
+\section{Feature list} %TODO Find new name for this.
+%TODO or delete, not sure.
+The following is a quick overview of the final state of the project, showcasing which of the planned features was implemented.
+
+\begin{enumerate}
+\item Encoding the rules
+\item Visualization
+\item ... 
+\end{enumerate}
+
+
+%
+%MODELLING
+%
+\chapter{Encoding the rules}
+
+
+%
+%IMPLEMENTAION
+\chapter{Implementation}
+
+
+
+
+%
+%CONCLUSION
+%
+\chapter{Conclusion}
+
+
+%-----------------------------------------------------------------
+%						     APPENDIX
+%-----------------------------------------------------------------
+%\newpage
+%\newgeometry{left=2.5cm,right=2.5cm}
+%\chapter{Appendix}
+%\section{Source code}
+
+\end{document}

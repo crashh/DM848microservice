@@ -34,6 +34,8 @@ public interface UserRepository extends Repository<User, Long> {
      */
 	public List<User> findAll();
 
+	public List<User> findByLastActive(String LastActive);
+
 	/**
 	 * Fetch the number of users known to the system.
 	 * 

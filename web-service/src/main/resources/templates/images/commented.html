@@ -1,0 +1,61 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Import header and navbar  -->
+<head th:replace="header :: copy"></head>
+
+<body>
+
+    <!-- *****************************************************************************************************************
+    TITLE & CONTENT
+    ***************************************************************************************************************** -->
+
+    <div class="container mtb">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 centered">
+                <h2>Images details, with number of comments</h2>
+                <h4>Click on image name to see details.</h4>
+                <br/>
+                <div class="hline"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfoliowrap">
+        <div class="container">
+
+            <div th:if="${images}">
+
+                <table class="table table-striped" style="width: 100%">
+                    <thead>
+                    <tr>
+                        <th><i class="fa fa-comment" aria-hidden="true"></i> Name</th>
+                        <th><i class="fa fa-user" aria-hidden="true"></i> Description</th>
+                        <th># of comments</th>
+                        <th><i class="fa fa-picture-o" aria-hidden="true"></i> Image</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr th:each="image : ${images}">
+                        <td><a href="image.html"
+                               th:href="@{|/images/${image.id}|}"
+                               th:text="|${image.name}|">11111111</a></td>
+                        <td width="40%"><a href="image.html"
+                               th:href="@{|/images/${image.id}|}"
+                               th:text="|${image.description}|">11111111</a></td>
+                        <td><a href="image.html"
+                               th:href="@{|/images/${image.id}|}"
+                               th:text="|${image.count}|">11111111</a></td>
+                        <td><img th:src="${image.link}" height="120" width="165"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div th:replace="footer :: copy"></div>
+
+</body>
+</html>

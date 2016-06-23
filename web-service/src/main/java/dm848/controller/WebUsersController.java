@@ -18,6 +18,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -117,6 +122,44 @@ public class WebUsersController {
         if (users != null)
             model.addAttribute("users", users);
         return "users/all";
+	}
 
+	@RequestMapping(value = "/users/active/{date}")
+	public String findActive(Model model, @PathVariable("date") String date) {
+		logger.info("web-service findActive() invoked.");
+
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        Date date1 = null;
+        List<User> activeUsers = new ArrayList<>();
+
+        try {
+            date1 = format.parse(date);
+        } catch (ParseException e) {
+            return "users/all"; //fail silently
+        }
+
+        List<User> users = usersService.findAll();
+
+
+        for (User user : users) {
+
+            Date date2 = null;
+
+            try {
+                date2 = format.parse(user.getLastActive());
+
+                if (date1.compareTo(date2) < 0) {
+                    activeUsers.add(user);
+                }
+            } catch (ParseException ignored) {}
+        }
+
+        Collections.sort(activeUsers, (o1, o2) -> o2.getLastActive().compareTo(o1.getLastActive()));
+
+
+		logger.info("web-service findActive() found: " + activeUsers);
+		if (activeUsers != null)
+			model.addAttribute("users", activeUsers);
+		return "users/all";
 	}
 }

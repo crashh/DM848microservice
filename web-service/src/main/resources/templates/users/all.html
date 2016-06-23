@@ -36,6 +36,7 @@ TITLE & CONTENT
 					<tr>
 						<th><i class="fa fa-user" aria-hidden="true"></i> Username</th>
 						<th><i class="fa fa-table" aria-hidden="true"></i> Name</th>
+						<th><i class="fa fa-clock-o" aria-hidden="true"></i> Last Active</th>
 					</tr>
 					</thead>
 
@@ -45,6 +46,7 @@ TITLE & CONTENT
 							   th:href="@{|/users/${user.userName}|}"
 							   th:text="|${user.userName}|">11111111</a></td>
 						<td th:text="${user.name}">Name</td>
+						<td th:text="${user.lastActive}">Last Active</td>
 					</tr>
 					</tbody>
 				</table>
@@ -58,12 +60,5 @@ TITLE & CONTENT
 	</div>
 
 	<div th:replace="footer :: copy"></div>
-
-    <!-- Main JS (Do not remove) -->
-    <script th:fragment="copy" src="/js/main_alt.js"></script>
-    <!-- Set active link -->
-    <script>
-        $("#navbar-elem li:nth-child(3)").addClass('active');
-    </script>
 </body>
 </html>

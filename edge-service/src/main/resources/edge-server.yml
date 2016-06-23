@@ -33,6 +33,14 @@ zuul:
 #    path: /user/**
 #    url: http://localhost:9999/uaa/user
 
+# Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 
 server:
   port: 9999

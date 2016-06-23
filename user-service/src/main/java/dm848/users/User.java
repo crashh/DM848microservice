@@ -26,6 +26,9 @@ public class User implements Serializable {
 
 	protected String name;
 
+	@Column(name = "last_active")
+	protected String lastActive;
+
 
 	/**
 	 * This is a very simple, and non-scalable solution to generating unique
@@ -46,10 +49,11 @@ public class User implements Serializable {
     public User() {
     }
 
-	public User(String userName, String name) {
+	public User(String userName, String name, String active) {
 		id = getNextId();
 		this.userName = userName;
 		this.name = name;
+		this.lastActive = active;
 	}
 
 	public long getId() {
@@ -70,6 +74,14 @@ public class User implements Serializable {
 
 	protected void setName(String name) {
 		this.name = name;
+	}
+
+	public String getLastActive() {
+		return lastActive;
+	}
+
+	protected void setLastActive(String lastActive) {
+		this.lastActive = lastActive;
 	}
 
 	@Override

@@ -13,10 +13,11 @@ public class Image {
 	protected Long id;
 	protected String name;
 	protected String link;
-	protected String embeddedLink; // Null by default
 	protected String description;
 	protected String date;
 	protected String userName;
+	protected String embeddedLink; // Null by default
+	protected int count; // Null by default
 
 
 	/**
@@ -68,6 +69,12 @@ public class Image {
 	}
 
 	public String getDate() { return date; }
+
+	public int getCount() {	return count; }
+
+	public void setCount(int count) {
+		this.count = count;
+	}
 
 	@Override
 	public String toString() {

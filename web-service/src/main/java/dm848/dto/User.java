@@ -12,6 +12,7 @@ public class User {
 	protected Long id;
 	protected String userName;
 	protected String name;
+	protected String lastActive;
 
 	/**
 	 * Default constructor for JPA only.
@@ -38,6 +39,8 @@ public class User {
     protected void setName(String name) {
         this.name = name;
     }
+
+	public String getLastActive() { return this.lastActive; }
 
 	@Override
 	public String toString() {

@@ -81,6 +81,24 @@ public class UsersController {
 		}
 	}
 
+	@RequestMapping("/users/last/{active}")
+	public List<User> byLastActive(@PathVariable("active") String activeLimit) {
+
+		logger.info("user-service byLastActive() invoked: "
+				+ userRepository.getClass().getName());
+
+		List<User> users = userRepository
+				.findByLastActive(activeLimit);
+
+		logger.info("user-service byLastActive() found: " + users);
+
+		if (users == null || users.size() == 0)
+			return null;
+		else {
+			return users;
+		}
+	}
+
     /**
      * Fetch all Users
      *

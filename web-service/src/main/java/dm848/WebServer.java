@@ -65,7 +65,7 @@ public class WebServer {
 		return new WebUsersController(usersService());
 	}
 	@Bean
-	public WebImageController videoController() {
+	public WebImageController imageController() {
 		return new WebImageController(imageService());
 	}
 	@Bean

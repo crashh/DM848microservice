@@ -11,8 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -76,6 +75,36 @@ public class WebImageController {
 		return "images/newest";
 	}
 
+	@RequestMapping("/images/commented")
+	public String findMostCommented(Model model) {
+		logger.info("web-service findNewest() invoked.");
+
+		List<Image> images = imageService.findAll();
+		List<Comment> comments = commentService.findAll();
+
+		Map<Long, Integer> commentCount = new HashMap<>();
+
+		for (Comment comment: comments) {
+			if (commentCount.containsKey(comment.getVideoId())) {
+				commentCount.put(comment.getVideoId(), commentCount.get(comment.getVideoId()) + 1);
+			} else {
+				commentCount.put(comment.getVideoId(), 1);
+			}
+		}
+
+		for (Image img: images) {
+            if (commentCount.containsKey(img.getId())) {
+                img.setCount(commentCount.get(img.getId()));
+            } else {
+                img.setCount(0);
+            }
+		}
+
+		model.addAttribute("images", images);
+
+		return "images/commented";
+	}
+
     @RequestMapping(value = "/images/ajax/all", method = RequestMethod.GET)
     public @ResponseBody	// <- Enables ajax response type.
     List<Image> findAll() {
@@ -120,7 +149,7 @@ public class WebImageController {
         logger.info("web-service ajax/newest() invoked with amount "+amount+".");
 
         List<Image> images = imageService.findAll();
-        Collections.sort(images, (o1, o2) -> o1.getDate().compareTo(o2.getDate()));
+        Collections.sort(images, (o1, o2) -> o2.getDate().compareTo(o1.getDate()));
 
 		if (!amount.equals("all")) {
 			images = images.subList(0, Integer.parseInt(amount));

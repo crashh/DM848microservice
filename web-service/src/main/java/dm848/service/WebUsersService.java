@@ -51,6 +51,14 @@ public class WebUsersService {
 				User.class, userName);
 	}
 
+	public List<User> findByLastActive(String activeLimit) {
+		logger.info("findByUserName() invoked: for " + activeLimit);
+		User[] users =  restTemplate.getForObject(serviceUrl + "/users/last/{active}",
+				User[].class, activeLimit);
+
+		return Arrays.asList(users);
+	}
+
 	public List<User> byNameContains(String name) {
 		logger.info("byNameContains() invoked:  for " + name);
 		User[] users = null;

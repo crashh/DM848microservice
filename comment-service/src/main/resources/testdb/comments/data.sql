@@ -11,3 +11,4 @@ insert into T_COMMENT (COMMENT, VIDEO_ID, USER_ID) values ('test comment, you kn
 insert into T_COMMENT (COMMENT, VIDEO_ID, USER_ID) values ('test comment, you know, for science! and global domination!', 8, 'kelee01');
 insert into T_COMMENT (COMMENT, VIDEO_ID, USER_ID) values ('test comment, you know, for science! and passing this course..', 9, 'cojle03');
 insert into T_COMMENT (COMMENT, VIDEO_ID, USER_ID) values ('test comment, you know, for science! and such.', 0, 'sayem13');
+insert into T_COMMENT (COMMENT, VIDEO_ID, USER_ID) values ('i like to comment stuff.', 9, 'idake09');
