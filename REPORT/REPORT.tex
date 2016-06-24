@@ -25,8 +25,13 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage{etoolbox}
-%Following overwrites the page style for chapters
-\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{ruledChapter}}{}{}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{}{}{}{}
+\makeatother
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+\renewcommand{\newpage}{}
 
 %New page style for chapters
 \newpagestyle{ruledChapter}{
@@ -71,35 +76,25 @@
 \textbf{WebApplication using the microservice architecture}
 \end{Huge}
 
-\vspace{4cm}
+\vspace{1cm}
 
 % Author and supervisor
 \begin{minipage}{1\textwidth}
 \begin{center}
-\emph{}\\
+
 
 Lars \textsc{Thomasen}\\
 \verb!<latho12@student.sdu.dk>!\\
 
 \end{center}
 \end{minipage}
-\begin{minipage}{0.4\textwidth}
-\end{minipage}
 
-\vfill
 
-% Bottom of the page
-{\large Spring 2016}\\
-
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
 \end{center}
 \end{titlepage}
 
-%-----------------------------------------------------------------
-%							   TOC
-%-----------------------------------------------------------------
-\renewcommand{\contentsname}{Table of Contents}
-\tableofcontents
-\thispagestyle{empty}
 
 %-----------------------------------------------------------------
 %						  ACTUAL REPORT
@@ -114,40 +109,69 @@ Lars \textsc{Thomasen}\\
 \chapter{Introduction}
 \setcounter{section}{1}
 
+For this project a web application using the microservice architectural style has been created. This allows one to take the theories learned from the course and implement them into a real product, thus ensuring that the theory is well understood and that the know-how on how to use them in practice is there.
 
+The microservice architectural style is a style to building a single application, consisting of a suite og small services, each running on its own process and instead communicates with the other services. This is a great contrast to the otherwise monolithic style that are well known, where the entire application often consists of a single executable.
 
-\section{Introduction to the chosen topic}
-
-
-\section{Background}
-
+This approach offers great flexibility, making it possible to quickly increase the processing power of pre-defined areas of the application, by simply increasing the number of that specific service. Likewise it increases the reliability, as the decline of one or more services wont result in loss of service, as long as atleast one or more services remain running.
 
 \section{Problem formulation}
+The specific problem formulation for this project are as following:
 
+\textbf{Goal:} Create a web application using the microservice architecture, this application must have several different services, each serving its own purpose. The application must be highly scalable and take advantage of load balancing and have a well defined interface to the public.
 
-\section{Feature list} %TODO Find new name for this.
-%TODO or delete, not sure.
-The following is a quick overview of the final state of the project, showcasing which of the planned features was implemented.
+\textbf{Tools:} In order to follow the ideas used widely in the community, this will be done using the Netflix Open Source\footnote{See \textbf{Common Runtime Services \& Libraries} at https://netflix.github.io/} stack, which is a set of tools developed by Netflix when creating microservice services.
 
+\section{Running the code}
+The following dependencies are required in order to run the program:
 \begin{enumerate}
-\item Encoding the rules
-\item Visualization
-\item ... 
+\item Java 8
+\item Maven
 \end{enumerate}
 
+A batch script has been created, simply run \texttt{mvnpackage.sh} in order to compile all the services using maven, and then run \texttt{runServices.sh} in order to start the 5 services. Note that starting all the services and registering them with eureka may take a couple of minutes. The webapplication is available at localhost:9999.
+
+A readme file is included in the project root folder if a manual approach is wanted. This allows for setting a given port by feeding it a parameter, and will have logging enabled. Alternatively, the application is deployed at \texttt{http://lthomasen.me:9999}.
 
 %
 %MODELLING
 %
-\chapter{Encoding the rules}
+\chapter{Modelling}
+This chapter will describe the design choices followed when modelling the application.
 
+\section{Exposing the front-end}
+One of the very first thing to define was how to expose all the services to the user. There er several approaches to this, some of these are described here, and the reason for going with one of these are also outlined.
+
+\begin{enumerate}
+\item The first and most simple approach would be to have a single monolithic style front-end, which handles all incoming and outgoing requests. This front-end will handle exposing the views and then communicate with all the services behind it. This allows for a static front-end which will always be available at a known location, much like any other approach.
+
+\item Another method would be to split up the front-end into individual services, the best way to describe this would be to imagine the front-end web design split up into sections, and then each section being its own service.
+
+\item And finally, the third option would be to use a proxy, which takes incoming requests and then delegates these requests, often in a round-robin style, to all the services which accepts the type of request given.
+\end{enumerate}
+
+For this project option (3) was used. There are several advantages to this approach, and some of these are as following.
+
+The first advantage being that having an extremely lightweight proxy delegate the requests allows for load balancing the web-server, this allows to spin up more than a single web-server such that no bottleneck would be present in generating views and sending them to the users.
+
+The second advantage of this approach is that following the idea of splitting up the front-end into several services would still be possible, by modifying the proxy to simple look at the request type and send it to the correct service.
+
+And finally this allows for having a single point of entry, such that all requests are served over the same port. This avoids any issues which would otherwise be present when working with Ajax-requests using JavaScript, which would be blocking any cross-site scripting. 
+
+
+\section{The services}
 
 %
 %IMPLEMENTAION
 \chapter{Implementation}
 
+\section{Service registration}
 
+\subsection*{Load balancing}
 
+\section{The proxy}
+
+\section{Communication}
 
 %
 %CONCLUSION
