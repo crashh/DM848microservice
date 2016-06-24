@@ -1,7 +1,6 @@
 \documentclass[a4paper,11pt,oneside]{book}
 
 \usepackage[english]{babel}
-\usepackage[showframe=false]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -12,7 +11,9 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{verbatimbox}
+\usepackage{setspace} 
 \usepackage{ulem}
+\usepackage[a4paper,margin=2.5cm,footskip=0.25in]{geometry}
 \usepackage{fancyvrb}
 \usepackage{float}
 \usepackage{hyperref}
@@ -32,6 +33,7 @@
 \renewcommand{\cleardoublepage}{}
 \renewcommand{\clearpage}{}
 \renewcommand{\newpage}{}
+\onehalfspacing
 
 %New page style for chapters
 \newpagestyle{ruledChapter}{
@@ -106,6 +108,7 @@ Lars \textsc{Thomasen}\\
 % Contains all nessecary information needed in order to understand the 
 % remaining report.
 %
+
 \chapter{Introduction}
 \setcounter{section}{1}
 
@@ -131,7 +134,7 @@ The following dependencies are required in order to run the program:
 
 A batch script has been created, simply run \texttt{mvnpackage.sh} in order to compile all the services using maven, and then run \texttt{runServices.sh} in order to start the 5 services. Note that starting all the services and registering them with eureka may take a couple of minutes. The webapplication is available at localhost:9999.
 
-A readme file is included in the project root folder if a manual approach is wanted. This allows for setting a given port by feeding it a parameter, and will have logging enabled. Alternatively, the application is deployed at \texttt{http://lthomasen.me:9999}.
+A readme file is included in the project root folder if a manual approach is wanted. This allows for setting a given port by feeding it a parameter, and will have logging enabled. Alternatively, the application is deployed at \textbf{\texttt{http://lthomasen.me:9999}} running on an Digital Ocean Ubuntu server.
 
 %
 %MODELLING
@@ -160,16 +163,46 @@ And finally this allows for having a single point of entry, such that all reques
 
 
 \section{The services}
+Microservice allows a large system to build up from a number of collaborating components, called services. When creating monolithic structures, we already follow design principles such as Seperation of Concerns (SoC), such that each section of the program addresses a separate well-defined concern.
+
+In micro-services we simply take this idea one step further, and take this entire section and moves it to its own application instead. A big advantage to this is that it gives the option of running additional services of the sections that are expected to be heavily loaded. Thus it is important to also identify which sections we should separate into their own services. Separate too big a section, and we will waste resources spinning up additional services, which are heavier on the resources than they needed to be.
+
+In this application, five services has been created:
+\begin{enumerate}
+\item \textbf{Registration service}: A service which purpose serves as a central repository, which allows other services to query it such that another service can see that they exists.
+\item \textbf{Edge service}: This is the proxy service, which takes incomming requests and redirects them to the correct service. If more than one exists of a given type of service, it will cycle between them in a round-robin manner, such that the load should be evenly divided.
+\item \textbf{User service}: Service which handles all operations regarding the users in the system.
+\item \textbf{Image service}: Service which handles all operations regarding the images in the system.
+\item \textbf{Comment service}: Service which handles all operations regarding the comments in the system.
+\end{enumerate}
 
 %
 %IMPLEMENTAION
+%
 \chapter{Implementation}
+The implementation of the project is done using the Spring framework, along with the libraries from the Netflix Open Source stack. Spring offers a great framework which simplifies the process of web-applications greatly, by removing a lot of the boilerplate code, and instead attempts to auto-bind elements based on the naming conventions. Spring has little effect on the actual micro-service architecture, but it does allow an easy integration with the Netflix libraries which they have integrated.
+
+Much of the relevant and interesting implementation process for this course were thus understanding how these libraries work, and how we could use them to work together in order to reach the goal set.
 
 \section{Service registration}
+Netflix offers a library called Eureka\footnote{A quick glance of what eureka is can be found at https://github.com/Netflix/eureka/wiki}. Eureka is essentially a microservice in itself, its purpose is for locating services and load-balancing. When a service starts, it will attempt to contact the Eureka service and register itself, this is done dynamically at runtime, thus no changes are needed to be done to this service if the load-out of the other services change.
 
-\subsection*{Load balancing}
+When a service is registered at Eureka, we can simply ask this service whenever we wish to use a specific service, and it will give us the correct address to the service we want. This way the services can have dynamically addresses, and no code will have to be changed if service change location. The only exception here is that the Eureka service itself has a static address for the other services being able to register at it (this can be avoided using a proxy).
 
+Each service has the address of the eureka server configured in the \texttt{*.yml} config files located under the resources folder.  Here we specify the address to the eureka server and the name and port of the offered service. The library then handles the actual registration process, thus no more code will be needed.
+
+\begin{minted}[frame=lines,linenos=true,fontsize=\footnotesize,]{c}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9998/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:
+      		${spring.application.instance_id:${server.port}}$
+\end{minted}
 \section{The proxy}
+In order to allow a single point of entry, and making it possible to have several web services available, a proxy has been used. Eureka offers a library known as Zuul, which can work closely together with Eureka. 
 
 \section{Communication}
 
