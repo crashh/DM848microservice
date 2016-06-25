@@ -8,7 +8,7 @@ echo Starting eureka...
 rm eureka_log.txt > /dev/null 2>&1
 touch eureka_log.txt
 java -jar spring-registration-service-1.0.0-SNAPSHOT.jar > eureka_log.txt &
-sleep 18
+sleep 20
 
 echo Starting edge service...
 rm edge_log.txt > /dev/null 2>&1

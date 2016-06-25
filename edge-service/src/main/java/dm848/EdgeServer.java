@@ -1,10 +1,10 @@
 package dm848;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.stereotype.Controller;
+
 //import org.springframework.cloud.security.oauth2.sso.EnableOAuth2Sso;
 //import org.springframework.cloud.security.oauth2.sso.OAuth2SsoConfigurer;
 //import org.springframework.cloud.security.oauth2.sso.OAuth2SsoConfigurerAdapter;
@@ -17,18 +17,6 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 //import org.springframework.security.web.csrf.CsrfTokenRepository;
 //import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 //import org.springframework.security.web.header.HeaderWriterFilter;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.filter.OncePerRequestFilter;
-import org.springframework.web.filter.RequestContextFilter;
-import org.springframework.web.util.WebUtils;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @SpringBootApplication
 @Controller
@@ -38,6 +26,11 @@ public class EdgeServer {
 
     public static void main(String[] args) {
         System.setProperty("spring.config.name", "edge-server");
+
+        if (args.length == 1) {
+            System.getProperties().put( "server.port", args[0] );
+        }
+
         new SpringApplicationBuilder(EdgeServer.class).web(true).run(args);
     }
 

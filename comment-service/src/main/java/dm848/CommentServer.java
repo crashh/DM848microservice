@@ -28,6 +28,11 @@ public class CommentServer {
 
     public static void main(String[] args) {
         System.setProperty("spring.config.name", "comment-server");
+
+        if (args.length == 1) {
+            System.getProperties().put( "server.port", args[0] );
+        }
+
         SpringApplication.run(CommentServer.class, args);
     }
 }

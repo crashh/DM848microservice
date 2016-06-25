@@ -3,7 +3,9 @@
 echo -------------------------
 echo Starting to compile services..
 echo -------------------------
-
+echo This will take a couple of minutes the first time, depending on
+echo the download speed.
+sleep 2
 
 cd registration-service
 mvn package

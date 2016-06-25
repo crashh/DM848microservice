@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a54bf324-e72b-4159-bdf6-ff19d58c4b49" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_cloudfoundry_connector_1_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_core_1_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_spring_service_connector_1_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/pom.xml" afterPath="$PROJECT_DIR$/comment-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/spring-comment-service.iml" afterPath="$PROJECT_DIR$/comment-service/spring-comment-service.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java" afterPath="$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edge-service/src/main/java/dm848/EdgeServer.java" afterPath="$PROJECT_DIR$/edge-service/src/main/java/dm848/EdgeServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edge-service/src/main/resources/edge-server.yml" afterPath="$PROJECT_DIR$/edge-service/src/main/resources/edge-server.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image-service/pom.xml" afterPath="$PROJECT_DIR$/image-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image-service/spring-image-service.iml" afterPath="$PROJECT_DIR$/image-service/spring-image-service.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image-service/src/main/java/dm848/ImageServer.java" afterPath="$PROJECT_DIR$/image-service/src/main/java/dm848/ImageServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvnpackage.sh" afterPath="$PROJECT_DIR$/mvnpackage.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration-service/src/main/java/dm848/RegistrationServer.java" afterPath="$PROJECT_DIR$/registration-service/src/main/java/dm848/RegistrationServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runServices.sh" afterPath="$PROJECT_DIR$/runServices.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/pom.xml" afterPath="$PROJECT_DIR$/user-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/spring-user-service.iml" afterPath="$PROJECT_DIR$/user-service/spring-user-service.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java" afterPath="$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-service/src/main/resources/user-server.yml" afterPath="$PROJECT_DIR$/user-service/src/main/resources/user-server.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java" afterPath="$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-service/src/main/resources/web-server.yml" afterPath="$PROJECT_DIR$/web-service/src/main/resources/web-server.yml" />
     </list>
     <ignored path="microservice-project.iws" />
@@ -57,7 +52,7 @@
             <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/user-server.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -67,17 +62,17 @@
             <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/web-server.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+                  <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="edge-server.yml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="edge-server.yml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/edge-service/src/main/resources/edge-server.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.57557434">
-                  <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -87,7 +82,70 @@
             <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                  <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="WebServer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-8.814815">
+                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#2192#2193#0" expanded="true" />
+                    <element signature="e#2244#2245#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UserServer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-12.592592">
+                  <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ImageServer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/image-service/src/main/java/dm848/ImageServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EdgeServer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/edge-service/src/main/java/dm848/EdgeServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CommentServer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="32" selection-end-column="65" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RegistrationServer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/registration-service/src/main/java/dm848/RegistrationServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.3083434">
+                  <caret line="19" column="65" selection-start-line="18" selection-start-column="92" selection-end-line="19" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
@@ -100,7 +158,7 @@
           <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/header.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="-31.384615">
                   <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
                   <folding />
                 </state>
@@ -167,25 +225,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Comment.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/Comment.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="0.7122128">
                   <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
                   <folding>
                     <element signature="e#1582#1583#0" expanded="true" />
                     <element signature="e#1606#1607#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="image-server.yml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/image-service/src/main/resources/image-server.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5139057">
-                  <caret line="25" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -222,11 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/service/WebImageService.java" />
-        <option value="$PROJECT_DIR$/image-service/src/main/java/dm848/images/ImageController.java" />
-        <option value="$PROJECT_DIR$/image-service/src/main/java/dm848/images/ImageRepository.java" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/users/userSearch.html" />
-        <option value="$PROJECT_DIR$/image-service/src/main/resources/testdb/images/schema.sql" />
         <option value="$PROJECT_DIR$/image-service/src/main/java/dm848/images/Image.java" />
         <option value="$PROJECT_DIR$/image-service/src/main/resources/testdb/images/data.sql" />
         <option value="C:/Program Files/Java/jdk1.8.0/src.zip!/java/util/Comparator.java" />
@@ -258,7 +301,6 @@
         <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/error.html" />
         <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/users/all.html" />
         <option value="$PROJECT_DIR$/web-service/src/main/resources/templates/users/users.html" />
-        <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java" />
         <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/dto/Image.java" />
         <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/controller/WebImageController.java" />
         <option value="$PROJECT_DIR$/web-service/src/main/resources/public/css/style.css" />
@@ -270,9 +312,15 @@
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
         <option value="$PROJECT_DIR$/image-service/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/src/main/resources/user-server.yml" />
+        <option value="$PROJECT_DIR$/web-service/src/main/resources/web-server.yml" />
         <option value="$PROJECT_DIR$/edge-service/src/main/resources/edge-server.yml" />
         <option value="$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml" />
-        <option value="$PROJECT_DIR$/web-service/src/main/resources/web-server.yml" />
+        <option value="$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java" />
+        <option value="$PROJECT_DIR$/image-service/src/main/java/dm848/ImageServer.java" />
+        <option value="$PROJECT_DIR$/edge-service/src/main/java/dm848/EdgeServer.java" />
+        <option value="$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java" />
+        <option value="$PROJECT_DIR$/registration-service/src/main/java/dm848/RegistrationServer.java" />
       </list>
     </option>
   </component>
@@ -713,6 +761,14 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm848" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -977,6 +1033,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm848" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1722,12 +1786,12 @@
       <workItem from="1466579058168" duration="27548000" />
       <workItem from="1466697411984" duration="10461000" />
       <workItem from="1466784254522" duration="1970000" />
-      <workItem from="1466845895626" duration="1564000" />
+      <workItem from="1466845895626" duration="2547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72056000" />
+    <option name="totallyTimeSpent" value="73039000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1750,7 +1814,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32788163" sideWeight="0.5174036" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33359313" sideWeight="0.76810914" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33359313" sideWeight="0.76810914" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281372" sideWeight="0.49529633" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1798,55 +1862,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/registration-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/users/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37453184">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/testdb/comments/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4074073">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/dm848/users/UsersConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1910,6 +1929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10278114">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1996,7 +2016,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-31.384615">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
@@ -2050,17 +2070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="37" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="37" />
-          <folding>
-            <element signature="e#2103#2104#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2105,25 +2114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image-service/src/main/resources/image-server.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5139057">
-          <caret line="25" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2184,14 +2174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7141074">
@@ -2203,7 +2185,7 @@
     <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/user-server.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2211,15 +2193,93 @@
     <entry file="file://$PROJECT_DIR$/web-service/src/main/resources/web-server.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edge-service/src/main/resources/edge-server.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57557434">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image-service/src/main/resources/image-server.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3700121">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/dm848/comments/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7122128">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding>
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/resources/comment-server.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-service/src/main/java/dm848/WebServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.814815">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2244#2245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/dm848/UserServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.592592">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image-service/src/main/java/dm848/ImageServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edge-service/src/main/java/dm848/EdgeServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment-service/src/main/java/dm848/CommentServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="32" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration-service/src/main/java/dm848/RegistrationServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3083434">
+          <caret line="19" column="65" selection-start-line="18" selection-start-column="92" selection-end-line="19" selection-end-column="65" />
           <folding />
         </state>
       </provider>

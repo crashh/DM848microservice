@@ -15,6 +15,12 @@ public class RegistrationServer {
         // Tell server to look for registration-server.properties or registration-server.yml
         System.setProperty("spring.config.name", "registration-server");
 
+        if (args.length == 1) {
+            System.err.println("WARNING: Changing port on registration server will require " +
+                    "config changes to the remaining services.");
+            System.getProperties().put( "server.port", args[0] );
+        }
+
         SpringApplication.run(RegistrationServer.class, args);
     }
 }

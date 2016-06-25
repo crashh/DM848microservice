@@ -28,6 +28,11 @@ public class ImageServer {
 
     public static void main(String[] args) {
         System.setProperty("spring.config.name", "image-server");
+
+        if (args.length == 1) {
+            System.getProperties().put( "server.port", args[0] );
+        }
+
         SpringApplication.run(ImageServer.class, args);
     }
 }
