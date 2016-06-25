@@ -29,7 +29,7 @@ cd ..
 cd image-service
 mvn package
 cd target
-mv spring-video-service-1.0.0-SNAPSHOT.jar ../../
+mv spring-image-service-1.0.0-SNAPSHOT.jar ../../
 cd ..
 cd ..
 

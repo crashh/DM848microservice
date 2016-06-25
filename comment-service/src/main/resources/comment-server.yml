@@ -23,7 +23,7 @@ eureka:
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}} # unique ID
-    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+#    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
 
 
 

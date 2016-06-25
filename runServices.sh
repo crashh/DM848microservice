@@ -19,7 +19,7 @@ sleep 3
 echo Starting image service...
 rm image_log.txt > /dev/null 2>&1
 touch image_log.txt
-java -jar spring-video-service-1.0.0-SNAPSHOT.jar > image_log.txt &
+java -jar spring-image-service-1.0.0-SNAPSHOT.jar > image_log.txt &
 sleep 3
 
 echo Starting user service...
